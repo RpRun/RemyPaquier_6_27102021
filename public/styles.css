@@ -1,3 +1,28 @@
 img {
     max-width: 300px;
 }
+.page-wrapper {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header {
+    display: flex;
+}
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+}
+.tags ul {
+    display: flex;
+}
+section {
+    width: 100vw;
+}
+.photographers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
