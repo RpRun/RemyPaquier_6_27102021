@@ -12,9 +12,11 @@ body {
 a {
     text-decoration: none;
 }
+
 .page-wrapper {
 
-    max-width: 1440px;
+    max-width: 1080px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,6 +26,7 @@ a {
 }
 
 header {
+    max-width: 1080px;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -35,20 +38,12 @@ header {
 .banner {
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: flex-start;
+
 }
 
 .logo {
-    width: 200px;
-    height: 50px;
-    left: 100px;
-    top: 42px;
     color: #901C1C;
-}
-
-.main-nav {
-    width: 553px;
-    height: 49px;
 }
 
 .tags ul {
@@ -77,8 +72,8 @@ header {
 h1 {
     color: #901C1C;
     white-space: nowrap;
-    width: 306px;
-    height: 47px;
+    /* width: 306px;
+    height: 47px; */
 }
 
 
@@ -89,6 +84,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-end;
     margin-top: 76px;
     margin-left: auto;
     margin-right: auto;
@@ -104,6 +100,11 @@ h1 {
 }
 
 /* paragraphs photographers__cards */
+
+.photographers__infos p {
+    padding: 3px;
+}
+
 .localisation {
     font-size: 13px;
     line-height: 17px;
