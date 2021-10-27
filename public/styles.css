@@ -1,28 +1,126 @@
-img {
-    max-width: 300px;
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+}
+
+/* BODY OU HTML? */
+
+a {
+    text-decoration: none;
 }
 .page-wrapper {
-   
+
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 header {
+    width: 100%;
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
 }
+
 .banner {
     display: flex;
     flex-wrap: wrap;
-    width: 70vw;
+    
 }
+
+.logo {
+    width: 200px;
+    height: 50px;
+    left: 100px;
+    top: 42px;
+    color: #901C1C;
+}
+
+.main-nav {
+    width: 553px;
+    height: 49px;
+}
+
 .tags ul {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-section {
-    width: 100vw;
+
+.tags li {
+    padding: 3px;
 }
+
+.tags a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 11px;
+    color: #911C1C;
+    padding: 3px 5px;
+}
+
+/* "Nos photographes" */
+h1 {
+    color: #901C1C;
+    white-space: nowrap;
+    width: 306px;
+    height: 47px;
+}
+
+
+/* section photographers */
+
 .photographers {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 76px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photographers__portrait {
+    max-width: 300px;
+}
+
+.photographers__name {
+    color: #D3573C;
+    font-weight: 400;
+}
+
+/* paragraphs photographers__cards */
+.localisation {
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    color: #901C1C;
+}
+
+.mojo {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #000000;
+}
+
+.cost {
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #757575;
 }
