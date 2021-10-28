@@ -279,7 +279,13 @@ h1 {
     justify-content: space-around;
 }
 
-.thumbnails__img{
+.thumbnails {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+
+.thumbnails__img {
     width: 350px;
     height: 300px;
     border-radius: 5px;
@@ -291,11 +297,23 @@ h1 {
     justify-content: space-between;
 }
 
-.likes-count img {
+.heart {
     height: 18px;
     width: 17px;
     color: #911C1C;
     background: #FFFFFF;
+}
+
+.likes-price {
+    display: flex;
+    background: #DB8876;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 22rem;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -320,4 +338,15 @@ h1 {
         max-width: 19rem;
     }
 
+    .likes-price {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .dropdown-wrapper {
+        display: none;
+    }
 }
