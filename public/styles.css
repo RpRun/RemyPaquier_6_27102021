@@ -159,7 +159,13 @@ h1 {
 /*  |P|O|R|T|F|O|L|I|O|
 /*  +-+-+-+-+-+-+-+-+-+
 /* */
-
+.photographer-page-wrapper{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
 .header__portfolio .logo {
     width: 100%;
     text-align: left;
@@ -176,7 +182,7 @@ h1 {
     flex-direction: row;
     background: #FAFAFA;
     border-radius: 5px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: flex-start;
     align-items: center;
     padding: 2rem;
@@ -189,7 +195,11 @@ h1 {
     align-items: flex-start;
     flex-direction: column;
     padding: 2rem;
+    position: relative;
+}
 
+.photographer__tags ul {
+    justify-content: flex-start;
 }
 
 .btn-contact {
@@ -204,12 +214,30 @@ h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    /* margin-left: auto;
-    margin-right: auto; */
     color: #FFFFFF;
+    position: absolute;
+    top: 35px;
+    margin-left: 20rem;
 }
 
-/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 
+    .btn-contact {
+        position: fixed;
+        bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        top: inherit;
+        left: -50%;
+        right: -50%;
+    }
+    .photographer-page-wrapper {
+        position: relative;
+    }
+    .photographers__infos--portfolio {
+        padding: 0.4rem;
+        max-width: 19rem;
+    }
     
-} */
+}
+
