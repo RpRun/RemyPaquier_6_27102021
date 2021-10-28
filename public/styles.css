@@ -261,6 +261,43 @@ h1 {
     display: block;
 }
 
+/*
+ +-+-+-+-+-+-+-+-+-+-+
+ |T|H|U|M|B|N|A|I|L|S|
+ +-+-+-+-+-+-+-+-+-+-+
+*/
+
+
+
+.preview__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.thumbnails__img{
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.thumbnails__infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.likes-count img {
+    height: 18px;
+    width: 17px;
+    color: #911C1C;
+    background: #FFFFFF;
+}
+
 
 @media screen and (max-width: 1023px) {
 
