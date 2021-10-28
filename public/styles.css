@@ -33,6 +33,7 @@ header {
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
+    margin: 1rem;
 }
 
 .banner {
@@ -58,14 +59,20 @@ header {
 
 .tags a {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 1rem;
+    line-height: 1rem;
     text-align: center;
     border: 0.5px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 11px;
     color: #911C1C;
     padding: 3px 5px;
+    transition: 0.1s ease-in-out;
+    display: block;
+}
+
+.tags a:hover {
+    transform: scale(1.03);
 }
 
 /* "Nos photographes" */
@@ -141,3 +148,8 @@ h1 {
     text-align: center;
     color: #757575;
 }
+
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    
+} */
