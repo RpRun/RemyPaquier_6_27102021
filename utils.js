@@ -17,9 +17,7 @@ export const createCard = photographe => {
         <p class="cost">${photographe.price}</p>
     </div>
     <div class="filters" role="navigation" aria-label="tags filters">
-        <ul class="tags" >
-        <ul>${tagList}</ul>
-        </ul>
+        <ul class="tags">${tagList}</ul>  
     </div>
     </div>`
 
