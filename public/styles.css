@@ -82,7 +82,7 @@ h1 {
     top: -89px;
 }
 
-.tags ul {
+.tags {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -243,8 +243,8 @@ h1 {
     color: #901C1C;
 }
 
-.photographer__tags ul {
-    justify-content: flex-start;
+.photographer__tags {
+    display: flex;
 }
 
 .thumbnails__infos p {
