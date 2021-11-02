@@ -5,7 +5,7 @@ export const createCard = photographe => {
         
     });
 
-    const card = `<div class="photographers__cards">
+    const card = `<li class="photographers__cards">
     <a href="./view/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
             src="./public/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="">
@@ -14,12 +14,12 @@ export const createCard = photographe => {
     <div class="photographers__infos">
         <p class="localisation">${photographe.city}</p>
         <p class="mojo">${photographe.tagline}</p>
-        <p class="cost">${photographe.price}</p>
+        <p class="cost">${photographe.price}€/jour</p>
     </div>
     <div class="filters" role="navigation" aria-label="tags filters">
         <ul class="tags">${tagList}</ul>  
     </div>
-    </div>`
+    </li>`
 
 return card
 
