@@ -114,7 +114,7 @@ h1 {
 
 
 /* section photographers */
-.photographers {
+.photographers__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
