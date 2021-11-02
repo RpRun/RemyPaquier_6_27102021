@@ -24,3 +24,4 @@ export const createCard = photographe => {
 return card
 
 }
+
