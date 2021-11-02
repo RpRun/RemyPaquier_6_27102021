@@ -17,6 +17,23 @@ fetch('data.json')
 
     })
 
-
-
+    // const getData = async () => {
+    //     const response = await fetch('./data.json');
+    //     const json = await response.json();
+    //     return json
+    // }
+    
+    // const init = async () => {
+    //     const data = await getData();
+    //     const ul = document.querySelector('.photographers__list')
+    
+    
+    //     data.photographers.forEach(photographer => {
+    //         const link = `<li class="photographers__cards"><a href='./view/portfolio.html?id=${photographer.id}'>${photographer.name}</a></li>`
+            
+    //         ul.insertAdjacentHTML('beforeend', link)
+    //     });
+    // }
+    
+    // init()
   
