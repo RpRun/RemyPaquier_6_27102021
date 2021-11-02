@@ -1,4 +1,4 @@
-import { createPage } from '../utils.js'
+import { createHeader } from '../utils.js'
 
 
 fetch('../data.json')
@@ -7,26 +7,26 @@ fetch('../data.json')
 
         console.log(reponse);
 
-        const sectionDom = document.querySelector('.photographers__name')
+        const sectionDom = document.querySelector('header')
         const photographers = reponse.photographers
 
         for (let i = 0; i < photographers.length; i++) {            
-            const page = createPage(photographers[i])
-            sectionDom.innerHTML += page
+            const header = createHeader(photographers[i])
+            sectionDom.innerHTML += header
         }
 
     })
 
 
 
-// const createPage = async () => {
+// const createHeader = async () => {
 //     const response = await fetch('../data.json');
 //     const json = await response.json();
 //     return json
 // }
 
 // const init = async() => {
-//     const data = await createPage()
+//     const data = await createHeader()
 //     const h1 = document.querySelector('.photographers__name')
 
 //     // RECUPERATION DES DONNEES A AFFICHER

@@ -1,7 +1,7 @@
 export const createCard = photographe => {
     let tagList = ''
-    photographe.tags.forEach(tag => { 
-        tagList += `<li><a href="">#${tag}</a></li>`
+    photographe.tags.forEach(pouet => { 
+        tagList += `<li><a href="lalala">#${pouet}</a></li>`
         
     });
 
@@ -25,15 +25,14 @@ return card
 
 }
 
-export const createPage = photographe => {
+export const createHeader = photographe => {
     let tagList = ''
     photographe.tags.forEach(tag => { 
         tagList += `<li><a href="">#${tag}</a></li>`
         
     });
 
-    const page = `<div class="photographer-page-wrapper">
-    <header class="header__portfolio">
+    const header = `<header class="header__portfolio">
         <a class="home-page-link" href="../index.html">
             <img class="logo" src="../public/icones/logo.png" alt="Fisheye Home page"></a>
         <div class="header__portfolio--wrapper">
@@ -66,69 +65,9 @@ export const createPage = photographe => {
                 </ul>
             </nav>
         </div>
-    </header>
-    <main>
-        
-        <section class="preview">
-            <ul class="preview__list">
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Animals_Rainbow.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Travel_Lonesome.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Event_SeasideWedding.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Portrait_Background.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Event_SeasideWedding.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
-                <li class="thumbnails"><a href=""><img class="thumbnails__img"
-                            src="../public/Photos/Mimi/Portrait_Wednesday.jpg" alt=""></a>
-                    <div class="thumbnails__infos">
-                        <h2 class="thumbnails__heading">Arc-en-ciel</h2>
-                        <div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    </div>
-                </li>
+    </header>`
 
-            </ul>
-            <div class="likes-price">
-                    <div class="total-likes">297 081<img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                    <div class="cost-by-day">300€/jour</div>
-                
-            </div>
-
-        </section>
-        <button class="fixed-contact modal-btn">Contactez-moi</button>
-    </main>
-
-
-</div>`
-
-return page    
+return header    
 
 
 }
