@@ -49,50 +49,16 @@ return header
 
 }
 
-export const createPreview = photographe => {
+export const createPreview = media => {
 
     const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Animals_Rainbow.jpg" alt=""></a>
+    src="../public/Photos/medias/${media.photographerId}/${media.id} title=${media.title}" alt=""></a>
 <div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-</div>
-</li>
-<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Travel_Lonesome.jpg" alt=""></a>
-<div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-</div>
-</li>
-<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Event_SeasideWedding.jpg" alt=""></a>
-<div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-</div>
-</li>
-<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Portrait_Background.jpg" alt=""></a>
-<div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-</div>
-</li>
-<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Event_SeasideWedding.jpg" alt=""></a>
-<div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-</div>
-</li>
-<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/Mimi/Portrait_Wednesday.jpg" alt=""></a>
-<div class="thumbnails__infos">
-<h2 class="thumbnails__heading">Arc-en-ciel</h2>
-<div class="likes-count">12 <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
+<h2 class="thumbnails__heading">${media.title}</h2>
+<div class="likes-count">${media.likes}<img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
 </div>
 </li>`
+
 
 return preview__list
 
