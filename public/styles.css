@@ -86,7 +86,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+
 }
 
 .tags li {
@@ -459,6 +459,13 @@ h1 {
         padding: 0.4rem;
         max-width: 19rem;
     }
+    .thumbnails__img {
+        width: 94vw;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+        max-height: 337px;
+    }
 
 }
 
@@ -512,10 +519,11 @@ h1 {
 
     .thumbnails {
         margin: 0rem;
-        padding: 0rem;
         height: unset;
         margin-bottom: 1rem;
     }
+
+    
 
 }
 
