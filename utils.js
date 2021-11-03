@@ -25,29 +25,29 @@ return card
 
 }
 
-// export const createHeader = photographe => {
-//     let tagList = ''
-//     photographe.tags.forEach(tag => { 
-//         tagList += `<li><a href="">#${tag}</a></li>`
+export const createHeader = photographe => {
+    let tagList = ''
+    photographe.tags.forEach(tag => { 
+        tagList += `<li><a href="">#${tag}</a></li>`
         
-//     });
+    });
 
-//     const header = `<div class="header__portfolio--wrapper">
-//                 <div class="photographers__infos--portfolio">
-//                     <h1 class="photographers__name">${photographe.name}</h1>
-//                     <p class="localisation">${photographe.city}, ${photographe.country}</p>
-//                     <p class="mojo">${photographe.tagline}</p> 
-//                         <ul role=navigation class="tags photographer__tags aria-label="tags filters"">
-//                         ${tagList}
-//                         </ul>                   
-//                     <button class="header-contact modal-btn">Contactez-moi</button>
-//                 </div>
+    const header = `<div class="header__portfolio--wrapper">
+                <div class="photographers__infos--portfolio">
+                    <h1 class="photographers__name">${photographe.name}</h1>
+                    <p class="localisation">${photographe.city}, ${photographe.country}</p>
+                    <p class="mojo">${photographe.tagline}</p> 
+                        <ul role=navigation class="tags photographer__tags aria-label="tags filters"">
+                        ${tagList}
+                        </ul>                   
+                    <button class="header-contact modal-btn">Contactez-moi</button>
+                </div>
 
-//             <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
-//                 alt="portrait du photographe">
-//             </div>`
+            <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
+                alt="portrait du photographe">
+            </div>`
 
-// return header    
+return header    
 
 
-// }
+}
