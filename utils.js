@@ -32,8 +32,7 @@ export const createHeader = photographe => {
         
     });
 
-    const header = `<div class="header__portfolio--wrapper">
-                <div class="photographers__infos--portfolio">
+    const header = `<div class="photographers__infos--portfolio">
                     <h1 class="photographers__name">${photographe.name}</h1>
                     <p class="localisation">${photographe.city}, ${photographe.country}</p>
                     <p class="mojo">${photographe.tagline}</p> 
@@ -44,8 +43,7 @@ export const createHeader = photographe => {
                 </div>
 
             <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
-                alt="portrait du photographe">
-            </div>`
+                alt="portrait du photographe">`
 
 return header    
 

@@ -86,8 +86,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .tags li {
@@ -420,7 +419,7 @@ h1 {
         margin-right: 3rem;
     }
 
-    .photographers {
+    .photographers__list {
         justify-content: space-evenly;
     }
 
@@ -486,9 +485,10 @@ h1 {
         margin-right: auto;
     }
 
-    .photographers {
+    .photographers__list {
         justify-content: center;
     }
+
 
     .photographers__infos--portfolio .photographers__portrait {
         background: #C4C4C4;
