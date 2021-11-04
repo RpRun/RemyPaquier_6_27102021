@@ -1,8 +1,8 @@
 export const createCard = photographe => {
     let tagList = ''
-    photographe.tags.forEach(pouet => { 
+    photographe.tags.forEach(pouet => {
         tagList += `<li><a href="lalala">#${pouet}</a></li>`
-        
+
     });
 
     const card = `<li class="photographers__cards">
@@ -21,15 +21,15 @@ export const createCard = photographe => {
     </div>
     </li>`
 
-return card
+    return card
 
 }
 
 export const createHeader = photographe => {
     let tagList = ''
-    photographe.tags.forEach(tag => { 
+    photographe.tags.forEach(tag => {
         tagList += `<li><a href="">#${tag}</a></li>`
-        
+
     });
 
     const header = `<div class="photographers__infos--portfolio">
@@ -45,7 +45,7 @@ export const createHeader = photographe => {
             <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
                 alt="portrait du photographe">`
 
-return header    
+    return header
 
 }
 
@@ -59,20 +59,20 @@ export const createPreview = media => {
 <div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
 </div>
 </li>`
-return preview__list
+
+        return preview__list
     }
 
     if (mediapreview == media.video) {
-        const preview__list = `<li class="thumbnails"><a href=""><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video>
-    </a>
+        const preview__list = `<li class="thumbnails">
+        <a href=""><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
 <div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
 </div>
 </li>`
 
-return preview__list
-    
+        return preview__list
 
-}
+    }
 }
