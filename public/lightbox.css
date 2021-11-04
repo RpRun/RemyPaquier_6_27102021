@@ -1,0 +1,73 @@
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    /* NOT SURE IF ITS WORKING */
+    overflow: auto;
+    /* NOT SURE IF ITS WORKING */
+    animation: lightboxIn .5s;
+}
+
+.lightbox__next,
+.lightbox__prev {
+    border: none;
+    background: url(./icones/arrow.svg) center center / 30px 48px no-repeat;
+    width: 42px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: -24px;
+    z-index: 11;
+}
+
+.lightbox__prev {
+    right: auto;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.lightbox__close {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: url('data:image/svg+xml;utf8,<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z" fill="rgba(144, 28, 28, 1)"/></svg>') center center / 100% 100% no-repeat transparent;
+    position: fixed;
+    top: 20px;
+    right: 5px;
+    z-index: 12;
+}
+
+.lightbox button {
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s;
+    text-indent: -3000px;
+}
+
+.lightbox button:hover {
+    opacity: 1;
+}
+
+.lightbox__container img {
+    max-width: 100%;
+    height: auto;
+    animation: lightboxIn .5s;
+}
+.lightbox__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 100vh;
+}
+
+@keyframes lightboxIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
