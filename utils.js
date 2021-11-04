@@ -51,6 +51,7 @@ return header
 
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
+
     const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
     src="../public/Photos/medias/${mediapreview}"></a>
 <div class="thumbnails__infos">
