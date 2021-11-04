@@ -52,7 +52,7 @@ return header
 export const createPreview = media => {
 
     const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
-    src="../public/Photos/medias/${media.photographerId}/${media.id} title=${media.title}" alt=""></a>
+    src="../public/Photos/medias/${media.image}"></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
 <div class="likes-count">${media.likes}<img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
