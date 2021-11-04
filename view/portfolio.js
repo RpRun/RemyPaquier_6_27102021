@@ -27,7 +27,6 @@ fetch('../data.json')
                 const header = createHeader(photographe)
                 sectionHeader.innerHTML += header
             }
-
         })
 
         medias.forEach(media => {
@@ -36,16 +35,8 @@ fetch('../data.json')
                 sectionPreview.innerHTML += preview
                 
             }
-
-
-
         })
-
-
-        
-
-
-        
+     
     });
 
    
