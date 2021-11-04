@@ -1,11 +1,11 @@
-class Ligthbox {
+class Lightbox {
 
     static init () {
         const links = document.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".mp4"]')
         .forEach(link => link.addEventListener('click', e =>
          {
             e.preventDefault()
-            new Ligthbox(e.currentTarget.getAttribute('href'))
+            new Lightbox(e.currentTarget.getAttribute('href'))
         }))
    
     }
@@ -50,4 +50,4 @@ class Ligthbox {
 */
 
 
-Ligthbox.init()
+Lightbox.init()
