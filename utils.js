@@ -52,7 +52,7 @@ export const createHeader = photographe => {
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
     if (mediapreview == media.image) {
-        const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
+        const preview__list = `<li class="thumbnails"><a href="../public/Photos/medias/${mediapreview}"><img class="thumbnails__img"
     src="../public/Photos/medias/${mediapreview}"></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
@@ -65,7 +65,7 @@ export const createPreview = media => {
 
     if (mediapreview == media.video) {
         const preview__list = `<li class="thumbnails">
-        <a href=""><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video></a>
+        <a href="../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
 <div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
