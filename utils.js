@@ -51,16 +51,28 @@ return header
 
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
-
-    const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
+    if (mediapreview == media.image) {
+        const preview__list = `<li class="thumbnails"><a href=""><img class="thumbnails__img"
     src="../public/Photos/medias/${mediapreview}"></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
 <div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
 </div>
 </li>`
+return preview__list
+    }
 
+    if (mediapreview == media.video) {
+        const preview__list = `<li class="thumbnails"><a href=""><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video>
+    </a>
+<div class="thumbnails__infos">
+<h2 class="thumbnails__heading">${media.title}</h2>
+<div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
+</div>
+</li>`
 
 return preview__list
+    
 
+}
 }
