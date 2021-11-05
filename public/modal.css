@@ -1,5 +1,5 @@
 .contact-bground {
-    /* display: none; */
+    display: none;
     /*transition?*/
     position: fixed;
     z-index: 1;
