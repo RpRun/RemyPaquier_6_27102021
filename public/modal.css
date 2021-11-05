@@ -1,0 +1,25 @@
+.contact-bground {
+    /* display: none; */
+    /*transition?*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+}
+
+.contact-content {
+    margin: 20% auto;
+    width: 100%;
+    max-width: 670px;
+    /* animation-name: modalopen;
+    animation-duration: var(--modal-duration); */
+    background: #DB8876;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+}
