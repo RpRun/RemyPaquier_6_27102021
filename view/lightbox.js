@@ -1,13 +1,16 @@
 class Lightbox {
 
-    static init () {
-        const links = document.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".mp4"]')
-        .forEach(link => link.addEventListener('click', e =>
+    static init() {
+        const links = document.querySelectorAll('a[href$=".mp4"], a[href$=".jpg"], a[href$=".jpeg"]')
+        links.forEach(link => link.addEventListener('click', e =>
          {
             e.preventDefault()
             new Lightbox(e.currentTarget.getAttribute('href'))
+            
+            
         }))
-   
+        console.log(links)
+        
     }
     // /**
     //  * @param {string} url URL de l'image
@@ -16,6 +19,7 @@ class Lightbox {
     constructor (url) {
         const element = this.buildDom(url)
         document.body.appendChild(element)
+
     }
     // /**
     // //  * @param {string} url URL de l'image
@@ -33,6 +37,8 @@ class Lightbox {
         </div>`
         return dom
     }
+
+    
 }
 
 
@@ -48,6 +54,5 @@ class Lightbox {
     </div>
 
 */
-
 
 Lightbox.init()

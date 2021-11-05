@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(243, 235, 235, 0.9);
     z-index: 10;
     /* NOT SURE IF ITS WORKING */
     overflow: auto;
@@ -62,9 +62,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
     min-height: 100vh;
+    margin: 0 50px;
 }
 
 @keyframes lightboxIn {
