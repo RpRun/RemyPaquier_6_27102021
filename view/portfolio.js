@@ -20,8 +20,6 @@ fetch('../data.json')
         const sectionPreview = document.querySelector(`.preview__list`)
         const medias = reponse.media
 
-        console.log(photographers)
-
         photographers.forEach(photographe => {
             if (photographe.id == urlId) {
                 const header = createHeader(photographe)
