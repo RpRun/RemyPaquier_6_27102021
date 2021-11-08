@@ -1,7 +1,7 @@
 export const createCard = photographe => {
     let tagList = ''
-    photographe.tags.forEach(pouet => {
-        tagList += `<li><a href="lalala">#${pouet}</a></li>`
+    photographe.tags.forEach(tag => {
+        tagList += `<li><a href="">#${tag}</a></li>`
 
     });
 
