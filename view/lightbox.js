@@ -10,10 +10,10 @@ class Lightbox {
 }
 
 /**
- * @init initialisation
+ * @init initialisation de la lightbox
  */
 static init() {
-    const links = document.querySelectorAll('a[href$=".mp4"], a[href$=".jpg"], a[href$=".jpeg"]')
+    const links = document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]')
     links.forEach(link => link.addEventListener('click', e => {
         e.preventDefault()
         new Lightbox(e.currentTarget.getAttribute('href'))
@@ -34,7 +34,7 @@ buildDom(url) {
     <button class="lightbox__next">Suivant</button>
     <button class="lightbox__prev">Précédent</button>
     <div class="lightbox__container">
-        <img src="${url}" alt="">
+    <div class="lightbox__loader"></div>       
     </div>`
     return dom
 }  
