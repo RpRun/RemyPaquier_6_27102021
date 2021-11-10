@@ -25,12 +25,11 @@ constructor(url, images) {
  * @init initialisation de la lightbox
  */
 static init() {
-    const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'))
+    const links = Array.from(document.querySelectorAll('a[href$=".jpg"]'))
     const images = links.map( link => link.getAttribute('href'))
     links.forEach(link => link.addEventListener('click', e => {
         e.preventDefault()
-        new Lightbox(e.currentTarget.getAttribute('href'), images)
-        
+        new Lightbox(e.currentTarget.getAttribute('href'), images)      
     }))
 }
 
@@ -44,6 +43,9 @@ loadImage (url) {
     const image = new Image();
     const container = this.element.querySelector('.lightbox__container')
     const loader = document.createElement('div')
+
+
+
     loader.classList.add('lightbox__loader')
     container.innerHTML = ''
     container.appendChild(loader)
@@ -68,8 +70,7 @@ onKeyUp (e) {
         this.prev(e)
     } else if (e.key === 'ArrowRight') {
         this.next(e)
-    }
-     
+    }    
 }
 
 
@@ -113,7 +114,6 @@ next (e)  {
     }
     this.loadImage(this.images [i - 1])
 }
-
 
 
 /**
