@@ -26,10 +26,13 @@ constructor(url, images) {
  */
 static init() {
     const links = Array.from(document.querySelectorAll('a[href$=".jpg"]'))
+    
     const images = links.map( link => link.getAttribute('href'))
     links.forEach(link => link.addEventListener('click', e => {
         e.preventDefault()
-        new Lightbox(e.currentTarget.getAttribute('href'), images)      
+        
+        new Lightbox(e.currentTarget.getAttribute('href'), images)    
+        console.log(links.includes(".jpg"))  
     }))
 }
 
@@ -134,6 +137,7 @@ buildDom(url) {
     dom.querySelector('.lightbox__prev').addEventListener('click',
     this.prev.bind(this))
     return dom
+
 }  
 
 }

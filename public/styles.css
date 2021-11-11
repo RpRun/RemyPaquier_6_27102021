@@ -262,7 +262,7 @@ h1 {
     color: #911C1C;
 }
 
-.modal-btn {
+.btn__ctc {
     height: 69px;
     width: 170px;
     background: #911C1C;
@@ -271,17 +271,22 @@ h1 {
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
+    cursor: pointer;
     justify-content: center;
     display: flex;
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    
+}
+
+.btn__ctc--header {
     position: absolute;
     top: 35px;
     margin-left: 20rem;
 }
 
-.fixed-contact {
+.btn__ctc--fixed {
     display: none;
 }
 
@@ -432,7 +437,7 @@ h1 {
 
 @media screen and (max-width: 1023px) {
 
-    .fixed-contact {
+    .btn__ctc--fixed {
         display: inline-block;
         position: fixed;
         bottom: 35px;
@@ -444,7 +449,7 @@ h1 {
         margin-bottom: 3rem;
     }
 
-    .header-contact {
+    .btn__ctc--header {
         display: none;
     }
 

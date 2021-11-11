@@ -39,7 +39,7 @@ export const createHeader = photographe => {
                         <ul role=navigation class="tags photographer__tags aria-label="tags filters"">
                         ${tagList}
                         </ul>                   
-                    <button class="header-contact modal-btn">Contactez-moi</button>
+                    <button class="btn__ctc--header btn__ctc">Contactez-moi</button>
                 </div>
 
             <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
