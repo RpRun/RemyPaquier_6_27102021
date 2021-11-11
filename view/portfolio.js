@@ -30,6 +30,12 @@ if(localstorage) {
             sectionPreview.innerHTML += preview           
         }
     })
+
+    //  Likes-count
+    
+
+
+
  
 }
  
@@ -64,7 +70,29 @@ fetch('../data.json')
                 
             }
         })
+
+      
      
     });
 
 }
+
+// / //  Likes-count
+// const mediaLikes = document.querySelector('.likes-count')
+// addEventListener.btonLikes
+// medias.forEach(media => {
+
+// })
+ 
+//  const likes = likes.media
+//     countLikes (likes) => {
+    
+//     const totalLikes = document.querySelector('.total-likes')
+//     const btonLikes = document.querySelector('.heart')
+    
+//     addEventListener.btonLikes('click', e => {
+
+// })
+
+// }
+
