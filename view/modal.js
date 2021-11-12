@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.close')
 const form = document.querySelector('.form')
 const inputFirstName = document.querySelector('#first')
 const inputLastName = document.querySelector('#last')
-const inputEmail = document.querySelector('#msg')
+const inputEmail = document.querySelector('#message')
 const thankClosing = document.querySelector(".contact__body--submitted")
 const CloseModal = document.querySelector(".close-modal")
 

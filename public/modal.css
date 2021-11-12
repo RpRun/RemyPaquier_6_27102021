@@ -1,6 +1,7 @@
 .contact-bground {
     display: none;
-    /*transition?*/
+    transition: opacity .3s;
+    animation: modalIn .5s;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -12,14 +13,89 @@
 }
 
 .contact-content {
-    margin: 20% auto;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
     max-width: 670px;
+    padding: 35px;
+    margin: 20% auto;
     /* animation-name: modalopen;
     animation-duration: var(--modal-duration); */
     background: #DB8876;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-    padding-top: 10px;
+}
+
+.contact-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.heading-modal {
+    text-align: left;
+    font-size: 64px;
+    line-height: 83px;
+    color: #000000;
+}
+
+.close {
+    cursor: pointer;
+    margin-top: 20git apx;
+}
+
+.modal-body {
+    width: 100%;
+}
+
+.modal__fields br {
+    display: none;
+}
+
+.modal__fields {
+    margin-bottom: 20px;
+}
+
+/* ******************************************************************** */
+.form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 36px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* ******************************************************************** */
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
