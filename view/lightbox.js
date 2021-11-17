@@ -62,6 +62,7 @@
             // sinon on fabrique une video
             const video = document.createElement('video')
             video.setAttribute('controls', true)
+            video.classList.add('lightboxVideo')
             container.removeChild(loader)
             container.appendChild(video)
             this.url = url
@@ -149,5 +150,6 @@
     
     }
     
-    
     Lightbox.init()
+
+    

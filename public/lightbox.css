@@ -68,7 +68,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /* margin: 0 50px; */
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -78,6 +77,10 @@
     height: 38px;
     opacity: .5;
     background: url(../public/icones/loader.svg) center center no-repeat;
+}
+
+.lightboxVideo {
+    max-width: 80vw;
 }
 
 @keyframes lightboxIn {
