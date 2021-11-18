@@ -30,9 +30,35 @@ if(localstorage) {
             sectionPreview.innerHTML += preview           
         }
     })
-
     //  Likes-count
+
+    const likeCounter = document.createElement("span");
     
+
+
+
+
+// **********************************************************************
+    //  Likes-count
+    // const sectionLikes = document.querySelector('.likes-count')
+    // const startLikes = data.likes
+    // const btonLikes = document.querySelector('.heart')
+
+    // btonLikes.forEach((btonLikes) => {
+    //     btonLikes.addEventListener('click', () => {
+
+    //         sectionLikes.innerHTML = `${1+startLikes}`;
+    //     })
+    // });
+// **********************************************************************
+    //  Likes-count
+    // const Startlikes = data.Startlikes
+    // let likesCount = ''
+    //     Startlikes.forEach(like => {
+    //         likesCount += `<div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
+    //         </div>`
+    //     })
+// **********************************************************************
 
 
 
@@ -43,23 +69,4 @@ else {
     document.location.href="../";   
 
 }
-
-// / //  Likes-count
-// const mediaLikes = document.querySelector('.likes-count')
-// addEventListener.btonLikes
-// medias.forEach(media => {
-
-// })
- 
-//  const likes = likes.media
-//     countLikes (likes) => {
-    
-//     const totalLikes = document.querySelector('.total-likes')
-//     const btonLikes = document.querySelector('.heart')
-    
-//     addEventListener.btonLikes('click', e => {
-
-// })
-
-// }
 
