@@ -15,7 +15,7 @@
         this.element = this.buildDom(url)
         this.images = images
         this.loadMedia(url)
-        this.onKeyUp =this.onKeyUp.bind(this)
+        this.onKeyUp = this.onKeyUp.bind(this)
         document.body.appendChild(this.element)
         document.addEventListener('keyup', this.onKeyUp)
     }
@@ -62,7 +62,7 @@
             // sinon on fabrique une video
             const video = document.createElement('video')
             video.setAttribute('controls', true)
-            video.classList.add('lightboxVideo')
+            video.classList.add('lightbox__video')
             container.removeChild(loader)
             container.appendChild(video)
             this.url = url

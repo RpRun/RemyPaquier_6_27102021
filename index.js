@@ -27,9 +27,7 @@ if (localstorage) {
             }
         })
 }
-// const tagList = document.querySelectorAll('.tags')
-/*tagList.querySelectorAll is not a function
-    at index.js:30*/
+
 const cards = document.querySelectorAll('.photographers__cards')
 console.log(cards);
 
@@ -40,8 +38,8 @@ console.log(taggedLinks);
 const handleFilters = (event) => {
     event.preventDefault();
     for (let i=0;i<cards.length;i+=1) {
-        cards[i].style.display = "none";
-    }
+    cards[i].style.display = "none";
+}
     
 }
 

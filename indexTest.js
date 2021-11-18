@@ -14,3 +14,8 @@
     }
     
     taggedLinks.forEach((link) => link.addEventListener('click', handleFilters));
+
+    let tagList = ''
+photographe.tags.forEach(tag => {
+    tagList += `<li><a href="./view/portfolio.html">#${tag}</a></li>`
+});

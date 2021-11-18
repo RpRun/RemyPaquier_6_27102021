@@ -79,7 +79,7 @@
     background: url(../public/icones/loader.svg) center center no-repeat;
 }
 
-.lightboxVideo {
+.lightbox__video {
     max-width: 80vw;
 }
 
