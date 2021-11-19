@@ -117,7 +117,21 @@ export const tagsHandler = () => {
                 }
             }
 
-
+            // =======
+            // EXTRA
+            // ======
+            // Si un tag est déjà sélectionné
+            if (selectedTag !== null) {
+                // et si on re-click sur le même tag:
+                if (selectedTag.outerText.toLowerCase() == clickedTag.outerText.toLowerCase()) {
+                    // la class 'selectedTag' est retirée
+                    clickedTag.classList.remove('selectedTag');
+                    // et on affiche toutes les cards
+                    for (let i = 0; i < cards.length; i += 1) {
+                        cards[i].style.display = "block";
+                    }
+                }
+            }
         }
 
     headerTags.forEach((link) => link.addEventListener('click', (event) => { handleFilters(event) }));
