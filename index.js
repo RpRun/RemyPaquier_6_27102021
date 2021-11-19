@@ -1,5 +1,5 @@
 import {
-    createCard
+    createCard, tagsHandler
 } from './utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -12,6 +12,9 @@ if (localstorage) {
         const card = createCard(photographers[i])
         sectionDom.innerHTML += card
     }
+
+    tagsHandler();
+
 } else {
     fetch('data.json')
         .then(data => data.json())
@@ -25,22 +28,8 @@ if (localstorage) {
                 const card = createCard(photographers[i])
                 sectionDom.innerHTML += card
             }
+
+            tagsHandler();
         })
 }
 
-const cards = document.querySelectorAll('.photographers__cards')
-console.log(cards);
-
-const taggedLinks = document.querySelectorAll('.tags li > a')
-console.log(taggedLinks);
-
-
-const handleFilters = (event) => {
-    event.preventDefault();
-    for (let i=0;i<cards.length;i+=1) {
-    cards[i].style.display = "none";
-}
-    
-}
-
-taggedLinks.forEach((link) => link.addEventListener('click', handleFilters));

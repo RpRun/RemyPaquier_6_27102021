@@ -112,6 +112,12 @@ h1 {
     transform: scale(1.03);
 }
 
+.tags .selectedTag {
+    border: 0.5px solid #C4C4C4;
+    background-color: #911C1C;
+    color: #fff;
+}
+
 
 /* section photographers */
 .photographers__list {
