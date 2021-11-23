@@ -20,29 +20,57 @@ const CloseModal = document.querySelector(".close-modal")
 const errorFirst = document.querySelector('.error-first')
 const errorLast = document.querySelector('.error-last')
 const errorEmail = document.querySelector('.error-eMail')
-const errorMsg = document.querySelector('.error-eMail')
+const errorMsg = document.querySelector('.error-msg')
+
+// questions about best pratices https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 
 // Tools
 const launchModal = () => {
-  pageWrapper.getAttribute('aria-hidden', 'true')
-  modal.getAttribute('aria-hidden', 'false')
+  pageWrapper.setAttribute('aria-hidden', 'true')
+  modal.setAttribute('aria-hidden', 'false')
   body.classList.add('no-scroll')
   ctcBg.style.display = "block";
+  closeBtn.focus();
+  // focus() is not a function
 }
 const closeModal = () => {
-  pageWrapper.getAttribute('aria-hidden', 'false')
-  modal.getAttribute('aria-hidden', 'true')
+  pageWrapper.setAttribute('aria-hidden', 'false')
+  modal.setAttribute('aria-hidden', 'true')
   body.classList.remove('no-scroll')
-
   ctcBg.style.display = "none";
+  ctcBtn.focus();
+  // giveFocus(ctcBtn);
+  //not sure about focus
 }
+
+// const giveFocus = (e) => {
+//   document.e.focus()
+// }
 
 
 // Form
 
 // Launch modal event
-
 ctcBtn.forEach((btn) => btn.addEventListener('click', launchModal));
 // add event click to launch closeModal()
 closeBtn.addEventListener('click', closeModal);
 CloseModal.addEventListener('click', closeModal);
+
+
+
+// Close modal when escape key is pressed
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+    
+  }
+});
+
+
+// $(document).on('keydown', e => {
+//   const keyCode = e.keyCode ? e.keyCode : e.which
+
+//   if (modal.setAttribute('aria-hidden') == 'false' && keyCode === 27) {
+//       CloseModal()
+//   }
+// })
