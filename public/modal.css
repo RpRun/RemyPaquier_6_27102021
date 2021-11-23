@@ -1,4 +1,8 @@
-.contact-bground {
+.no-scroll {
+        overflow: hidden;
+     }
+
+.modal__bground {
     display: none;
     transition: opacity .3s;
     animation: modalIn .5s;
@@ -12,7 +16,7 @@
     background-color: rgba(26, 39, 156, 0.4);
 }
 
-.contact-content {
+.modal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +33,7 @@
     position: relative;
 }
 
-.contact-content header {
+.modal header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -48,15 +52,15 @@
     margin-top: 20px;
 }
 
-.modal-body {
+.modal__form {
     width: 100%;
 }
 
-.modal__fields br {
+.modal__form--fields br {
     display: none;
 }
 
-.modal__fields {
+.modal__form--fields {
     margin-bottom: 20px;
 }
 
@@ -89,9 +93,9 @@ form input {
 
 
 @media screen and (max-width: 768px){
-    
-    .contact-content {
-        width: 65%;
+
+    .modal {
+    width: 65%;
 }
 .heading-modal {
     font-size: 3rem;

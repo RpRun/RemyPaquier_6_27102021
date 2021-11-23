@@ -16,17 +16,14 @@
     <script type="module" src="./portfolio.js"></script>
     <script type="module" defer src="./lightbox.js"></script>
     <script type="module" defer src="./modal.js"></script>
-
-    
 </head>
 
 <body>
-    <div class="photographer-page-wrapper">
+    <div class="photographer-page-wrapper" aria-hidden="false">
         <header class="header__portfolio">
             <a class="home-page-link" href="../index.html">
                 <img class="logo" src="../public/icones/logo.png" alt="Fisheye Home page"></a>
             <div class="header__portfolio--wrapper">
-                
             </div>
             <div class="dropdown-wrapper">
                 <span>Trier par </span>
@@ -46,65 +43,64 @@
             </div>
         </header>
         <main>
-            
-            
             <section class="preview">
-                <ul class="preview__list">
-                    
-                </ul>
+                <ul class="preview__list"></ul>
                 <div class="likes-price">
-                        <div class="total-likes">297 081<img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-                        <div class="cost-by-day">300€/jour</div>                   
+                    <div class="total-likes">297 081<img class="heart" src="../public/icones/like-filled.svg"
+                            alt="coeur"></div>
+                    <div class="cost-by-day">300€/jour</div>
                 </div>
-
             </section>
             <button class="btn__ctc btn__ctc--fixed">Contactez-moi</button>
         </main>
     </div>
-    <div class="contact-bground">
-                
-        <div class="contact-content">
-            <header> <h2 class="heading-modal">Contactez-moi<br>Mimi Keel</h2>
-                <!--H1 or H2???-->
-                <img class="close" aria-label="Fermer" src="../public/icones/close.svg"></header>
-           
-            <div class="modal-body">
+    <div class="modal__bground">
+        <!-- modal__bground have to be aria hidden? should i only use photographer-page-wrapper?-->
+        <div class="modal" aria-hidden="true" role="dialog" aria-describedby="Contactez-moi Mimi Keel">
+            <!-- is aria-describedby correct? -->
+            <!-- aria-modal? -->
+            <header>
+                <h2 class="heading-modal">Contactez-moi<br>Mimi Keel</h2>
+                <img class="close" alt="croix" aria-label="Fermer" src="../public/icones/close.svg">
+            </header>
+
+            <div class="modal__form">
                 <form action="post" class="form">
-                    <div class="modal__fields">
+                    <div class="modal__form--fields">
                         <label for="first">Prénom</label>
                         <br>
                         <input type="text" class="text-control" id="first" name="first" minlength="2">
                         <!--check name-->
                         <br>
                     </div>
-                    <div class="error-modal__fields error-first"></div>
+                    <div class="error-modal__form--fields error-first"></div>
 
-                    <div class="modal__fields">
+                    <div class="modal__form--fields">
                         <label for="last">Nom</label>
                         <br>
                         <input type="text" class="text-control" id="last" name="last" minlength="2">
                         <!--check name-->
                         <br>
                     </div>
-                    <div class="error-modal__fields error-last"></div>
+                    <div class="error-modal__form--fields error-last"></div>
 
-                    <div class="modal__fields">
+                    <div class="modal__form--fields">
                         <label for="email">Email</label>
                         <br>
                         <input type="email" class="text-control" id="email" name="email" minlength="2">
                         <!--check email-->
                         <br>
                     </div>
-                    <div class="error-modal__fields error-eMail"></div>
+                    <div class="error-modal__form--fields error-eMail"></div>
 
-                    <div class="modal__fields">
+                    <div class="modal__form--fields">
                         <label for="message">Votre message</label>
                         <br>
                         <input type="text" class="text-control" id="message" name="message" minlength="20">
                         <!--check message-->
                         <br>
                     </div>
-                    <div class="error-modal__fields"></div>
+                    <div class="error-modal__form--fields"></div>
 
                 </form>
                 <button class="btn__ctc btn__ctc--send">Envoyer</button>

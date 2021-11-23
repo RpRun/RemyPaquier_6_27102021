@@ -1,5 +1,11 @@
-//  Dom Elements
-const ctcBg = document.querySelector('.contact-bground')
+// Global DOM var
+const body = document.querySelector('body')
+const pageWrapper = document.querySelector('.photographer-page-wrapper')
+const modal = document.querySelector('.modal')
+
+
+//  DOM Modal Elements
+const ctcBg = document.querySelector('.modal__bground')
 const ctcBtn = document.querySelectorAll('.btn__ctc')
 const closeBtn = document.querySelector('.close')
 const form = document.querySelector('.form')
@@ -10,7 +16,7 @@ const thankClosing = document.querySelector(".contact__body--submitted")
 const CloseModal = document.querySelector(".close-modal")
 
 
-//  Dom Elements Errors
+//  DOM Modal Elements Errors
 const errorFirst = document.querySelector('.error-first')
 const errorLast = document.querySelector('.error-last')
 const errorEmail = document.querySelector('.error-eMail')
@@ -18,11 +24,18 @@ const errorMsg = document.querySelector('.error-eMail')
 
 // Tools
 const launchModal = () => {
-    ctcBg.style.display = "block";
+  pageWrapper.getAttribute('aria-hidden', 'true')
+  modal.getAttribute('aria-hidden', 'false')
+  body.classList.add('no-scroll')
+  ctcBg.style.display = "block";
 }
 const closeModal = () => {
-    ctcBg.style.display = "none";
-  }
+  pageWrapper.getAttribute('aria-hidden', 'false')
+  modal.getAttribute('aria-hidden', 'true')
+  body.classList.remove('no-scroll')
+
+  ctcBg.style.display = "none";
+}
 
 
 // Form
