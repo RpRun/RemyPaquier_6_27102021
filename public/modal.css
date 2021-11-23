@@ -38,14 +38,14 @@
 
 .heading-modal {
     text-align: left;
-    font-size: 64px;
-    line-height: 83px;
+    font-size: 4rem;
+    line-height: 5rem;
     color: #000000;
 }
 
 .close {
     cursor: pointer;
-    margin-top: 20git apx;
+    margin-top: 20px;
 }
 
 .modal-body {
@@ -88,6 +88,15 @@ form input {
 }
 
 
+@media screen and (max-width: 768px){
+    
+    .contact-content {
+        width: 65%;
+}
+.heading-modal {
+    font-size: 3rem;
+    line-height: 3rem;
+}
 /* ******************************************************************** */
 
 @keyframes modalIn {
