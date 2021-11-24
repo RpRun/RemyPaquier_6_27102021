@@ -55,7 +55,8 @@ export const createPreview = media => {
     src="../public/Photos/medias/${mediapreview}"></a>
 <div class="thumbnails__infos">
 <h2 class="thumbnails__heading">${media.title}</h2>
-<div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
+<div class="likes-count">${media.likes} <i aria-hidden="true" class="far fa-heart heart" title="Je n'aime pas"></i>
+<span class="sr-only">Je n'aime pas</span></div>
 </div>
 </li>`
 
@@ -141,22 +142,43 @@ export const tagsHandler = () => {
 }
 
 export const likesCountHandler = () => {
-
-    //  Likes-count
-    const sectionLikes = document.querySelector('.likes-count')
+    const sectionLikes = document.querySelectorAll('.likes-count')
     const btonLikes = document.querySelector('.heart')
 
     const handleLikes = (event) => {
         event.preventDefault();
 
+        // let totalLikes = document.querySelector('.total-likes__amount')
+        let totalLikes = []
+        const totalLikes = document.querySelector('.total-likes__amount')
+        const likedHeart = document.querySelector('.fas fa-heart')
+        const clickedHeart = event.target
 
+        // Pour chaque média, pour chaque "sectionLikes", on compte tous les
+        //coeurs clikés (medias likés)
+        for (let i = 0; i < sectionLikes.length; i += 1) {
+            sectionLikes[i].pushes.totalLikes
+        }
 
+        // 2 - On vérifie si l'image est déjà likée
+        // Si oui (média déjà liké)
+        if (likedHeart !== null) {
+            // On le retire
+            likedHeart.classList.remove('.fas fa-heart')
+        }
 
+        // 3 - Au click sur le coeur, on rajoute la class:
+        clickedHeart.classList.add('.fas fa-heart')
 
+        // 3 Pour chaque media et chaque sectionLikes, on met à jour le nombre de likes
+        for (let i = 0; i < sectionLikes.length; i += 1) {
+            sectionLikes[i].innerHTML
+        }
+
+    }
 
     btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
         handleLikes(event)
     }));
 
-}
 }
