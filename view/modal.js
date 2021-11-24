@@ -11,7 +11,8 @@ const closeBtn = document.querySelector('.close')
 const form = document.querySelector('.form')
 const inputFirstName = document.querySelector('#first')
 const inputLastName = document.querySelector('#last')
-const inputEmail = document.querySelector('#message')
+const inputEmail = document.querySelector('#email')
+const inputMessage = document.querySelector('#message')
 const thankClosing = document.querySelector(".contact__body--submitted")
 const CloseModal = document.querySelector(".close-modal")
 
@@ -74,3 +75,27 @@ document.addEventListener('keydown', function(e) {
 //       CloseModal()
 //   }
 // })
+
+
+/* **************************************************************************************** */
+
+
+// PARTIE FORMULAIRE
+
+
+// AU Moment du submit
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  console.log('Prénom:', inputFirstName.value);
+  console.log('Nom:', inputLastName.value);
+  console.log('Email:', inputEmail.value);
+  console.log('Message:', inputMessage.value);
+
+  if (inputFirstName.value.length < 2) {
+    console.log('PAS BOOOOON^^');
+  }
+  else {
+    console.log('BOOOOON^^');
+  }
+})

@@ -149,7 +149,7 @@ export const likesCountHandler = () => {
         event.preventDefault();
 
         // let totalLikes = document.querySelector('.total-likes__amount')
-        let totalLikes = []
+        const totalLikes = []
         const totalLikesAmount = document.querySelector('.total-likes__amount')
         const likedHeart = document.querySelector('.fas fa-heart')
         const clickedHeart = event.target
@@ -158,6 +158,7 @@ export const likesCountHandler = () => {
         //coeurs clikés (medias likés)
         for (let i = 0; i < sectionLikes.length; i += 1) {
             sectionLikes[i].pushes.totalLikes
+            innerHTML.totalLikesAmount.totalLikes
         }
 
         // 2 - On vérifie si l'image est déjà likée
