@@ -150,7 +150,7 @@ export const likesCountHandler = () => {
 
         // let totalLikes = document.querySelector('.total-likes__amount')
         let totalLikes = []
-        const totalLikes = document.querySelector('.total-likes__amount')
+        const totalLikesAmount = document.querySelector('.total-likes__amount')
         const likedHeart = document.querySelector('.fas fa-heart')
         const clickedHeart = event.target
 
