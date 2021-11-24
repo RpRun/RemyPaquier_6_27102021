@@ -25,13 +25,19 @@ const errorMsg = document.querySelector('.error-msg')
 
 // questions about best pratices https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 
+// function giveFocus(e)
+// {
+// document.querySelector(${e}).focus();
+// }
+
 // Tools
 const launchModal = () => {
   pageWrapper.setAttribute('aria-hidden', 'true')
   modal.setAttribute('aria-hidden', 'false')
   body.classList.add('no-scroll')
   ctcBg.style.display = "block";
-  closeBtn.focus();
+  // giveFocus(closeBtn);
+  document.querySelector('.close').focus();
   // focus() is not a function
 }
 const closeModal = () => {
@@ -39,7 +45,8 @@ const closeModal = () => {
   modal.setAttribute('aria-hidden', 'true')
   body.classList.remove('no-scroll')
   ctcBg.style.display = "none";
-  ctcBtn.focus();
+  // giveFocus(ctcBtn);
+  document.querySelectorAll('.btn__ctc')
   // giveFocus(ctcBtn);
   //not sure about focus
 }
@@ -48,8 +55,6 @@ const closeModal = () => {
 //   document.e.focus()
 // }
 
-
-// Form
 
 // Launch modal event
 ctcBtn.forEach((btn) => btn.addEventListener('click', launchModal));
@@ -80,7 +85,7 @@ document.addEventListener('keydown', function(e) {
 /* **************************************************************************************** */
 
 
-// PARTIE FORMULAIRE
+// Form
 
 
 // AU Moment du submit
