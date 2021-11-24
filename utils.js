@@ -78,62 +78,85 @@ export const createPreview = media => {
 
 
 export const tagsHandler = () => {
-        const cards = document.querySelectorAll('.photographers__cards')
-        const headerTags = document.querySelectorAll('.main-nav .tags li a')
+    const cards = document.querySelectorAll('.photographers__cards')
+    const headerTags = document.querySelectorAll('.main-nav .tags li a')
 
-        const handleFilters = (event) => {
-            event.preventDefault();
+    const handleFilters = (event) => {
+        event.preventDefault();
 
-            const selectedTag = document.querySelector('.selectedTag')
-            const clickedTag = event.target
+        const selectedTag = document.querySelector('.selectedTag')
+        const clickedTag = event.target
 
-            // 1 - On enleve toutes les cards du dom
-            for (let i = 0; i < cards.length; i += 1) {
-                cards[i].style.display = "none";
-            }
+        // 1 - On enleve toutes les cards du dom
+        for (let i = 0; i < cards.length; i += 1) {
+            cards[i].style.display = "none";
+        }
 
-            // 2 - On vérifie si il n'y a pas déjà un 'selectedTag' dans la nav
-            // Si oui (déjà un tag de cliqué):
-            if (selectedTag !== null) {
-                // On le retire
-                selectedTag.classList.remove('selectedTag')
-            }
-            // 3 - Au click sur le tag, on rajoute la class:
-            clickedTag.classList.add('selectedTag')
+        // 2 - On vérifie si il n'y a pas déjà un 'selectedTag' dans la nav
+        // Si oui (déjà un tag de cliqué):
+        if (selectedTag !== null) {
+            // On le retire
+            selectedTag.classList.remove('selectedTag')
+        }
+        // 3 - Au click sur le tag, on rajoute la class:
+        clickedTag.classList.add('selectedTag')
 
-            // 4 - On affiche que les cards avec le meme tag que le tag cliqué
+        // 4 - On affiche que les cards avec le meme tag que le tag cliqué
 
-            // Pour chaque cards
-            for (let i = 0; i < cards.length; i += 1) {
-                const cardTags = cards[i].querySelectorAll('.tags a')
+        // Pour chaque cards
+        for (let i = 0; i < cards.length; i += 1) {
+            const cardTags = cards[i].querySelectorAll('.tags a')
 
-                // On recherche dans ses tags si clickedTag est présent
-                for (let j = 0; j < cardTags.length; j++) {
-                    const tags = cardTags[j].outerText;
-                    // Si oui, on affiche les cards
-                    if (clickedTag.outerText.toLowerCase() == tags.toLowerCase()) {
-                        cards[i].style.display = "block";
-                    }
-                }
-            }
-
-            // =======
-            // EXTRA
-            // ======
-            // Si un tag est déjà sélectionné
-            if (selectedTag !== null) {
-                // et si on re-click sur le même tag:
-                if (selectedTag.outerText.toLowerCase() == clickedTag.outerText.toLowerCase()) {
-                    // la class 'selectedTag' est retirée
-                    clickedTag.classList.remove('selectedTag');
-                    // et on affiche toutes les cards
-                    for (let i = 0; i < cards.length; i += 1) {
-                        cards[i].style.display = "block";
-                    }
+            // On recherche dans ses tags si clickedTag est présent
+            for (let j = 0; j < cardTags.length; j++) {
+                const tags = cardTags[j].outerText;
+                // Si oui, on affiche les cards
+                if (clickedTag.outerText.toLowerCase() == tags.toLowerCase()) {
+                    cards[i].style.display = "block";
                 }
             }
         }
 
-    headerTags.forEach((link) => link.addEventListener('click', (event) => { handleFilters(event) }));
-                
+        // =======
+        // EXTRA
+        // ======
+        // Si un tag est déjà sélectionné
+        if (selectedTag !== null) {
+            // et si on re-click sur le même tag:
+            if (selectedTag.outerText.toLowerCase() == clickedTag.outerText.toLowerCase()) {
+                // la class 'selectedTag' est retirée
+                clickedTag.classList.remove('selectedTag');
+                // et on affiche toutes les cards
+                for (let i = 0; i < cards.length; i += 1) {
+                    cards[i].style.display = "block";
+                }
+            }
+        }
+    }
+
+    headerTags.forEach((link) => link.addEventListener('click', (event) => {
+        handleFilters(event)
+    }));
+
+}
+
+export const likesCountHandler = () => {
+
+    //  Likes-count
+    const sectionLikes = document.querySelector('.likes-count')
+    const btonLikes = document.querySelector('.heart')
+
+    const handleLikes = (event) => {
+        event.preventDefault();
+
+
+
+
+
+
+    btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
+        handleLikes(event)
+    }));
+
+}
 }

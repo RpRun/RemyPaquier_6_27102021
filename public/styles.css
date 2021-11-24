@@ -370,8 +370,11 @@ h1 {
     height: 18px;
     width: 17px;
     color: #911C1C;
-    background: #FFFFFF;
     cursor: pointer;
+}
+
+.likes-price .heart {
+    color: #000000;
 }
 
 /*
@@ -382,9 +385,10 @@ h1 {
 
 .likes-price {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     background: #DB8876;
     border-radius: 5px;
-    justify-content: space-between;
     width: 22rem;
     padding: 1rem;
     position: fixed;

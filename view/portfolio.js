@@ -1,6 +1,6 @@
 import {
     createHeader,
-    createPreview
+    createPreview,likesCountHandler
 } from '../utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -31,8 +31,7 @@ if(localstorage) {
         }
     })
     //  Likes-count
-
-    const likeCounter = document.createElement("span");
+    likesCountHandler ();
     
 
 

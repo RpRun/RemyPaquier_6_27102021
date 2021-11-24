@@ -47,12 +47,12 @@
     line-height: 5rem;
     color: #000000;
 }
-
+/*need position absolute*/
 .close {
     cursor: pointer;
     margin-top: 20px;
 }
-
+/*need position absolute*/
 .modal__form {
     width: 100%;
 }
