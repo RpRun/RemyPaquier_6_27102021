@@ -1,6 +1,6 @@
 import {
     createHeader,
-    createPreview,likesCountHandler
+    createPreview,createLikeSection
 } from '../utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -31,9 +31,20 @@ if(localstorage) {
         }
     })
     //  Likes-count
-    likesCountHandler();
-    
+    createLikeSection();
 
+// ***************************************************
+    // const likeSection = document.querySelector('.thumbnails')
+    // const likesData = data.likes
+
+    // medias.forEach(media => {
+    //     if (media.likes )
+        
+
+        
+        // const thumbnailsInfos = createLikeSection();
+        // likeSection.innerHTML += thumbnailsInfos;
+        
 // **********************************************************************
     //  Likes-count
     // const sectionLikes = document.querySelector('.likes-count')
@@ -55,7 +66,6 @@ if(localstorage) {
     //         </div>`
     //     })
 // **********************************************************************
-
  
 }
  // redirige vers index
