@@ -75,6 +75,7 @@ export const createPreview = media => {
         return preview__list
 
     }
+    
 }
 
 
@@ -142,42 +143,18 @@ export const tagsHandler = () => {
 }
 
 export const likesCountHandler = () => {
-    const sectionLikes = document.querySelectorAll('.likes-count')
-    const btonLikes = document.querySelector('.heart')
+    
+    let totaLikes = []
+    
+    const totalLikeSection = document.querySelector('.total-likes__amount')
+    const LikeSection = document.querySelectorAll('.likes-count')
 
     const handleLikes = (event) => {
         event.preventDefault();
 
-        // let totalLikes = document.querySelector('.total-likes__amount')
-        const totalLikes = []
-        const totalLikesAmount = document.querySelector('.total-likes__amount')
-        const likedHeart = document.querySelector('.fas fa-heart')
+        const likedMedia = document.querySelector('.fas')
         const clickedHeart = event.target
-
-        // Pour chaque média, pour chaque "sectionLikes", on compte tous les
-        //coeurs clikés (medias likés)
-        for (let i = 0; i < sectionLikes.length; i += 1) {
-            sectionLikes[i].pushes.totalLikes
-            innerHTML.totalLikesAmount.totalLikes
-        }
-
-        // 2 - On vérifie si l'image est déjà likée
-        // Si oui (média déjà liké)
-        if (likedHeart !== null) {
-            // On le retire
-            likedHeart.classList.remove('.fas fa-heart')
-        }
-
-        // 3 - Au click sur le coeur, on rajoute la class:
-        clickedHeart.classList.add('.fas fa-heart')
-
-        // 3 Pour chaque media et chaque sectionLikes, on met à jour le nombre de likes
-        for (let i = 0; i < sectionLikes.length; i += 1) {
-            sectionLikes[i].innerHTML
-        }
-
     }
-
     btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
         handleLikes(event)
     }));
