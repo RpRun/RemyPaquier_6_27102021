@@ -54,8 +54,8 @@ export const createPreview = media => {
         src="../public/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count">${media.likes} <i aria-hidden="true" class="far fa-heart heart" title="Je n'aime pas"></i>
-                <span class="sr-only">Je n'aime pas</span></div>
+             <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>
+                
         </div>
         </li>`
 
@@ -67,8 +67,8 @@ export const createPreview = media => {
         <a href="../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count">${media.likes} <i aria-hidden="true" class="far fa-heart heart" title="Je n'aime pas"></i>
-                 <span class="sr-only">Je n'aime pas</span></div>
+                 <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>
+                 
         </div>
         </li>`
 
@@ -142,97 +142,27 @@ export const tagsHandler = () => {
 
 }
 
-export const createLikeSection = () => {
-    const likeSection = document.querySelectorAll('.likes-count')
-    const btonLikes = document.querySelector('.heart')
-    const handleLikes = (event) => {
-        event.preventDefault();
 
-        const mediaLiked = document.querySelector('.far')
-        const clickedHeart = event.target
-
-        // 1 - on liste toutes les section-likes du dom et on les enleve
-        // A transformer en for each si ça fonctionne
-        for (let i = 0; i < likeSection.length; i += 1) {
-            likeSection[i].style.display = "none";
-        }
-
-        // 2 - On vérifie si il n'y a pas déjà un '.far' dans la section like
-        // Si oui (déjà un coeur de cliqué):
-        if (mediaLiked !== null) {
-            // On le retire
-            selectedTag.classList.remove('.far')
-        }
-
-        // 3 - Au click sur le coeur, on rajoute la class:
-        clickedHeart.classList.add('.far')
-
-
-
-        // if (mediaLiked == null) {
-        //     const likeSection = `<div class="thumbnails__infos">
-        //         <h2 class="thumbnails__heading">${media.title}</h2>
-        //         <div class="likes-count">${media.likes} <i aria-hidden="true" class="far fa-heart heart" title="Je n'aime pas"></i>
-        //         <span class="sr-only">Je n'aime pas</span></div>
-        //         </div>`
-
-        //     return likeSection
-        // }
-        // else {
-        //     const likeSection = `<div class="thumbnails__infos">
-        //         <h2 class="thumbnails__heading">${media.title}</h2>
-        //         <div class="likes-count">${media.likes} <i aria-hidden="true" class="fas fa-heart heart" title="J'aime"></i>
-        //         <span class="sr-only">J'aime</span></div>
-        //         </div>`
-
-        //     return likeSection
-        // }
-
-    }
-
-    btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
-        handleLikes(event)
-    }));
+export const addListenerOnHearts = () => {
+    const hearts = document.querySelectorAll('.heart')
+    hearts.forEach(heart => {
+        heart.addEventListener('click', (event) => {
+            onClickLike(event)
+        })
+    });
 }
-// const totalLikeSection = document.querySelector('.total-likes__amount')
-// const LikeSection = document.querySelectorAll('.likes-count')
 
-// const handleLikes = (event) => {
-//     event.preventDefault();
+const onClickLike = (event) => {
+    const heart = event.target;
+    const likesCount = heart.parentNode
+    const total = likesCount.querySelector('.total')
+    let totalCount
+    if (heart.classList.contains('fas')) {
+        totalCount = parseInt(total.innerHTML, 10) - 1
+    } else {
+        totalCount = parseInt(total.innerHTML, 10) + 1
+    }
+    heart.classList.toggle('fas')
 
-//     const likedMedia = document.querySelector('.fas')
-//     const clickedHeart = event.target
-
-
-
-
-// }
-// btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
-//     handleLikes(event)
-// }));
-
-
-
-
-// export const likesCountHandler = () => {
-
-//     let totaLikes = []
-//     const mediaCurrentLikes = 
-//     const totalLikeSection = document.querySelector('.total-likes__amount')
-//     const LikeSection = document.querySelectorAll('.likes-count')
-
-//     const handleLikes = (event) => {
-//         event.preventDefault();
-
-//         const likedMedia = document.querySelector('.fas')
-//         const clickedHeart = event.target
-
-
-
-
-//     }
-//     btonLikes.forEach((btn) => btn.addEventListener('click', (event) => {
-//         handleLikes(event)
-//     }));
-
-// }
+    total.innerHTML = totalCount
+}

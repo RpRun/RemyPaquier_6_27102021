@@ -1,6 +1,6 @@
 import {
     createHeader,
-    createPreview,createLikeSection
+    createPreview,addListenerOnHearts
 } from '../utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -30,43 +30,8 @@ if(localstorage) {
             sectionPreview.innerHTML += preview           
         }
     })
-    //  Likes-count
-    createLikeSection();
-
-// ***************************************************
-    // const likeSection = document.querySelector('.thumbnails')
-    // const likesData = data.likes
-
-    // medias.forEach(media => {
-    //     if (media.likes )
-        
-
-        
-        // const thumbnailsInfos = createLikeSection();
-        // likeSection.innerHTML += thumbnailsInfos;
-        
-// **********************************************************************
-    //  Likes-count
-    // const sectionLikes = document.querySelector('.likes-count')
-    // const startLikes = data.likes
-    // const btonLikes = document.querySelector('.heart')
-
-    // btonLikes.forEach((btonLikes) => {
-    //     btonLikes.addEventListener('click', () => {
-
-    //         sectionLikes.innerHTML = `${1+startLikes}`;
-    //     })
-    // });
-// **********************************************************************
-    //  Likes-count
-    // const Startlikes = data.Startlikes
-    // let likesCount = ''
-    //     Startlikes.forEach(like => {
-    //         likesCount += `<div class="likes-count">${media.likes} <img class="heart" src="../public/icones/like-filled.svg" alt="coeur"></div>
-    //         </div>`
-    //     })
-// **********************************************************************
- 
+  
+addListenerOnHearts();
 }
  // redirige vers index
 else {
