@@ -39,9 +39,9 @@ export const createHeader = photographe => {
                         ${tagList}
                         </ul>                   
                     <button class="btn__ctc--header btn__ctc">Contactez-moi</button>
-                </div>
-            <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
-                alt="portrait du photographe">`
+                    </div>
+                    <img class="photographers__portrait" src="../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
+                     alt="portrait du photographe">`
 
     return header
 
@@ -50,12 +50,11 @@ export const createHeader = photographe => {
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
     if (mediapreview == media.image) {
-        const preview__list = `<li class="thumbnails"><a href="../public/Photos/medias/${mediapreview}"><img class="thumbnails__img"
+        const preview__list = `<li class="thumbnails"><a href="../public/Photos/medias/${mediapreview}"><img class="thumbnails__medias"
         src="../public/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>
-                
+             <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
         </div>
         </li>`
 
@@ -64,11 +63,10 @@ export const createPreview = media => {
 
     if (mediapreview == media.video) {
         const preview__list = `<li class="thumbnails">
-        <a href="../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__img" src="../public/Photos/medias/${mediapreview}"></video></a>
+        <a href="../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../public/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>
-                 
+                 <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
         </div>
         </li>`
 
