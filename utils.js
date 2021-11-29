@@ -143,9 +143,30 @@ export const tagsHandler = () => {
 
 export const addListenerOnHearts = () => {
     const hearts = document.querySelectorAll('.heart')
+    // const allLikesCount = hearts.parentNode
+    const allLikes = document.querySelectorAll('.total')
+    const totalPhotographersLikes = document.querySelector('.total-likes__amount')
+
+    let sumAllLikes 
+
     hearts.forEach(heart => {
         heart.addEventListener('click', (event) => {
             onClickLike(event)
+
+            if (heart.classList.contains('fas')) {
+                
+                sumAllLikes = parseInt(allLikes.innerHTML, 10) - 1
+                console.log(allLikes)
+               
+            } else {
+                
+                sumAllLikes = parseInt(allLikes.innerHTML, 10) + 1  
+                console.log(allLikes)
+            }
+            
+            totalPhotographersLikes.innerHTML = sumAllLikes
+        
+
         })
     });
 }
@@ -154,13 +175,22 @@ const onClickLike = (event) => {
     const heart = event.target;
     const likesCount = heart.parentNode
     const total = likesCount.querySelector('.total')
+    
     let totalCount
+    
     if (heart.classList.contains('fas')) {
         totalCount = parseInt(total.innerHTML, 10) - 1
+       
+       
     } else {
-        totalCount = parseInt(total.innerHTML, 10) + 1
+        totalCount = parseInt(total.innerHTML, 10) + 1   
+        
     }
     heart.classList.toggle('fas')
 
+
     total.innerHTML = totalCount
+    
+
 }
+
