@@ -386,6 +386,8 @@ h1 {
 
 .likes-price .heart {
     color: #000000;
+    margin-right: auto;
+    margin-left: 1rem;
 }
 
 /*
