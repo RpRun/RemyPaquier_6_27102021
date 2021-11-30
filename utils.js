@@ -146,33 +146,63 @@ export const addListenerOnHearts = () => {
 
     hearts.forEach(heart => {
         heart.addEventListener('click', (event) => {
-            onClickLike(event)
-        
+            toggleLike(event.target)       
         })
     });
 }
 
-const onClickLike = (event) => {
-    const heart = event.target;
+const toggleLike = (heart) => {
     const likesCount = heart.parentNode
-    const total = likesCount.querySelector('.total')
+    let currentCount = parseInt(likesCount.getAttribute('data-like-count'))
+    // const total = likesCount.querySelector('.total')
+        if(heart.classList.contains('fas')) {
+            likesCount.setAttribute('data-like-count', currentCount += 1)
+        } else {
+            likesCount.setAttribute('data-like-count', currentCount -= 1)
+        }
 
-    const totalPhotographersLikes = document.querySelector('.total-likes__amount')
-    
-    let totalCount
-    
-    if (heart.classList.contains('fas')) {
-        totalCount = parseInt(total.innerHTML, 10) - 1
-        totalPhotographersLikes.textContent--;
-      
-    } else {
-        totalCount = parseInt(total.innerHTML, 10) + 1   
-        totalPhotographersLikes.textContent++;
-        
-    }
-    heart.classList.toggle('fas')
-
-    total.innerHTML = totalCount
-    
+        heart.classList.toggle('fas')
+        likesCount.querySelector('.total').innerHTML = likesCount.getAttribute('data-like-count')
+        updateTotalLikeCount()
 }
+
+export const updateTotalLikeCount = () => {
+    const totalPhotographersLikes = document.querySelector('.total-likes__amount')
+    totalPhotographersLikes.innerHTML = getTotalLikeCount()
+}
+
+const getTotalLikeCount = () => {
+    let total = 0
+    document.querySelectorAll('.likes-count').forEach(counter => {
+        total += parseInt(counter.getAttribute('data-like-count'))
+    })
+    return total
+}
+
+    
+
+
+
+//     const allLikes = likesCount.querySelectorAll('.total')
+   
+    
+//     let totalCount
+ 
+//     if (heart.classList.contains('fas')) {
+//         totalCount = parseInt(total.innerHTML, 10) - 1
+//         totalPhotographersLikes.textContent--;
+      
+//     } else {
+//         totalCount = parseInt(total.innerHTML, 10) + 1   
+//         totalPhotographersLikes.textContent++;
+        
+//     }
+//     heart.classList.toggle('fas')
+
+//     total.innerHTML = totalCount
+
+    
+//     let sumAllMediasTotalCount = parseInt(allLikes.innerHTML, 10)
+    
+
 

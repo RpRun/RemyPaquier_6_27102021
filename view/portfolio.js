@@ -1,6 +1,6 @@
 import {
     createHeader,
-    createPreview,addListenerOnHearts
+    createPreview,updateTotalLikeCount,addListenerOnHearts
 } from '../utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -30,7 +30,7 @@ if(localstorage) {
             sectionPreview.innerHTML += preview           
         }
     })
-  
+updateTotalLikeCount();
 addListenerOnHearts();
 }
  // redirige vers index
