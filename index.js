@@ -42,7 +42,7 @@ const scrollBtn = document.querySelector('.scroll-btn');
 // 2 - When the user scrolls down 80px from the top of the document, show the button
 function toggleScrollBtn() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollBtn.style.transform = "translateY(50px)";
+        scrollBtn.style.transform = "translateY(60px)";
     } else {
         scrollBtn.style.transform = "translateY(-40px)";        
     }
@@ -58,10 +58,7 @@ window.onscroll = function () {
 
 // Reset display of the button if clicked
 function resetScrollBtn() {
-    
     scrollBtn.style.transform = "translateY(-600px)";
-    
-    console.log('resetScrollBtn');
     
 }
 
