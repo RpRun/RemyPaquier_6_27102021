@@ -54,7 +54,7 @@ export const createPreview = media => {
         src="../public/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
+             <div class="likes-count" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
         </div>
         </li>`
 
@@ -66,7 +66,7 @@ export const createPreview = media => {
         <a href="../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../public/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
+                 <div class="likes-count" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
         </div>
         </li>`
 
@@ -146,24 +146,24 @@ export const addListenerOnHearts = () => {
 
     hearts.forEach(heart => {
         heart.addEventListener('click', (event) => {
-            toggleLike(event.target)       
+            toggleLike(event.target)
         })
     });
 }
 
 const toggleLike = (heart) => {
     const likesCount = heart.parentNode
-    let currentCount = parseInt(likesCount.getAttribute('data-like-count'))
+    let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
     // const total = likesCount.querySelector('.total')
-        if(heart.classList.contains('fas')) {
-            likesCount.setAttribute('data-like-count', currentCount += 1)
-        } else {
-            likesCount.setAttribute('data-like-count', currentCount -= 1)
-        }
+    if (heart.classList.contains('fas')) {
+        likesCount.setAttribute('data-like-count', currentCount -= 1)
+    } else {
+        likesCount.setAttribute('data-like-count', currentCount += 1)
+    }
 
-        heart.classList.toggle('fas')
-        likesCount.querySelector('.total').innerHTML = likesCount.getAttribute('data-like-count')
-        updateTotalLikeCount()
+    heart.classList.toggle('fas')
+    likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
+    updateTotalLikeCount()
 }
 
 export const updateTotalLikeCount = () => {
@@ -172,6 +172,7 @@ export const updateTotalLikeCount = () => {
 }
 
 const getTotalLikeCount = () => {
+
     let total = 0
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
@@ -179,30 +180,27 @@ const getTotalLikeCount = () => {
     return total
 }
 
-    
+
 
 
 
 //     const allLikes = likesCount.querySelectorAll('.total')
-   
-    
+
+
 //     let totalCount
- 
+
 //     if (heart.classList.contains('fas')) {
 //         totalCount = parseInt(total.innerHTML, 10) - 1
 //         totalPhotographersLikes.textContent--;
-      
+
 //     } else {
 //         totalCount = parseInt(total.innerHTML, 10) + 1   
 //         totalPhotographersLikes.textContent++;
-        
+
 //     }
 //     heart.classList.toggle('fas')
 
 //     total.innerHTML = totalCount
 
-    
+
 //     let sumAllMediasTotalCount = parseInt(allLikes.innerHTML, 10)
-    
-
-
