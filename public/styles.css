@@ -205,10 +205,6 @@ h1 {
 }
 
 .header__portfolio {
-    
-}
-
-.header__portfolio {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -410,16 +406,22 @@ h1 {
 }
 
 .scroll-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    position: fixed;
+    z-index: 99;
+    top: -40px;
+    left: -50%;
+    right: -50%;
+    transition: ease-in-out 300ms;
+    margin-left: auto;
+    margin-right: auto;
     width: 182px;
     height: 30px;
     background: #DB8876;
+    font-weight: bold;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
-    position: absolute;
-    top: -100px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -443,6 +445,10 @@ h1 {
 }
 
 @media screen and (max-width: 1023px) {
+
+    /* .scroll-btn {
+        display: none;
+    } */
 
     .btn__ctc--fixed {
         display: inline-block;

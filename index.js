@@ -1,5 +1,6 @@
 import {
-    createCard, tagsHandler
+    createCard,
+    tagsHandler
 } from './utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -33,3 +34,38 @@ if (localstorage) {
         })
 }
 
+
+//Scroll button handler
+// 1- Get the button:
+const scrollBtn = document.querySelector('.scroll-btn');
+
+// 2 - When the user scrolls down 80px from the top of the document, show the button
+function toggleScrollBtn() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.transform = "translateY(50px)";
+    } else {
+        scrollBtn.style.transform = "translateY(-40px)";        
+    }
+}
+
+window.onscroll = function () {
+    toggleScrollBtn()
+    
+    console.log('toggleScrollBtn');
+
+};
+
+
+// Reset display of the button if clicked
+function resetScrollBtn() {
+    
+    scrollBtn.style.transform = "translateY(-600px)";
+    
+    console.log('resetScrollBtn');
+    
+}
+
+scrollBtn.addEventListener('click', (event) => {
+    resetScrollBtn(event.target)
+    console.log('resetScrollBtn');
+})
