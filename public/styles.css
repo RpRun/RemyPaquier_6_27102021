@@ -55,7 +55,6 @@ a {
 .logo {
     color: #901C1C;
     width: 200px;
-    height: 50px;
     margin-right: 1rem;
 }
 
@@ -76,14 +75,12 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
+/* .tags li {
+    
+} */
 
-.tags li {
-    padding: 3px;
-}
-
-.tags a {
+.tags .photographers__tags, .tags a {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1rem;
@@ -93,6 +90,7 @@ h1 {
     border-radius: 11px;
     color: #911C1C;
     padding: 3px 5px;
+    margin: 2px;
     transition: 0.1s ease-in-out;
     display: block;
 }
@@ -196,8 +194,8 @@ h1 {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem; */
     width: 98vw;
     max-width: 1280px;
     position: relative;
@@ -470,10 +468,10 @@ h1 {
         bottom: 35px;
         margin-left: auto;
         margin-right: auto;
-        top: inherit;
+        /* top: inherit; */
         left: -50%;
         right: -50%;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .btn__ctc--header {
@@ -532,8 +530,13 @@ h1 {
 
     .index-main-title {
         margin-left: auto;
-        margin-right: auto;
+        font-size: 14px;
     }
+
+    .logo  {
+        width: 150px;
+    }
+
 
 /*******PORTFOLIO******************/
     .header__portfolio--wrapper {

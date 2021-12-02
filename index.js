@@ -90,6 +90,7 @@ document.addEventListener('scroll', (event) => {
 
 function hideScrollBtn () {
     scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
+    // scrollBtn.toggleAttribute
 }
 
 scrollBtn.addEventListener('click', (event) => {

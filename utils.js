@@ -1,7 +1,7 @@
 export const createCard = photographe => {
     let tagList = ''
     photographe.tags.forEach(tag => {
-        tagList += `<li><a href="./view/portfolio.html">#${tag}</a></li>`
+        tagList += `<li class= "photographers__tags">#${tag}</li>`
     });
 
     const card = `<li class="photographers__cards">
@@ -27,7 +27,7 @@ export const createCard = photographe => {
 export const createHeader = photographe => {
     let tagList = ''
     photographe.tags.forEach(tag => {
-        tagList += `<li><a href="">#${tag}</a></li>`
+        tagList += `<li class= "photographers__tags">#${tag}</li>`
 
     });
 
@@ -105,7 +105,7 @@ export const tagsHandler = () => {
 
         // Pour chaque cards
         for (let i = 0; i < cards.length; i += 1) {
-            const cardTags = cards[i].querySelectorAll('.tags a')
+            const cardTags = cards[i].querySelectorAll('.tags li')
 
             // On recherche dans ses tags si clickedTag est présent
             for (let j = 0; j < cardTags.length; j++) {
