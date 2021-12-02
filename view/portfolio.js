@@ -30,12 +30,12 @@ if(localstorage) {
             sectionPreview.innerHTML += preview           
         }
     })
+    
 updateTotalLikeCount();
 addListenerOnHearts();
 
-
-
 }
+
  // redirige vers index
 else {
     document.location.href="../";   
