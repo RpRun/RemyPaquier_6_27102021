@@ -429,9 +429,6 @@ h1 {
 
 .scroll-btn.scroll-visible {    
     position: fixed; 
-    z-index: 99;
-    left: -50%;
-    right: -50%;
     top: 5px;
 }
 

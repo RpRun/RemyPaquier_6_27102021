@@ -74,9 +74,8 @@ if (localstorage) {
  // 1- Get the button:
 const scrollBtn = document.querySelector('.scroll-btn');
 
-
 function toggleScrollBtn() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (window.scrollY) {
         scrollBtn.classList.replace('scroll-hidden', 'scroll-visible') 
     } else {
         hideScrollBtn();
