@@ -1,7 +1,7 @@
 import {
     createHeader,
     createPreview,addListenerOnHearts, updateTotalLikeCount
-} from '../utils.js'
+} from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
 
