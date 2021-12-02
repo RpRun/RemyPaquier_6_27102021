@@ -76,11 +76,13 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 /* .tags li {
     
 } */
 
-.tags .photographers__tags, .tags a {
+.tags .photographers__tags,
+.tags a {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1rem;
@@ -402,8 +404,8 @@ h1 {
     bottom: 0;
 }
 
-.scroll-btn  {
-    
+.scroll-btn {
+
     z-index: 99;
     left: -50%;
     right: -50%;
@@ -421,18 +423,21 @@ h1 {
 }
 
 .scroll-btn.scroll-hidden {
-    position:absolute; 
+    position: absolute;
     top: -100px;
 }
 
-.scroll-btn.scroll-visible {    
-    position: fixed; 
+.scroll-btn.scroll-visible {
+    position: fixed;
     top: 5px;
 }
 
-
-
-
+.scroll-btn a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
 
 @media screen and (max-width: 1280px) {
 
@@ -533,12 +538,12 @@ h1 {
         font-size: 14px;
     }
 
-    .logo  {
+    .logo {
         width: 150px;
     }
 
 
-/*******PORTFOLIO******************/
+    /*******PORTFOLIO******************/
     .header__portfolio--wrapper {
         flex-wrap: wrap-reverse;
     }
