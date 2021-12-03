@@ -209,7 +209,7 @@ const reorganizeMedias = (value, photographerPics) => {
     //     break;
 
     //     case 'title':
-    //         filteredMedia = // todo
+    //         filteredMedia = 
     //         // filter or sort
 
 
