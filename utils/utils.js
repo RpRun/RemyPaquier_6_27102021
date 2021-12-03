@@ -54,7 +54,7 @@ export const createPreview = media => {
         src="../../public/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
+             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
         </div>
         </li>`
 
@@ -65,7 +65,7 @@ export const createPreview = media => {
         const preview__list = `<li class="thumbnails"><a href="../../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../../public/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
+                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
         </div>
         </li>`
 
@@ -194,11 +194,34 @@ export const filterListener = (photographerPics) => {
 
 const reorganizeMedias = (value, photographerPics) => {
     const sectionPreview = document.querySelector('.preview-list')
-    sectionPreview.innerHTML = '';
+    // sectionPreview.innerHTML = '';
 
     let filteredMedia = []
 
     console.log(photographerPics);
+    console.log(value);
+
+    // switch (value) {
+    //     case 'popular':
+    //         filteredMedia = // todo
+    //         // filter or sort
+
+    //     break;
+
+    //     case 'title':
+    //         filteredMedia = // todo
+    //         // filter or sort
+
+
+    //     break;
+
+    //     default:
+    //         filteredMedia = // todo
+    //         // filter or sort
+
+    //     break;
+    
+    // }
 
 
     filteredMedia.forEach(media => {

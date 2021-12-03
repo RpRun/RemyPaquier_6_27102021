@@ -29,15 +29,9 @@
                 <span>Trier par </span>
                 <nav class="sortBy" aria-label="Trier par">
                     <ul id="menubar" role="menubar" aria-label="Trier par">
-                        <li><a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">
-                                Popularité</a>
-                        </li>
-                        <li><a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">
-                                Date</a>
-                        </li>
-                        <li><a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">
-                                Titre</a>
-                        </li>
+                        <li data-filter="popularité" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">Popularité</li>
+                        <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Date</li>
+                        <li data-filter="titre" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Titre</li>
                     </ul>
                 </nav>
             </div>
@@ -60,7 +54,7 @@
             <!-- aria-modal? -->
             <header>
                 <h2 class="heading-modal">Contactez-moi<br>Mimi Keel</h2>
-                <img class="close" alt="croix" aria-label="Fermer" src="../public/icones/close.svg">
+                <img class="close" alt="croix" aria-label="Fermer" src="../../public/icones/close.svg">
             </header>
 
             <div class="modal__form">
