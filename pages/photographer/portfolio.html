@@ -49,11 +49,10 @@
     </div>
     <div class="modal__bground">
         <!-- modal__bground have to be aria hidden? should i only use photographer-page-wrapper?-->
-        <div class="modal" aria-hidden="true" role="dialog" aria-describedby="Contactez-moi Mimi Keel">
-            <!-- is aria-describedby correct? -->
+        <aside class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
             <!-- aria-modal? -->
             <header>
-                <h2 class="heading-modal">Contactez-moi<br>Mimi Keel</h2>
+                <h2 id="modal-title" class="modal__heading">Contactez-moi<br>Mimi Keel</h2>
                 <img class="close" alt="croix" aria-label="Fermer" src="../../public/icones/close.svg">
             </header>
 
@@ -101,7 +100,7 @@
                     <button class="close-modal">Merci</button>
                 </div>
             </div>
-        </div>
+        </aside>
     </div>
 </body>
 

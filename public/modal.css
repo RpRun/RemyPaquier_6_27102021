@@ -41,7 +41,7 @@
     width: 100%;
 }
 
-.heading-modal {
+.modal__heading {
     text-align: left;
     font-size: 4rem;
     line-height: 5rem;
@@ -100,7 +100,7 @@ form input {
     .modal {
     width: 65%;
 }
-.heading-modal {
+.modal__heading {
     font-size: 3rem;
     line-height: 3rem;
 }

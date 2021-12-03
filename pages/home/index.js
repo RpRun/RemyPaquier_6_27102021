@@ -78,7 +78,7 @@ function toggleScrollBtn() {
     if (window.scrollY) {
         scrollBtn.classList.replace('scroll-hidden', 'scroll-visible') 
     } else {
-        hideScrollBtn();
+        scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
     }
       
 }
@@ -88,12 +88,12 @@ document.addEventListener('scroll', (event) => {
     console.log('toggleScrollBtn');
 })
 
-function hideScrollBtn () {
-    scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
-    // scrollBtn.toggleAttribute
-}
+// function hideScrollBtn () {
+//     scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
+//     // scrollBtn.toggleAttribute
+// }
 
-scrollBtn.addEventListener('click', (event) => {
-    hideScrollBtn(event.target)
-    console.log('hideScrollBtn');
-})
+// scrollBtn.addEventListener('click', (event) => {
+//     hideScrollBtn(event.target)
+//     console.log('hideScrollBtn');
+// })

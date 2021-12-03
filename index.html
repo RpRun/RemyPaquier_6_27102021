@@ -14,7 +14,10 @@
 <body>
     <div class="page-wrapper">
         <header class="header__index">
-            <button class="scroll-btn scroll-hidden"><a href="#index_main_content">Passez au contenu</a></button>
+            <button class="scroll-btn scroll-hidden" aria-controls="#index_main_content">
+                <!-- aria-controls="#index_main_content" -->
+                <a href="#index_main_content">Passez au contenu</a>
+            </button>
             <div class="banner">
                 <a href="#" ><img class="logo" src="./public/icones/logo.png" alt="Fisheye Home page"></a>
                 <nav class="main-nav">
