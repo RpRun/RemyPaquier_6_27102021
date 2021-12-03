@@ -17,7 +17,7 @@ if (localstorage) {
     tagsHandler();
 
 } else {
-    fetch('data.json')
+    fetch('../data/data.json')
         .then(data => data.json())
         .then(reponse => {
 

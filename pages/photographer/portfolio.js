@@ -1,6 +1,6 @@
 import {
     createHeader,
-    createPreview,addListenerOnHearts, updateTotalLikeCount
+    createPreview,addListenerOnHearts, updateTotalLikeCount, filterListener
 } from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -12,6 +12,7 @@ if(localstorage) {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const urlId = urlParams.get('photographerId')
+    let photographerPics = []
 
     // preview_list
     const sectionPreview = document.querySelector(`.preview__list`)
@@ -27,12 +28,14 @@ if(localstorage) {
     medias.forEach(media => {
         if (media.photographerId == urlId) {
             const preview = createPreview(media)
-            sectionPreview.innerHTML += preview           
+            sectionPreview.innerHTML += preview
+            photographerPics.push(media)           
         }
     })
     
 updateTotalLikeCount();
 addListenerOnHearts();
+filterListener(photographerPics);
 
 }
 

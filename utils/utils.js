@@ -179,27 +179,31 @@ const getTotalLikeCount = () => {
     return total
 }
 
+export const filterListener = (photographerPics) => {
+    const filters = document.querySelectorAll('li[data-filter]')
+
+    for (let i = 0; i < filters.length; i++) {
+        const filter = filters[i];
+
+        filter.addEventListener('click', () => {
+            const value = filter.getAttribute('data-filter')
+            reorganizeMedias(value, photographerPics)
+        })
+    }
+}
+
+const reorganizeMedias = (value, photographerPics) => {
+    const sectionPreview = document.querySelector('.preview-list')
+    sectionPreview.innerHTML = '';
+
+    let filteredMedia = []
+
+    console.log(photographerPics);
 
 
+    filteredMedia.forEach(media => {
+        const preview = createPreview(media)
+        sectionPreview.innerHTML += preview
+    });
 
-
-//     const allLikes = likesCount.querySelectorAll('.total')
-
-
-//     let totalCount
-
-//     if (heart.classList.contains('fas')) {
-//         totalCount = parseInt(total.innerHTML, 10) - 1
-//         totalPhotographersLikes.textContent--;
-
-//     } else {
-//         totalCount = parseInt(total.innerHTML, 10) + 1   
-//         totalPhotographersLikes.textContent++;
-
-//     }
-//     heart.classList.toggle('fas')
-
-//     total.innerHTML = totalCount
-
-
-//     let sumAllMediasTotalCount = parseInt(allLikes.innerHTML, 10)
+}
