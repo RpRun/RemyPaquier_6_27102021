@@ -76,7 +76,7 @@
     width: 38px;
     height: 38px;
     opacity: .5;
-    background: url(../assets/icones/loader.svg) center center no-repeat;
+    background: url(../public/icones/loader.svg) center center no-repeat;
 }
 
 .lightbox__video {
