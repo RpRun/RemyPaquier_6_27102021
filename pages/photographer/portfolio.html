@@ -6,9 +6,9 @@
     <title class="photographer-page">FishEye - Portfolio</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/reset.css">
     <link rel="stylesheet" href="../../public/styles.css">
     <link rel="stylesheet" href="../../public/lightbox.css">
@@ -23,17 +23,14 @@
         <header class="header__portfolio">
             <a class="home-page-link" href="../../index.html">
                 <img class="logo" src="../../public/icones/logo.png" alt="Fisheye Home page"></a>
-            <div class="header__portfolio--wrapper">
-            </div>
+            <div class="header__portfolio--wrapper"></div>
             <div class="dropdown-wrapper">
-                <span>Trier par </span>
-                <nav class="sortBy" aria-label="Trier par">
-                    <ul id="menubar" role="menubar" aria-label="Trier par">
-                        <li data-filter="popularité" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">Popularité</li>
-                        <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Date</li>
-                        <li data-filter="titre" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Titre</li>
-                    </ul>
-                </nav>
+                <label for="sortBy">Trier par: </label>
+                <select name="Order by" id="sortBy">
+                    <option selected data-filter="popularité" value="Popularité">Popularité</option>
+                    <option data-filter="date" value="date">Date</option>
+                    <option data-filter="titre" value="titre">Titre</option>
+                </select>
             </div>
         </header>
         <main>
