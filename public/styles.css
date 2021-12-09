@@ -7,8 +7,6 @@ body {
     text-align: center;
 }
 
-/* BODY OU HTML? */
-
 a {
     text-decoration: none;
 }
@@ -73,19 +71,15 @@ h1 {
 
 .tags {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+}
+
+.main-nav .tags {
     flex-wrap: wrap;
 }
 
-/* .tags li {
+ .photographers__tags, .tags a {
     
-} */
-
-.tags .photographers__tags,
-.tags a {
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1rem;
     text-align: center;
     border: 0.5px solid #C4C4C4;
     box-sizing: border-box;
@@ -95,6 +89,9 @@ h1 {
     margin: 2px;
     transition: 0.1s ease-in-out;
     display: block;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
 .tags a:hover {
@@ -137,11 +134,24 @@ h1 {
     width: 200px;
 }
 
-.photographers__name {
+.photographers__portrait--container {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.photographers__name  {
     color: #D3573C;
     font-weight: 400;
     white-space: nowrap;
 }
+
+h2.photographers__name {
+    font-size: 36px;
+    line-height: 47px;
+}
+
+
 
 /* paragraphs photographers__cards */
 .links__portfolio {
@@ -164,6 +174,9 @@ h1 {
     color: #901C1C;
 }
 
+.photographers__infos--portfolio p {
+    margin-bottom: 1rem;
+}
 .mojo {
     font-size: 10px;
     line-height: 13px;
@@ -196,8 +209,6 @@ h1 {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    /* padding-left: 0.5rem;
-    padding-right: 0.5rem; */
     width: 98vw;
     max-width: 1280px;
     position: relative;
@@ -214,9 +225,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin: 1rem auto;
+    padding: 2rem 1rem;
     background: #fafafa;
     border-radius: 5px;
 
@@ -232,12 +244,17 @@ h1 {
     position: relative;
 }
 
+h1.photographers__name  {
+    font-size: 64px;
+    line-height: 83px;
+}
+
 .photographers__infos--portfolio {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .photographers__infos--portfolio .localisation {
@@ -264,8 +281,15 @@ h1 {
 }
 
 .btn__ctc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    white-space: nowrap;
     height: 69px;
     width: 170px;
+    color: #FFFFFF;
     background: #911C1C;
     border: none;
     border-radius: 5px;
@@ -273,11 +297,6 @@ h1 {
     font-size: 20px;
     line-height: 26px;
     cursor: pointer;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
 }
 
 .btn__ctc--fixed {
@@ -462,13 +481,14 @@ h1 {
 
     .header__portfolio--wrapper {
         background: #FFFFFF;
+        padding: 0px;
     }
 
     .photographers__infos--portfolio {
         padding: 0;
     }
 
-    .photographers__infos--portfolio .photographers__portrait {
+     .photographers__portrait {
         background: #C4C4C4;
         box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
         height: 120px;
@@ -484,11 +504,11 @@ h1 {
         justify-content: center;
     }
 
-  /*
+    /*
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
-*/  
+*/
     .btn__ctc--header {
         display: none;
     }
@@ -507,12 +527,18 @@ h1 {
 
     .likes-price {
         right: -50rem;
-        overflow: hidden;       
+        overflow: hidden;
     }
+
     .dropdown-wrapper {
         position: absolute;
-        overflow: hidden; 
+        overflow: hidden;
         left: -20rem;
+    }
+
+    .photographers__name  {
+        font-size: 36px;
+        line-height: 47px;
     }
 
 }

@@ -40,9 +40,10 @@ export const createHeader = photographe => {
                         </ul>                   
                     </div>  
                     <button class="btn__ctc--header btn__ctc">Contactez-moi</button>
+                    <div class="photographers__portrait--container">
                     <img class="photographers__portrait" src="../../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
-                     alt="portrait du photographe">`
-
+                     alt="portrait du photographe">
+                     </div>`
     return header
 
 }
