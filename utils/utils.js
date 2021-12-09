@@ -41,7 +41,7 @@ export const createHeader = photographe => {
                     </div>  
                     <button class="btn__ctc--header btn__ctc">Contactez-moi</button>
                     <div class="photographers__portrait--container">
-                    <img class="photographers__portrait" src="../../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
+                    <img class="photographers__portrait photographers__portrait--portfolio" src="../../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
                      alt="portrait du photographe">
                      </div>`
     return header

@@ -126,7 +126,8 @@ h1 {
 
 /* img portrait */
 .photographers__portrait {
-    box-shadow: 2px 2px 2px 1px #d3d3d3;
+    background: #C4C4C4;
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
     margin: 1rem;
     object-fit: cover;
     border-radius: 50%;
@@ -474,6 +475,20 @@ h1.photographers__name  {
         width: 94vw;
     }
 
+    h1.photographers__name {
+        font-size: 36px;
+        line-height: 47px;
+    }
+
+    .photographers__portrait--portfolio {
+        height: 150px;
+        width: 150px;
+    }
+
+    .btn__ctc {
+        margin-left: 2rem;
+    }
+
 }
 
 
@@ -488,9 +503,13 @@ h1.photographers__name  {
         padding: 0;
     }
 
-     .photographers__portrait {
-        background: #C4C4C4;
-        box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+    .photographers__infos--portfolio .mojo, .photographers__infos--portfolio .localisation {
+        margin-bottom: 0.5rem;
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .photographers__portrait--portfolio {
         height: 120px;
         width: 120px;
     }
@@ -562,8 +581,6 @@ h1.photographers__name  {
     }
 
     .photographers__portrait {
-        height: 150px;
-        width: 150px;
         margin-left: auto;
         margin-right: auto;
     }
