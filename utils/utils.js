@@ -181,7 +181,7 @@ const getTotalLikeCount = () => {
 }
 
 export const filterListener = (photographerPics) => {
-    const filters = document.querySelectorAll('#sortBy[data-filter]')
+    const filters = document.querySelectorAll('li[data-filter]')
 
     for (let i = 0; i < filters.length; i++) {
         const filter = filters[i];
