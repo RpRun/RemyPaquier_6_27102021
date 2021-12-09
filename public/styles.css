@@ -316,7 +316,7 @@ h1.photographers__name  {
     align-items: baseline;
 }
 
-.dropdown-wrapper span {
+.dropdown-wrapper label {
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
@@ -324,7 +324,7 @@ h1.photographers__name  {
     margin-right: 1rem;
 }
 
-.sortBy {
+#sortBy {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -341,11 +341,11 @@ h1.photographers__name  {
     cursor: pointer;
 }
 
-.sortBy li {
+#sortBy li {
     padding: 1rem;
 }
 
-/* .sortBy li :nth-child() {
+/* #sortBy li :nth-child() {
     border-bottom: #ffffff;
 } */
 

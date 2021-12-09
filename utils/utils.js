@@ -181,16 +181,16 @@ const getTotalLikeCount = () => {
 }
 
 export const filterListener = (photographerPics) => {
-    const filters = document.querySelectorAll('li[data-filter]')
+    const filters = document.getElementById('sortBy')
 
-    for (let i = 0; i < filters.length; i++) {
-        const filter = filters[i];
+    for (let i = 0; i < filters.options.length; i++) {
+        filters.options[i].defaultSelected = i == filters.selectedIndex
 
-        filter.addEventListener('click', () => {
-            const value = filter.getAttribute('data-filter')
+        filters.addEventListener('change', () => {           
+            const value = filters.value 
             reorganizeMedias(value, photographerPics)
         })
-        
+ 
     }
 }
 
