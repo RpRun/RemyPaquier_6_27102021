@@ -316,7 +316,7 @@ h1.photographers__name  {
     align-items: baseline;
 }
 
-.dropdown-wrapper label {
+.dropdown-wrapper span {
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
@@ -324,25 +324,31 @@ h1.photographers__name  {
     margin-right: 1rem;
 }
 
-#sortBy {
+.sortBy {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     background: #911C1C;
     color: #ffffff;
-    font-size: 1rem;
     padding: 1rem;
+    font-size: 18px;
+    line-height: 23px;
     border-radius: 5px;
     width: 170px;
     height: auto;
     cursor: pointer;
 }
 
-option {
-    cursor: pointer;
+.sortBy li {
+    padding: 1rem;
 }
+
+/* .sortBy li :nth-child() {
+    border-bottom: #ffffff;
+} */
+
 
 
 /*
