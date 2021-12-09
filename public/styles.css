@@ -227,7 +227,7 @@ h2.photographers__name {
     justify-content: space-between;
     align-content: flex-start;
     align-items: flex-start;
-    width: 100%;
+    width: 97%;
     margin: 1rem auto;
     padding: 2rem 1rem;
     background: #fafafa;
@@ -337,6 +337,11 @@ h1.photographers__name  {
     border-radius: 5px;
     width: 170px;
     height: auto;
+    cursor: pointer;
+}
+
+option {
+    cursor: pointer;
 }
 
 
