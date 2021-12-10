@@ -1,12 +1,16 @@
 import {
     createHeader,
-    createPreview,addListenerOnHearts, updateTotalLikeCount, onClickSelect, onClickFilters
+    createPreview,
+    addListenerOnHearts,
+    updateTotalLikeCount,
+    onClickSelect,
+    onClickFilters
 } from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
 
 
-if(localstorage) {
+if (localstorage) {
     const data = JSON.parse(localstorage)
     const sectionHeader = document.querySelector('.header__portfolio--wrapper')
     const photographers = data.photographers
@@ -30,18 +34,18 @@ if(localstorage) {
         if (media.photographerId == urlId) {
             const preview = createPreview(media)
             sectionPreview.innerHTML += preview
-            photographerPics.push(media)           
+            photographerPics.push(media)
         }
     })
     
-updateTotalLikeCount();
-addListenerOnHearts();
-onClickSelect();
-onClickFilters(photographerPics);
+    updateTotalLikeCount();
+    addListenerOnHearts();
+    onClickSelect();
+    onClickFilters(photographerPics);
+
 }
 
- // redirige vers index
+// redirige vers index
 else {
-    document.location.href="../";   
+    document.location.href = "../";
 }
-

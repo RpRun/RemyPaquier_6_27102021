@@ -24,7 +24,6 @@ a {
     position: relative;
 }
 
-
 .main__index {
     position: relative;
     margin-top: 7rem;
@@ -71,15 +70,16 @@ h1 {
 
 .tags {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .main-nav .tags {
     flex-wrap: wrap;
 }
 
- .photographers__tags, .tags a {
-    
+.photographers__tags,
+.tags a {
+
     text-align: center;
     border: 0.5px solid #C4C4C4;
     box-sizing: border-box;
@@ -103,7 +103,6 @@ h1 {
     background-color: #911C1C;
     color: #fff;
 }
-
 
 /* section photographers */
 .photographers__list {
@@ -141,7 +140,7 @@ h1 {
     justify-content: flex-end;
 }
 
-.photographers__name  {
+.photographers__name {
     color: #D3573C;
     font-weight: 400;
     white-space: nowrap;
@@ -151,8 +150,6 @@ h2.photographers__name {
     font-size: 36px;
     line-height: 47px;
 }
-
-
 
 /* paragraphs photographers__cards */
 .links__portfolio {
@@ -178,6 +175,7 @@ h2.photographers__name {
 .photographers__infos--portfolio p {
     margin-bottom: 1rem;
 }
+
 .mojo {
     font-size: 10px;
     line-height: 13px;
@@ -198,7 +196,6 @@ h2.photographers__name {
     text-align: center;
     color: #757575;
 }
-
 
 /* /*
 /*  +-+-+-+-+-+-+-+-+-+
@@ -232,7 +229,6 @@ h2.photographers__name {
     padding: 2rem 1rem;
     background: #fafafa;
     border-radius: 5px;
-
 }
 
 /* Main section portfolio*/
@@ -245,7 +241,7 @@ h2.photographers__name {
     position: relative;
 }
 
-h1.photographers__name  {
+h1.photographers__name {
     font-size: 64px;
     line-height: 83px;
 }
@@ -304,7 +300,6 @@ h1.photographers__name  {
     display: none;
 }
 
-
 /*
  +-+-+-+-+-+-+-+-+
  |D|R|O|P|D|O|N|W|
@@ -324,11 +319,8 @@ h1.photographers__name  {
     margin-right: 1rem;
 }
 
-.sortBy, .select {
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start; */
+.sortBy,
+.select {
     text-align: left;
     background: #911C1C;
     color: #ffffff;
@@ -339,36 +331,45 @@ h1.photographers__name  {
     width: 170px;
     height: auto;
     cursor: pointer;
-    z-index: 1000;
 }
+
 .sortBy {
     display: none;
     position: absolute;
-    margin-top: -20px;
+    margin-top: -6px;
+    z-index: 1000;
 }
-.sortBy li :hover {
-    border-bottom: #ffffff;
+
+.sortBy li {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: solid 2px #ffffff;
+}
+
+.sortBy li:hover {
+    background: #d3573c;
+}
+
+.sortBy li:last-child {
+    border-bottom: none;
 }
 
 .select {
     display: flex;
     justify-content: space-between;
     position: relative;
-    
+    align-items: center;
 }
 
-.select span {
+.select .select__icon {
     color: #ffffff;
+    transform: scale(1, -1);
+
 }
+
 .display {
     display: block;
 }
-
-/* #sortBy li :nth-child() {
-    border-bottom: #ffffff;
-} */
-
-
 
 /*
  +-+-+-+-+-+-+-+-+-+-+
@@ -437,11 +438,9 @@ h1.photographers__name  {
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
-
 }
 
 .scroll-btn {
-
     z-index: 99;
     left: -50%;
     right: -50%;
@@ -474,7 +473,6 @@ h1.photographers__name  {
 }
 
 @media screen and (max-width: 1280px) {
-
     .main-nav {
         position: absolute;
         top: 9rem;
@@ -482,7 +480,6 @@ h1.photographers__name  {
         left: -50%;
         right: -50%;
         max-width: 70%;
-
     }
 
     .photographers__list {
@@ -496,7 +493,6 @@ h1.photographers__name  {
 }
 
 @media screen and (max-width: 1023px) {
-
     .preview__list {
         margin-bottom: 14rem;
     }
@@ -521,9 +517,7 @@ h1.photographers__name  {
 
 }
 
-
 @media screen and (max-width: 768px) {
-
     .header__portfolio--wrapper {
         background: #FFFFFF;
         padding: 0px;
@@ -533,7 +527,8 @@ h1.photographers__name  {
         padding: 0;
     }
 
-    .photographers__infos--portfolio .mojo, .photographers__infos--portfolio .localisation {
+    .photographers__infos--portfolio .mojo,
+    .photographers__infos--portfolio .localisation {
         margin-bottom: 0.5rem;
         font-size: 13px;
         line-height: 17px;
@@ -553,7 +548,7 @@ h1.photographers__name  {
         justify-content: center;
     }
 
-    /*
+/*
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
@@ -585,7 +580,7 @@ h1.photographers__name  {
         left: -20rem;
     }
 
-    .photographers__name  {
+    .photographers__name {
         font-size: 36px;
         line-height: 47px;
     }
@@ -603,7 +598,6 @@ h1.photographers__name  {
     .logo {
         width: 150px;
     }
-
 
     /*******PORTFOLIO******************/
     .header__portfolio--wrapper {

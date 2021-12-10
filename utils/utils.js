@@ -183,6 +183,7 @@ const getTotalLikeCount = () => {
 export const toggleFilters = () => {
     const ul = document.querySelector('.sortBy')
     ul.classList.toggle('display')
+    
 }
 // Ecoute le click sur le select du dropdown
 export const onClickSelect = () => {
@@ -193,7 +194,7 @@ export const onClickSelect = () => {
 }
 
 export const onClickFilters = (photographerPics) => {
-    const select = document.querySelector('.select-text')
+    const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
@@ -201,19 +202,19 @@ export const onClickFilters = (photographerPics) => {
             const value = filter.getAttribute('data-filter')
             reorganizeMedias(value, photographerPics)
         })
-    })
+        
+    });
 }
 
 
 const reorganizeMedias = (value, photographerPics) => {
-    console.log(value)
+    console.log(value);
     const sectionPreview = document.querySelector('.preview__list')
     sectionPreview.innerHTML = '';
 
-        switch (value) {
-
+    switch (value) {
         case 'popular':
-             photographerPics.sort((a, b) => b.likes - a.likes)
+            photographerPics.sort((a, b) => b.likes - a.likes)
             break;
         case 'date':
             photographerPics.sort((a, b) => {
@@ -221,14 +222,12 @@ const reorganizeMedias = (value, photographerPics) => {
                 return 1;
             })
             break;
-
         case 'title':
             photographerPics.sort((a, b) => {
                 if (a.title < b.title) return -1
                 return 1;
             })
             break;
-
         default:
             console.log('filter error');
             break;
