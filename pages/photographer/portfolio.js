@@ -1,9 +1,10 @@
 import {
     createHeader,
-    createPreview,addListenerOnHearts, updateTotalLikeCount, filterListener
+    createPreview,addListenerOnHearts, updateTotalLikeCount, onClickSelect, onClickFilters
 } from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
+
 
 if(localstorage) {
     const data = JSON.parse(localstorage)
@@ -35,13 +36,12 @@ if(localstorage) {
     
 updateTotalLikeCount();
 addListenerOnHearts();
-filterListener(photographerPics);
-
+onClickSelect();
+onClickFilters(photographerPics);
 }
 
  // redirige vers index
 else {
     document.location.href="../";   
-
 }
 

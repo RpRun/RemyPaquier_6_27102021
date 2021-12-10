@@ -26,24 +26,28 @@
             <a class="home-page-link" href="../../index.html">
                 <img class="logo" src="../../assets/icones/logo.png" alt="Fisheye Home page"></a>
             <div class="header__portfolio--wrapper"></div>
-            <div class="dropdown-wrapper">
+            <!-- <div class="dropdown-wrapper">
                 <label for="sortBy">Trier par: </label>
                 <select name="Order by" id="sortBy">
                     <option   value="Popularité">Popularité</option>
                     <option   value="date">Date</option>
                     <option   value="titre">Titre</option>
                 </select>
-            </div>
-            <!-- <div class="dropdown-wrapper">
-                <span>Trier par </span>
-               
-                    <ul class="sortBy" id="menubar" role="menubar" aria-label="Trier par">
-                        <li data-filter="popularité" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">Popularité</li>
-                        <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Date</li>
-                        <li data-filter="titre" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Titre</li>
-                    </ul>
-                
             </div> -->
+            <div class="dropdown-wrapper">
+                <span>Trier par </span>
+                    <div class="selectContainer">
+                        <div class="select">
+                            <div class="select_text">Choisir</div>
+                            <span>v</span>
+                        </div>
+                        <ul class="sortBy" id="menubar" role="menubar" aria-label="Trier par">
+                            <li data-filter="popular" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">Popularité</li>
+                            <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Date</li>
+                            <li data-filter="title" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Titre</li>
+                        </ul>
+                    </div>
+            </div>
         </header>
         <main>
             <section class="photographers__main-page">

@@ -179,43 +179,76 @@ const getTotalLikeCount = () => {
     })
     return total
 }
-
-export const filterListener = (photographerPics) => {
-    const filters = document.getElementById('sortBy')
-
-
-    filters.addEventListener('change', () => {
-        const value = filters.value
-        reorganizeMedias(value, photographerPics)
+// Rajoute la classe display qui fait apparaitre la liste du dropdown
+export const toggleFilters = () => {
+    const ul = document.querySelector('.sortBy')
+    ul.classList.toggle('display')
+}
+// Ecoute le click sur le select du dropdown
+export const onClickSelect = () => {
+    const select = document.querySelector('.selectContainer')
+    select.addEventListener('click', () => {
+        toggleFilters()
     })
-
-    // for (let i = 0; i < filters.options.length; i++) {
-    //     filters.options[i].selected = filters.defaultSelected 
-
-    // }
 }
 
-const reorganizeMedias = (value, photographerPics) => {
-    const sectionPreview = document.querySelector('.preview-list')
-    // sectionPreview.innerHTML = '';
-
-    let filteredMedia = []
-    const byLikes= photographerPics.sort( (a,b) => {
-        return b.title - a.title;
+export const onClickFilters = (photographerPics) => {
+    const select = document.querySelector('.select-text')
+    const filters = document.querySelectorAll('.sortBy li')
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            select.innerHTML = filter.innerHTML
+            const value = filter.getAttribute('data-filter')
+            reorganizeMedias(value, photographerPics)
+        })
     })
-    console.log('par likes', byLikes)
+}
 
 
+const reorganizeMedias = (value, photographerPics) => {
+    console.log(value)
+    const sectionPreview = document.querySelector('.preview__list')
+    sectionPreview.innerHTML = '';
+
+        switch (value) {
+
+        case 'popular':
+             photographerPics.sort((a, b) => b.likes - a.likes)
+            break;
+        case 'date':
+            photographerPics.sort((a, b) => {
+                if (new Date(a.date) < new Date(b.date)) return -1
+                return 1;
+            })
+            break;
+
+        case 'title':
+            photographerPics.sort((a, b) => {
+                if (a.title < b.title) return -1
+                return 1;
+            })
+            break;
+
+        default:
+            console.log('filter error');
+            break;
+    }
+
+    photographerPics.forEach(media => {
+        const preview = createPreview(media)
+        sectionPreview.innerHTML += preview
+    });
+}
 
 
-    const byDate = photographerPics.sort( (a,b) => {
-        return new Date(a.date).valueOf() - new Date(b.date).valueOf();
+    // const byDate = photographerPics.sort( (a,b) => {
+    //     return new Date(a.date).valueOf() - new Date(b.date).valueOf();
 
         // Par mois puis par jour
 
         // let d1 = new Date(a.date); 
         // let d2 = new Date(b.date);
-        // log(d1.getDate(), d1.getUTCDate(), d1.getMonth(), d1.getUTCMonth());
+        // console.log(d1.getDate(), d1.getUTCDate(), d1.getMonth(), d1.getUTCMonth());
         // if (d1.getUTCMonth() > d2.getUTCMonth()) {
         //     return 1;
         // } else if (d1.getUTCMonth() < d2.getUTCMonth()) {
@@ -227,54 +260,14 @@ const reorganizeMedias = (value, photographerPics) => {
         //     return d1.getUTCDate() - d2.getUTCDate();
         // }
 
-    })
-    console.log('par date', byDate)
+    // })
+    // console.log('par date', byDate)
 
 
-    const byTitle = photographerPics.sort( (a,b) => {
-        if (a.title < b.title) return -1
-        return 1;
-    })
-    console.log('par titre', byTitle)
-    console.log(photographerPics);
-    console.log(value);
-
-
-
-
-    // switch (value) {
-
-    //     case 'popular':
-    //         filteredMedia = photographerPics.sort((a, b) => {
-    //             return b.title - a.title;
-    //         })
-
-    //     case 'date':
-    //         filteredMedia = photographerPics.sort((a, b) => {
-    //             if (a.date < b.date) return -1
-    //             return 1;
-    //         })
-
-    //         break;
-
-    //     case 'title':
-    //         filteredMedia = photographerPics.sort((a, b) => {
-    //             if (a.title < b.title) return -1
-    //             return 1;
-    //         })
-
-    //         break;
-
-    //     default:
-    //         filteredMedia = photographerPics.sort()
-
-    //         break;
-    // }
-
-
-    filteredMedia.forEach(media => {
-        const preview = createPreview(media)
-        sectionPreview.innerHTML += preview
-    });
-
-}
+    // const byTitle = photographerPics.sort( (a,b) => {
+    //     if (a.title < b.title) return -1
+    //     return 1;
+    // })
+    // console.log('par titre', byTitle)
+    // console.log(photographerPics);
+    // console.log(value);
