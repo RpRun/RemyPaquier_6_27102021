@@ -7,7 +7,7 @@ export const createCard = photographe => {
     const card = `<li class="photographers__cards">
     <a href="./pages/photographer/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
-            src="./public/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="portrait du photographe">
+            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="portrait du photographe">
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
@@ -41,7 +41,7 @@ export const createHeader = photographe => {
                     </div>  
                     <button class="btn__ctc--header btn__ctc">Contactez-moi</button>
                     <div class="photographers__portrait--container">
-                    <img class="photographers__portrait photographers__portrait--portfolio" src="../../public/Photos/PhotographersIdPhotos/${photographe.portrait}"
+                    <img class="photographers__portrait photographers__portrait--portfolio" src="../../assets/Photos/PhotographersIdPhotos/${photographe.portrait}"
                      alt="portrait du photographe">
                      </div>`
     return header
@@ -51,8 +51,8 @@ export const createHeader = photographe => {
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
     if (mediapreview == media.image) {
-        const preview__list = `<li class="thumbnails"><a href="../../public/Photos/medias/${mediapreview}"><img class="thumbnails__medias"
-        src="../../public/Photos/medias/${mediapreview}"></a>
+        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}"><img class="thumbnails__medias"
+        src="../../assets/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
              <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
@@ -63,7 +63,7 @@ export const createPreview = media => {
     }
 
     if (mediapreview == media.video) {
-        const preview__list = `<li class="thumbnails"><a href="../../public/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../../public/Photos/medias/${mediapreview}"></video></a>
+        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
                  <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
