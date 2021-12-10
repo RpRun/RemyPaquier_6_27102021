@@ -140,17 +140,21 @@ export const tagsHandler = () => {
 
 }
 
-
+// 1 -1 Ecoute le click sur les coeurs, declenche togglelike
 export const addListenerOnHearts = () => {
     const hearts = document.querySelectorAll('.heart')
-
+    console.log('addListenerOnHearts')
     hearts.forEach(heart => {
         heart.addEventListener('click', (event) => {
             toggleLike(event.target)
         })
+        
     });
 }
 
+// 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand il est likée
+// 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
+// 2 - 3 Appelle la fonction qui mets à jour le total de likes sur la page
 const toggleLike = (heart) => {
     const likesCount = heart.parentNode
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
@@ -164,27 +168,35 @@ const toggleLike = (heart) => {
     heart.classList.toggle('fas')
     likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
+    console.log('toggleLike')
 }
 
-export const updateTotalLikeCount = () => {
-    const totalPhotographersLikes = document.querySelector('.total-likes__amount')
-    totalPhotographersLikes.innerHTML = getTotalLikeCount()
-}
-
-const getTotalLikeCount = () => {
-
+// Additionne tous les likes de la page
+export const getTotalLikeCount = () => {
+    
     let total = 0
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
     })
+    console.log('getTotalLikeCount')
     return total
 }
+
+// Inscrit la Mise à jour du compteur total de likes sur la page 
+export const updateTotalLikeCount = () => {
+    const totalPhotographersLikes = document.querySelector('.total-likes__amount')
+    totalPhotographersLikes.innerHTML = getTotalLikeCount()
+    console.log('updateTotalLikeCount')
+}
+
+
 // Rajoute la classe display qui fait apparaitre la liste du dropdown
 export const toggleFilters = () => {
     const ul = document.querySelector('.sortBy')
     ul.classList.toggle('display')
     
 }
+
 // Ecoute le click sur le select du dropdown
 export const onClickSelect = () => {
     const select = document.querySelector('.selectContainer')
@@ -192,7 +204,10 @@ export const onClickSelect = () => {
         toggleFilters()
     })
 }
-
+// gestion du dropdown, au click sur le filtre (date, popularité...):
+// le filtre remplace le select (choisir) en haut du dropdown
+// on recupere l attribut data filter (date, popularité) du filtre selectionné
+// on appelle la fonction qui reorganise les medias avec comme parametre l'attribut correspondant au filtre selectionné
 export const onClickFilters = (photographerPics) => {
     const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
@@ -200,13 +215,12 @@ export const onClickFilters = (photographerPics) => {
         filter.addEventListener('click', () => {
             select.innerHTML = filter.innerHTML
             const value = filter.getAttribute('data-filter')
-            reorganizeMedias(value, photographerPics)
-        })
-        
+            reorganizeMedias(value, photographerPics)         
+        })      
     });
 }
 
-
+// 
 const reorganizeMedias = (value, photographerPics) => {
     console.log(value);
     const sectionPreview = document.querySelector('.preview__list')
@@ -237,6 +251,10 @@ const reorganizeMedias = (value, photographerPics) => {
         const preview = createPreview(media)
         sectionPreview.innerHTML += preview
     });
+
+    updateTotalLikeCount();
+    addListenerOnHearts();
+    
 }
 
 
