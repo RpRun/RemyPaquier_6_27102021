@@ -166,7 +166,7 @@ h2.photographers__name {
 }
 
 .localisation {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 17px;
     text-align: center;
     color: #901C1C;
@@ -177,7 +177,7 @@ h2.photographers__name {
 }
 
 .mojo {
-    font-size: 10px;
+    font-size: 0.9rem;
     line-height: 13px;
     text-align: center;
     color: #000000;
@@ -191,7 +191,7 @@ h2.photographers__name {
 }
 
 .cost {
-    font-size: 9px;
+    font-size: 0.8rem;
     line-height: 12px;
     text-align: center;
     color: #757575;

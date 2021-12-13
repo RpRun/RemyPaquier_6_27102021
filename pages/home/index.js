@@ -73,10 +73,11 @@ if (localstorage) {
  //Scroll button handler
  // 1- Get the button:
 const scrollBtn = document.querySelector('.scroll-btn');
-
+ // 2- If user scroll down, give focus on the button    
 function toggleScrollBtn() {
     if (window.scrollY) {
-        scrollBtn.classList.replace('scroll-hidden', 'scroll-visible') 
+        scrollBtn.classList.replace('scroll-hidden', 'scroll-visible')
+        scrollBtn.focus()
     } else {
         scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
     }
