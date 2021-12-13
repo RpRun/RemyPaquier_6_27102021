@@ -463,6 +463,7 @@ h1.photographers__name {
 .scroll-btn.scroll-visible {
     position: fixed;
     top: 5px;
+    cursor: pointer;
 }
 
 .scroll-btn a {

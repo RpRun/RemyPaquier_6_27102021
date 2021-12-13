@@ -30,13 +30,13 @@
                 <span>Trier par </span>
                     <div class="selectContainer">
                         <div class="select">
-                            <div class="select__text">Choisir</div>
-                            <span class="select__icon">v</span>
+                            <div class="select__text" tabindex="0">Choisir</div>
+                            <span class="select__icon" aria-hidden="true">v</span>
                         </div>
                         <ul class="sortBy" id="menubar" role="menubar" aria-label="Trier par">
-                            <li data-filter="popular" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="0">Popularité</li>
-                            <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Date</li>
-                            <li data-filter="title" role="menuitem" aria-haspopup="true" aria-expanded="false" href="#" tabindex="-1">Titre</li>
+                            <li data-filter="popular" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">Popularité</li>
+                            <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false"  tabindex="0">Date</li>
+                            <li data-filter="title" role="menuitem" aria-haspopup="true" aria-expanded="false"  tabindex="0">Titre</li>
                         </ul>
                     </div>
             </div>
@@ -45,7 +45,7 @@
             <section class="photographers__main-page">
                 <ul class="preview__list"></ul>
                 <div class="likes-price">
-                    <span class="total-likes__amount"></i></span><i class="fas fa-heart heart" alt="coeur"></i>
+                    <span class="total-likes__amount"></span><i class="fas fa-heart heart"></i>
                     <div class="cost-by-day">300€/jour</div>
                 </div>
             </section>

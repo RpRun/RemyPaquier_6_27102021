@@ -55,7 +55,7 @@ export const createPreview = media => {
         src="../../assets/Photos/medias/${mediapreview}"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart" ></i>              
+             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i tabindex="0" class="far fa-heart heart" ></i>              
         </div>
         </li>`
 
@@ -66,7 +66,7 @@ export const createPreview = media => {
         const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}"><video controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i aria-hidden="true" class="far fa-heart heart"></i>                
+                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i tabindex="0" class="far fa-heart heart"></i>                
         </div>
         </li>`
 
