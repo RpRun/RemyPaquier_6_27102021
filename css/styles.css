@@ -451,6 +451,10 @@ h1.photographers__name {
     width: 182px;
     height: 30px;
     background: #DB8876;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;  
     border: none;
     border-radius: 5px;
 }
@@ -464,13 +468,6 @@ h1.photographers__name {
     position: fixed;
     top: 5px;
     cursor: pointer;
-}
-
-.scroll-btn a {
-    color: #000000;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
 }
 
 @media screen and (max-width: 1280px) {
