@@ -1,20 +1,27 @@
 // Global DOM var
 const body = document.querySelector('body')
 const pageWrapper = document.querySelector('.photographer-page-wrapper')
-const modal = document.querySelector('.modal')
 
 
 //  DOM Modal Elements
-const ctcBg = document.querySelector('.modal__bground')
+const modalDialog = document.querySelector('.modal-wrapper')
 const ctcBtn = document.querySelectorAll('.btn__ctc')
-const closeBtn = document.querySelector('.close')
+const closeBtn = document.querySelector('.crossBtn')
+const CloseModal = document.querySelector(".close-modal")
+
+let previouslyFocusElement = null
+let modal = null
+const focusableSelector = 'button, a, input, textarea'
+let focusables = []
+
+// FORM
 const form = document.querySelector('.form')
 const inputFirstName = document.querySelector('#first')
 const inputLastName = document.querySelector('#last')
 const inputEmail = document.querySelector('#email')
 const inputMessage = document.querySelector('#message')
 const thankClosing = document.querySelector(".contact__body--submitted")
-const CloseModal = document.querySelector(".close-modal")
+
 
 
 //  DOM Modal Elements Errors
@@ -25,61 +32,86 @@ const errorMsg = document.querySelector('.error-msg')
 
 // questions about best pratices https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 
-// function giveFocus(e)
-// {
-// document.querySelector(${e}).focus();
-// }
 
 // Tools
-const launchModal = () => {
-  pageWrapper.setAttribute('aria-hidden', 'true')
-  modal.setAttribute('aria-hidden', 'false')
-  body.classList.add('no-scroll')
-  ctcBg.style.display = "block";
-  // giveFocus(closeBtn);
-  document.querySelector('.close').focus();
-  // focus() is not a function
-}
-const closeModal = () => {
-  pageWrapper.setAttribute('aria-hidden', 'false')
+const openModal = (e) => {
+  e.preventDefault()
+  // pageWrapper.setAttribute('aria-hidden', 'true')
+  modal = document.querySelector('.modal')
+  focusables = Array.from(modal.querySelectorAll(focusableSelector))
+  previouslyFocusElement = document.querySelector(':focus')
+  focusables[0].focus()
+  modal.style.display = null
+  
+  modal.removeAttribute('aria-hidden')
+  modal.setAttribute('aria-modal', 'true')
+  
+  closeBtn.addEventListener('click', closeModal);
+  CloseModal.addEventListener('click', closeModal);
+  // body.classList.add('no-scroll')
+}       
+
+const closeModal = (e) => {
+  if (modal === null) return
+  // pageWrapper.removeAttribute('aria-hidden')
+  if (previouslyFocusElement !== null) previouslyFocusElement.focus()
+  e.preventDefault()
+  const hideModal = function () {
+    modal.style.display = "none";
+    modal.removeEventListener('animationend', hideModal)
+    modal = null
+  }
+  
+    
+  
+  modal.addEventListener('animationend', hideModal)
   modal.setAttribute('aria-hidden', 'true')
-  body.classList.remove('no-scroll')
-  ctcBg.style.display = "none";
-  // giveFocus(ctcBtn);
-  document.querySelectorAll('.btn__ctc')
-  // giveFocus(ctcBtn);
-  //not sure about focus
+  modal.removeAttribute('aria-modal')
+
+  
+
+  closeBtn.removeEventListener('click', closeModal);
+  CloseModal.removeEventListener('click', closeModal);
+  // body.classList.remove('no-scroll')
+  
+ 
 }
 
-// const giveFocus = (e) => {
-//   document.e.focus()
-// }
-
+const focusInModal = function (e) {
+  e.preventDefault()
+  let index = focusables.findIndex(f => f === modal.querySelector(':focus'))
+  if (e.shiftKey === true) {
+    index --
+  } else {
+    index++
+  }
+  if (index >= focusables.length) {
+    index = 0
+  }
+  if (index < 0) {
+    index =focusables.length -1
+  }
+  focusables[index].focus()
+  
+}
 
 // Launch modal event
-ctcBtn.forEach((btn) => btn.addEventListener('click', launchModal));
-// add event click to launch closeModal()
-closeBtn.addEventListener('click', closeModal);
-CloseModal.addEventListener('click', closeModal);
+ctcBtn.forEach((btn) => btn.addEventListener('click', openModal));
+// add event click to close the modal:
+
 
 
 
 // Close modal when escape key is pressed
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeModal();
-    
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' || e.key === 'Esc') {
+    closeModal(e);    
+  }
+  if (e.key === 'Tab' && modal !== null) {
+    focusInModal(e)
   }
 });
 
-
-// $(document).on('keydown', e => {
-//   const keyCode = e.keyCode ? e.keyCode : e.which
-
-//   if (modal.setAttribute('aria-hidden') == 'false' && keyCode === 27) {
-//       CloseModal()
-//   }
-// })
 
 
 /* **************************************************************************************** */

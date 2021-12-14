@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="photographer-page-wrapper" aria-hidden="false">
+    <div class="photographer-page-wrapper">
         <header class="header__portfolio">
             <a class="home-page-link" href="../../index.html">
                 <img class="logo" src="../../assets/icones/logo.png" alt="Fisheye Home page"></a>
@@ -51,62 +51,61 @@
             </section>
             <button class="btn__ctc btn__ctc--fixed">Contactez-moi</button>
         </main>
-    </div>
-    <div class="modal__bground">
-        <!-- modal__bground have to be aria hidden? should i only use photographer-page-wrapper?-->
-        <aside class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
-            <!-- aria-modal? -->
-            <header>
-                <h2 id="modal-title" class="modal__heading">Contactez-moi<br>Mimi Keel</h2>
-                <img class="close" alt="croix" aria-label="Fermer" src="../../assets/icones/close.svg">
-            </header>
-
-            <div class="modal__form">
-                <form action="post" class="form">
-                    <div class="modal__form--fields">
-                        <label for="first">Prénom</label>
-                        <br>
-                        <input type="text" class="text-control" id="first" name="first" minlength="2">
-                        <!--check name-->
-                        <br>
+        <aside class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" style="display: none;">
+            <div class="modal-wrapper">
+                <header>
+                    <h2 id="modal-title" class="modal__heading">Contactez-moi<br>Mimi Keel</h2>
+                    <button class="crossBtn"  aria-label="Fermer"></button>
+                </header>
+    
+                <div class="modal__form">
+                    <form action="post" class="form">
+                        <div class="modal__form--fields">
+                            <label for="first">Prénom</label>
+                            <br>
+                            <input type="text" class="text-control" id="first" name="first" minlength="2">
+                            <!--check name-->
+                            <br>
+                        </div>
+                        <div class="error-modal__form--fields error-first"></div>
+    
+                        <div class="modal__form--fields">
+                            <label for="last">Nom</label>
+                            <br>
+                            <input type="text" class="text-control" id="last" name="last" minlength="2">
+                            <!--check name-->
+                            <br>
+                        </div>
+                        <div class="error-modal__form--fields error-last"></div>
+    
+                        <div class="modal__form--fields">
+                            <label for="email">Email</label>
+                            <br>
+                            <input type="email" class="text-control" id="email" name="email" minlength="2">
+                            <!--check email-->
+                            <br>
+                        </div>
+                        <div class="error-modal__form--fields error-eMail"></div>
+    
+                        <div class="modal__form--fields">
+                            <label for="message">Votre message</label>
+                            <br>
+                            <input type="text" class="text-control" id="message" name="message" minlength="20">
+                            <!--check message-->
+                            <br>
+                        </div>
+                        <div class="error-modal__form--fields"></div>
+                        <button type="submit" class="btn__ctc btn__ctc--send">Envoyer</button>
+                    </form>
+    
+                    <div class="contact__body--submitted">
+                        <button class="close-modal btn__ctc">Merci</button>
                     </div>
-                    <div class="error-modal__form--fields error-first"></div>
-
-                    <div class="modal__form--fields">
-                        <label for="last">Nom</label>
-                        <br>
-                        <input type="text" class="text-control" id="last" name="last" minlength="2">
-                        <!--check name-->
-                        <br>
-                    </div>
-                    <div class="error-modal__form--fields error-last"></div>
-
-                    <div class="modal__form--fields">
-                        <label for="email">Email</label>
-                        <br>
-                        <input type="email" class="text-control" id="email" name="email" minlength="2">
-                        <!--check email-->
-                        <br>
-                    </div>
-                    <div class="error-modal__form--fields error-eMail"></div>
-
-                    <div class="modal__form--fields">
-                        <label for="message">Votre message</label>
-                        <br>
-                        <input type="text" class="text-control" id="message" name="message" minlength="20">
-                        <!--check message-->
-                        <br>
-                    </div>
-                    <div class="error-modal__form--fields"></div>
-                    <button type="submit" class="btn__ctc btn__ctc--send">Envoyer</button>
-                </form>
-
-                <div class="contact__body--submitted">
-                    <button class="close-modal">Merci</button>
                 </div>
             </div>
         </aside>
     </div>
+    
 </body>
 
 </html>
