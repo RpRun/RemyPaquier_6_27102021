@@ -142,56 +142,61 @@ export const tagsHandler = () => {
 }
 
 // 1 -1 Ecoute le click sur les boutons contenant les coeurs, declenche togglelike
+// export const addListenerOnHearts = () => {
+//     const heartsBtn = document.querySelectorAll('.heartBtn')
+//     console.log('addListenerOnHearts')
+//     heartsBtn.forEach(heartBtn => {
+//         heartBtn.addEventListener('click', (event) => {
+//             toggleLikeSection(event.target)
+//         })
+
+//     });
+// }
+
+// 1 -1 Ecoute le click sur les coeurs, declenche togglelike
 export const addListenerOnHearts = () => {
-    const heartsBtn = document.querySelectorAll('.heartBtn')
+    const hearts = document.querySelectorAll('.heart')
     console.log('addListenerOnHearts')
-    heartsBtn.forEach(heartBtn => {
-        heartBtn.addEventListener('click', (event) => {
-            toggleLike(event.target)
+    hearts.forEach(heart => {
+        heart.addEventListener('click', (event) => {
+            toggleLike(event.heart)
         })
-        
+
     });
 }
 
 // 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand il est likée
 // 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
 // 2 - 3 Appelle la fonction qui mets à jour le total de likes sur la page
-const toggleLike = (heartBtn) => {
-    const likesCount = heartBtn.parentNode
-    const heart = document.querySelectorAll('.heart')
+const toggleLike = (heart) => {
+    const likesCount = heart.parentNode
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
-    const total = likesCount.querySelector('.total')
+    // const total = likesCount.querySelector('.total')
     if (heart.classList.contains('fas')) {
-        heart.classList.remove('fas')
         likesCount.setAttribute('data-like-count', currentCount -= 1)
+        heart.classList.remove('fas')
     } else {
-        heart.classList.add('fas')
         likesCount.setAttribute('data-like-count', currentCount += 1)
+        heart.classList.add('fas')
     }
 
-    // heart.classList.toggle('fas')
-    total.innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
+    likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
-    console.log('toggleLike')
-    console.log(likesCount)
 }
 
 // Additionne tous les likes de la page
 export const getTotalLikeCount = () => {
-    
+
     let total = 0
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
     })
-    console.log('getTotalLikeCount')
     return total
 }
-
 // Inscrit la Mise à jour du compteur total de likes sur la page 
 export const updateTotalLikeCount = () => {
     const totalPhotographersLikes = document.querySelector('.total-likes__amount')
     totalPhotographersLikes.innerHTML = getTotalLikeCount()
-    console.log('updateTotalLikeCount')
 }
 
 
@@ -199,7 +204,6 @@ export const updateTotalLikeCount = () => {
 export const toggleFilters = () => {
     const ul = document.querySelector('.sortBy')
     ul.classList.toggle('display')
-    
 }
 
 // Ecoute le click sur le select du dropdown
@@ -220,8 +224,8 @@ export const onClickFilters = (photographerPics) => {
         filter.addEventListener('click', () => {
             select.innerHTML = filter.innerHTML
             const value = filter.getAttribute('data-filter')
-            reorganizeMedias(value, photographerPics)         
-        })      
+            reorganizeMedias(value, photographerPics)
+        })
     });
 }
 
@@ -259,37 +263,13 @@ const reorganizeMedias = (value, photographerPics) => {
 
     updateTotalLikeCount();
     addListenerOnHearts();
-    
+
 }
 
 
-    // const byDate = photographerPics.sort( (a,b) => {
-    //     return new Date(a.date).valueOf() - new Date(b.date).valueOf();
 
-        // Par mois puis par jour
-
-        // let d1 = new Date(a.date); 
-        // let d2 = new Date(b.date);
-        // console.log(d1.getDate(), d1.getUTCDate(), d1.getMonth(), d1.getUTCMonth());
-        // if (d1.getUTCMonth() > d2.getUTCMonth()) {
-        //     return 1;
-        // } else if (d1.getUTCMonth() < d2.getUTCMonth()) {
-        //     return -1;            
-        // } else {
-
-        //     // même mois
-
-        //     return d1.getUTCDate() - d2.getUTCDate();
-        // }
-
-    // })
-    // console.log('par date', byDate)
-
-
-    // const byTitle = photographerPics.sort( (a,b) => {
-    //     if (a.title < b.title) return -1
-    //     return 1;
-    // })
-    // console.log('par titre', byTitle)
-    // console.log(photographerPics);
-    // console.log(value);
+// Inscrit le cout par jour du photographe 
+export const displayCostByDay = photographe => {
+    const price = `<div class="cost-by-day">${photographe.price}€/jour</div>`
+    return price
+}

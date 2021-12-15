@@ -1,6 +1,7 @@
 import {
     createHeader,
     createPreview,
+    displayCostByDay,
     addListenerOnHearts,
     updateTotalLikeCount,
     onClickSelect,
@@ -13,6 +14,7 @@ const localstorage = localStorage.getItem('data')
 if (localstorage) {
     const data = JSON.parse(localstorage)
     const sectionHeader = document.querySelector('.header__portfolio--wrapper')
+    const likesAndPrice = document.querySelector('.likes-price')
     const photographers = data.photographers
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
@@ -26,7 +28,9 @@ if (localstorage) {
     photographers.forEach(photographe => {
         if (photographe.id == urlId) {
             const header = createHeader(photographe)
+            const price = displayCostByDay(photographe)
             sectionHeader.innerHTML += header
+            likesAndPrice.innerHTML += price
         }
     })
 
