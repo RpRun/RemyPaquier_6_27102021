@@ -406,21 +406,23 @@ h1.photographers__name {
 }
 
 .heart {
-    height: 18px;
-    width: 17px;
-    padding: 8px;
+    margin: 0.2rem;     
     color: #911C1C;
-    /* cursor: pointer; */
+
 }
 
 .heartBtn {
     cursor: pointer;
+    background: #ffffff;
+    border: none;
+    font-size: 24px;
 }
 
 .likes-price .heart {
     color: #000000;
     margin-right: auto;
-    margin-left: 0;
+    margin-left: 0.4rem;
+    
 }
 
 /*

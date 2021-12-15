@@ -118,9 +118,6 @@ export const tagsHandler = () => {
             }
         }
 
-        // =======
-        // EXTRA
-        // ======
         // Si un tag est déjà sélectionné
         if (selectedTag !== null) {
             // et si on re-click sur le même tag:
@@ -142,63 +139,52 @@ export const tagsHandler = () => {
 }
 
 // 1 -1 Ecoute le click sur les boutons contenant les coeurs, declenche togglelike
-// export const addListenerOnHearts = () => {
-//     const heartsBtn = document.querySelectorAll('.heartBtn')
-//     console.log('addListenerOnHearts')
-//     heartsBtn.forEach(heartBtn => {
-//         heartBtn.addEventListener('click', (event) => {
-//             toggleLikeSection(event.target)
-//         })
-
-//     });
-// }
-
-// 1 -1 Ecoute le click sur les coeurs, declenche togglelike
 export const addListenerOnHearts = () => {
-    const hearts = document.querySelectorAll('.heart')
-    console.log('addListenerOnHearts')
-    hearts.forEach(heart => {
-        heart.addEventListener('click', (event) => {
-            toggleLike(event.heart)
+    const heartsBtn = document.querySelectorAll('.heartBtn')
+    heartsBtn.forEach(heartBtn => {
+        heartBtn.addEventListener('click', () => {
+            toggleLike(heartBtn)
         })
-
+        
     });
 }
 
-// 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand il est likée
+// 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand le
+//  bouton est liké
 // 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
 // 2 - 3 Appelle la fonction qui mets à jour le total de likes sur la page
-const toggleLike = (heart) => {
-    const likesCount = heart.parentNode
+const toggleLike = (heartBtn) => {
+    const likesCount = heartBtn.parentNode
+    const heart = heartBtn.querySelector('.heart')
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
-    // const total = likesCount.querySelector('.total')
-    if (heart.classList.contains('fas')) {
+    if (heart.classList.contains('fas')) {     
         likesCount.setAttribute('data-like-count', currentCount -= 1)
-        heart.classList.remove('fas')
     } else {
         likesCount.setAttribute('data-like-count', currentCount += 1)
-        heart.classList.add('fas')
     }
 
+    heart.classList.toggle('fas')
     likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
 }
 
 // Additionne tous les likes de la page
 export const getTotalLikeCount = () => {
-
+    
     let total = 0
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
     })
+    console.log('getTotalLikeCount')
     return total
 }
+
 // Inscrit la Mise à jour du compteur total de likes sur la page 
 export const updateTotalLikeCount = () => {
     const totalPhotographersLikes = document.querySelector('.total-likes__amount')
     totalPhotographersLikes.innerHTML = getTotalLikeCount()
+    console.log('updateTotalLikeCount')
 }
-
 
 // Rajoute la classe display qui fait apparaitre la liste du dropdown
 export const toggleFilters = () => {
@@ -267,8 +253,7 @@ const reorganizeMedias = (value, photographerPics) => {
 }
 
 
-
-// Inscrit le cout par jour du photographe 
+// Inscrit le cout par jour du photographe en bas de la page portfolio 
 export const displayCostByDay = photographe => {
     const price = `<div class="cost-by-day">${photographe.price}€/jour</div>`
     return price
