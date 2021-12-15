@@ -49,13 +49,13 @@
                     <div class="cost-by-day">300€/jour</div>
                 </div>
             </section>
-            <button class="btn__ctc btn__ctc--fixed">Contactez-moi</button>
+            <button class="js-modalOpen btn__ctc btn__ctc--fixed">Contactez-moi</button>
         </main>
         <aside class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" style="display: none;">
             <div class="modal-wrapper">
                 <header>
                     <h2 id="modal-title" class="modal__heading">Contactez-moi<br>Mimi Keel</h2>
-                    <button class="crossBtn"  aria-label="Fermer"></button>
+                    <button class="js-modalClose crossBtn"  aria-label="Fermer"></button>
                 </header>
     
                 <div class="modal__form">
@@ -95,12 +95,12 @@
                             <br>
                         </div>
                         <div class="error-modal__form--fields"></div>
-                        <button type="submit" class="btn__ctc btn__ctc--send">Envoyer</button>
+                        <input type="submit" class="js-modalClose btn__ctc btn__ctc--send" value="Envoyer">
                     </form>
-    
-                    <div class="contact__body--submitted">
+                    
+                    <!-- <div class="contact__body--submitted">
                         <button class="close-modal btn__ctc">Merci</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </aside>

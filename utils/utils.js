@@ -39,7 +39,7 @@ export const createHeader = photographe => {
                         ${tagList}
                         </ul>                   
                     </div>  
-                    <button class="btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
+                    <button class="js-modalOpen btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
                     <div class="photographers__portrait--container">
                     <img class="photographers__portrait photographers__portrait--portfolio" src="../../assets/Photos/PhotographersIdPhotos/${photographe.portrait}"
                      alt="portrait du photographe ${photographe.name}">
