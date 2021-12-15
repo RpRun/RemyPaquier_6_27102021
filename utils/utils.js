@@ -55,7 +55,7 @@ export const createPreview = media => {
         <img class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button><i class="far fa-heart heart"></i></button>              
+             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn"><i class="far fa-heart heart"></i></button>              
         </div>
         </li>`
 
@@ -67,7 +67,7 @@ export const createPreview = media => {
         <video Title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><i tabindex="0" class="far fa-heart heart"></i>                
+                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn"><i class="far fa-heart heart"></i></button>                
         </div>
         </li>`
 
@@ -141,12 +141,12 @@ export const tagsHandler = () => {
 
 }
 
-// 1 -1 Ecoute le click sur les coeurs, declenche togglelike
+// 1 -1 Ecoute le click sur les boutons contenant les coeurs, declenche togglelike
 export const addListenerOnHearts = () => {
-    const hearts = document.querySelectorAll('.heart')
+    const heartsBtn = document.querySelectorAll('.heartBtn')
     console.log('addListenerOnHearts')
-    hearts.forEach(heart => {
-        heart.addEventListener('click', (event) => {
+    heartsBtn.forEach(heartBtn => {
+        heartBtn.addEventListener('click', (event) => {
             toggleLike(event.target)
         })
         
@@ -156,20 +156,24 @@ export const addListenerOnHearts = () => {
 // 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand il est likée
 // 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
 // 2 - 3 Appelle la fonction qui mets à jour le total de likes sur la page
-const toggleLike = (heart) => {
-    const likesCount = heart.parentNode
+const toggleLike = (heartBtn) => {
+    const likesCount = heartBtn.parentNode
+    const heart = document.querySelectorAll('.heart')
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
-    // const total = likesCount.querySelector('.total')
+    const total = likesCount.querySelector('.total')
     if (heart.classList.contains('fas')) {
+        heart.classList.remove('fas')
         likesCount.setAttribute('data-like-count', currentCount -= 1)
     } else {
+        heart.classList.add('fas')
         likesCount.setAttribute('data-like-count', currentCount += 1)
     }
 
-    heart.classList.toggle('fas')
-    likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
+    // heart.classList.toggle('fas')
+    total.innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
     console.log('toggleLike')
+    console.log(likesCount)
 }
 
 // Additionne tous les likes de la page

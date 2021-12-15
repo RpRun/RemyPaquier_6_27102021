@@ -410,6 +410,10 @@ h1.photographers__name {
     width: 17px;
     padding: 8px;
     color: #911C1C;
+    /* cursor: pointer; */
+}
+
+.heartBtn {
     cursor: pointer;
 }
 
