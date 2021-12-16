@@ -51,7 +51,8 @@ export const createHeader = photographe => {
 export const createPreview = media => {
     const mediapreview = (media.image || media.video)
     if (mediapreview == media.image) {
-        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}">
+        const preview__list = `<li class="thumbnails">
+        <a href="../../assets/Photos/medias/${mediapreview}">
         <img class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
@@ -63,8 +64,8 @@ export const createPreview = media => {
     }
 
     if (mediapreview == media.video) {
-        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}">
-        <video Title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
+        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}" aria-label="ouvrir cette vidéo dans le caroussel">
+        <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
                  <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour liker ce média"><i class="far fa-heart heart"></i></button>                

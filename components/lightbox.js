@@ -64,7 +64,7 @@
         else {
             // sinon on fabrique une video
             const video = document.createElement('video')
-            video.setAttribute('controls', true)
+            video.setAttribute('controls', true)            
             video.classList.add('lightbox__video')
             container.removeChild(loader)
             container.appendChild(video)
