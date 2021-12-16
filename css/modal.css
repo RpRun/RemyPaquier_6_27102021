@@ -94,7 +94,7 @@
 .crossBtn {
 
     display: inline-block;
-    background: no-repeat url("../../assets/icones/close.svg");
+    background: no-repeat url("../assets/icones/close.svg");
     cursor: pointer;
     border: none;
     margin-top: 20px;
