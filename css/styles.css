@@ -430,6 +430,15 @@ h1.photographers__name {
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+}
 
 .likes-price {
     display: flex;
