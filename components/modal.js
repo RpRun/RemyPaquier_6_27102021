@@ -47,7 +47,7 @@ const openModal = (e) => {
 
   modalCloseBtn.addEventListener('click', closeModal);
   // CloseModal.addEventListener('click', closeModal);
-  // body.classList.add('no-scroll')
+  body.classList.add('no-scroll')
 }
 
 const closeModal = (e) => {
@@ -67,7 +67,7 @@ const closeModal = (e) => {
 
   modalCloseBtn.removeEventListener('click', closeModal);
   // CloseModal.removeEventListener('click', closeModal);
-  // body.classList.remove('no-scroll')
+  body.classList.remove('no-scroll')
 
 }
 
@@ -123,6 +123,7 @@ form.addEventListener('submit', (event) => {
 
   if (inputFirstName.value.length > 2) {
     alert('Merci pour votre message');
+    closeModal();
   } else {
     alert('Veuillez reverifier vos informations');
   }

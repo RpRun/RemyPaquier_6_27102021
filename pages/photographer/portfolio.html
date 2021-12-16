@@ -69,7 +69,7 @@
                         <div class="modal__form--fields">
                             <label for="first">Prénom</label>
                             <br>
-                            <input type="text" class="text-control" id="first" name="first" minlength="2">
+                            <input type="text" required aria-required="true" class="text-control" id="first" name="first" aria-placeholder="Renseignez votre prénom" minlength="2">
                             <!--check name-->
                             <br>
                         </div>
@@ -78,7 +78,7 @@
                         <div class="modal__form--fields">
                             <label for="last">Nom</label>
                             <br>
-                            <input type="text" class="text-control" id="last" name="last" minlength="2">
+                            <input type="text" required aria-required="true" class="text-control" id="last" name="last" aria-placeholder="Renseignez votre nom" minlength="2">
                             <!--check name-->
                             <br>
                         </div>
@@ -87,7 +87,7 @@
                         <div class="modal__form--fields">
                             <label for="email">Email</label>
                             <br>
-                            <input type="email" class="text-control" id="email" name="email" minlength="2">
+                            <input type="email" required aria-required="true" class="text-control" id="email" name="email" aria-placeholder="Renseignez votre mail">
                             <!--check email-->
                             <br>
                         </div>
@@ -96,7 +96,9 @@
                         <div class="modal__form--fields">
                             <label for="message">Votre message</label>
                             <br>
-                            <input type="text" class="text-control" id="message" name="message" minlength="20">
+                            <input type="text" required aria-required="true" class="text-control" id="message" name="message" aria-placeholder="Ecrivez votre message ici" minlength="20"
+                           size="100,20">
+                        </input>
                             <!--check message-->
                             <br>
                         </div>

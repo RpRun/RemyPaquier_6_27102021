@@ -185,7 +185,6 @@ export const getTotalLikeCount = () => {
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
     })
-    console.log('getTotalLikeCount')
     return total
 }
 
@@ -193,7 +192,6 @@ export const getTotalLikeCount = () => {
 export const updateTotalLikeCount = () => {
     const totalPhotographersLikes = document.querySelector('.total-likes__amount')
     totalPhotographersLikes.innerHTML = getTotalLikeCount()
-    console.log('updateTotalLikeCount')
 }
 
 // Rajoute la classe display qui fait apparaitre la liste du dropdown
