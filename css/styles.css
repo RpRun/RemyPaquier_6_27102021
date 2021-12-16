@@ -321,11 +321,12 @@ h1.photographers__name {
 }
 
 .sortBy,
-.select {
+.select, 
+.select button {
     text-align: left;
     background: #911C1C;
     color: #ffffff;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 18px;
     line-height: 23px;
     border-radius: 5px;
@@ -333,6 +334,12 @@ h1.photographers__name {
     height: auto;
     cursor: pointer;
 }
+
+.select button {  
+    border:none;
+    display: flex;
+    justify-content: space-between;
+}   
 
 .sortBy {
     display: none;
@@ -362,10 +369,14 @@ h1.photographers__name {
     align-items: center;
 }
 
+.select__icon {
+    padding-left: 0.5rem;
+    
+}
+
 .select .select__icon {
     color: #ffffff;
     transform: scale(1, -1);
-
 }
 
 .display {
