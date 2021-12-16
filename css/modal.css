@@ -7,6 +7,7 @@
         opacity: 1;
     }
 }
+
 @keyframes fadeout {
     from {
         opacity: 1;
@@ -16,9 +17,10 @@
         opacity: 0;
     }
 }
+
 @keyframes slideFromRight {
     from {
-       transform: translateX(+50px);
+        transform: translateX(+50px);
     }
 
     to {
@@ -26,9 +28,10 @@
 
     }
 }
+
 @keyframes slideFromCenter {
     from {
-       transform: translateX(0px);
+        transform: translateX(0px);
     }
 
     to {
@@ -55,7 +58,7 @@
     animation: fadeIn 0.3s both;
 }
 
-.modal[aria-hidden="true"]{
+.modal[aria-hidden="true"] {
     animation-name: fadeOut;
 }
 
@@ -88,7 +91,6 @@
     color: #000000;
 }
 
-/*need position absolute*/
 .crossBtn {
 
     display: inline-block;
@@ -101,7 +103,6 @@
     background-size: 41px 44px;
 }
 
-/*need position absolute*/
 .modal__form {
     width: 100%;
 }
@@ -146,12 +147,9 @@ form input {
 
 @media screen and (max-width: 768px) {
 
-
     .modal__heading {
         font-size: 3rem;
         line-height: 3rem;
     }
-
-    /* ******************************************************************** */
 
 }

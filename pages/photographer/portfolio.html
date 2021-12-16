@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="../../css/lightbox.css">
     <link rel="stylesheet" href="../../css/modal.css">
     <script type="module" src="../../pages/photographer/portfolio.js"></script>
-    <script type="module" defer src="../../components/lightbox.js"></script>
-    <script type="module" defer src="../../components/modal.js"></script>
+    <script type="module" src="../../components/lightbox.js"></script>
+    <script type="module" src="../../components/modal.js"></script>
+    <!-- <script type="module" defer src="../../components/lightbox.js"></script>
+    <script type="module" defer src="../../components/modal.js"></script> -->
 </head>
 
 <body>
@@ -28,17 +30,20 @@
             <div class="header__portfolio--wrapper"></div>
             <div class="dropdown-wrapper">
                 <span>Trier par </span>
-                    <div class="selectContainer">
-                        <div class="select">
-                            <div class="select__text" tabindex="0">Choisir</div>
-                            <span class="select__icon" aria-hidden="true">v</span>
-                        </div>
-                        <ul class="sortBy" id="menubar" role="menubar" aria-label="Trier par">
-                            <li data-filter="popular" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">Popularité</li>
-                            <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false"  tabindex="0">Date</li>
-                            <li data-filter="title" role="menuitem" aria-haspopup="true" aria-expanded="false"  tabindex="0">Titre</li>
-                        </ul>
+                <div class="selectContainer">
+                    <div class="select">
+                        <div class="select__text" tabindex="0">Choisir</div>
+                        <span class="select__icon" aria-hidden="true">v</span>
                     </div>
+                    <ul class="sortBy" id="menubar" role="menubar" aria-label="Trier par">
+                        <li data-filter="popular" role="menuitem" aria-haspopup="true" aria-expanded="false"
+                            tabindex="0">Popularité</li>
+                        <li data-filter="date" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                            Date</li>
+                        <li data-filter="title" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                            Titre</li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -50,13 +55,13 @@
             </section>
             <button class="js-modalOpen btn__ctc btn__ctc--fixed">Contactez-moi</button>
         </main>
-        <aside class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" style="display: none;">
+        <div class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" style="display: none;">
             <div class="modal-wrapper">
                 <header>
                     <h2 id="modal-title" class="modal__heading">Contactez-moi<br>Mimi Keel</h2>
-                    <button class="js-modalClose crossBtn"  aria-label="Fermer"></button>
+                    <button class="js-modalClose crossBtn" aria-label="Fermer"></button>
                 </header>
-    
+
                 <div class="modal__form">
                     <form action="post" class="form">
                         <div class="modal__form--fields">
@@ -67,7 +72,7 @@
                             <br>
                         </div>
                         <div class="error-modal__form--fields error-first"></div>
-    
+
                         <div class="modal__form--fields">
                             <label for="last">Nom</label>
                             <br>
@@ -76,7 +81,7 @@
                             <br>
                         </div>
                         <div class="error-modal__form--fields error-last"></div>
-    
+
                         <div class="modal__form--fields">
                             <label for="email">Email</label>
                             <br>
@@ -85,7 +90,7 @@
                             <br>
                         </div>
                         <div class="error-modal__form--fields error-eMail"></div>
-    
+
                         <div class="modal__form--fields">
                             <label for="message">Votre message</label>
                             <br>
@@ -96,15 +101,14 @@
                         <div class="error-modal__form--fields"></div>
                         <input type="submit" class="js-modalClose btn__ctc btn__ctc--send" value="Envoyer">
                     </form>
-                    
-                    <!-- <div class="contact__body--submitted">
+                    <!-- <div class="contact__body-submitted">
                         <button class="close-modal btn__ctc">Merci</button>
                     </div> -->
                 </div>
             </div>
-        </aside>
+        </div>
     </div>
-    
+
 </body>
 
 </html>

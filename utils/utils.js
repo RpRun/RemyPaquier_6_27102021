@@ -145,7 +145,7 @@ export const addListenerOnHearts = () => {
         heartBtn.addEventListener('click', () => {
             toggleLike(heartBtn)
         })
-        
+
     });
 }
 
@@ -157,7 +157,7 @@ const toggleLike = (heartBtn) => {
     const likesCount = heartBtn.parentNode
     const heart = heartBtn.querySelector('.heart')
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
-    if (heart.classList.contains('fas')) {     
+    if (heart.classList.contains('fas')) {
         likesCount.setAttribute('data-like-count', currentCount -= 1)
     } else {
         likesCount.setAttribute('data-like-count', currentCount += 1)
@@ -170,7 +170,7 @@ const toggleLike = (heartBtn) => {
 
 // Additionne tous les likes de la page
 export const getTotalLikeCount = () => {
-    
+
     let total = 0
     document.querySelectorAll('.likes-count').forEach(counter => {
         total += parseInt(counter.getAttribute('data-like-count'))
@@ -253,7 +253,7 @@ const reorganizeMedias = (value, photographerPics) => {
 }
 
 
-// Inscrit le cout par jour du photographe en bas de la page portfolio 
+// Inscrit le coût par jour du photographe en bas de la page portfolio 
 export const displayCostByDay = photographe => {
     const price = `<div class="cost-by-day">${photographe.price}€/jour</div>`
     return price

@@ -406,7 +406,7 @@ h1.photographers__name {
 }
 
 .heart {
-    margin: 0.2rem;     
+    margin: 0.2rem;
     color: #911C1C;
 
 }
@@ -422,7 +422,7 @@ h1.photographers__name {
     color: #000000;
     margin-right: auto;
     margin-left: 0.4rem;
-    
+
 }
 
 /*
@@ -461,7 +461,7 @@ h1.photographers__name {
     color: #000000;
     font-weight: bold;
     font-size: 18px;
-    line-height: 23px;  
+    line-height: 23px;
     border: none;
     border-radius: 5px;
 }
@@ -553,7 +553,7 @@ h1.photographers__name {
         justify-content: center;
     }
 
-/*
+    /*
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+

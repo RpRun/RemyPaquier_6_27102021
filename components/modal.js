@@ -91,9 +91,6 @@ const focusInModal = function (e) {
 
 // Launch modal event
 modalOpenBtn.forEach((btn) => btn.addEventListener('click', openModal));
-// add event click to close the modal:
-
-
 
 
 // Close modal when escape key is pressed
@@ -125,7 +122,7 @@ form.addEventListener('submit', (event) => {
   console.log('Message:', inputMessage.value);
 
   if (inputFirstName.value.length > 2) {
-    alert ('Merci pour votre message');
+    alert('Merci pour votre message');
   } else {
     alert('Veuillez reverifier vos informations');
   }
