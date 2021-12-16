@@ -431,13 +431,19 @@ h1.photographers__name {
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
 */
 .sr-only {
-    position: absolute;
+    /* position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    border: 0;
+    border: 0; */
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .likes-price {

@@ -55,7 +55,7 @@ export const createPreview = media => {
         <img class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn"><i class="far fa-heart heart"></i></button>              
+             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour liker ce média"><i class="far fa-heart heart"></i></button>              
         </div>
         </li>`
 
@@ -67,7 +67,7 @@ export const createPreview = media => {
         <video Title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn"><i class="far fa-heart heart"></i></button>                
+                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour liker ce média"><i class="far fa-heart heart"></i></button>                
         </div>
         </li>`
 
@@ -144,6 +144,7 @@ export const addListenerOnHearts = () => {
     heartsBtn.forEach(heartBtn => {
         heartBtn.addEventListener('click', () => {
             toggleLike(heartBtn)
+            
         })
 
     });
@@ -152,6 +153,7 @@ export const addListenerOnHearts = () => {
 // 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand le
 //  bouton est liké
 // 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
+// 2 - 2 Modifie les aria label sur le bouton en fonction du contexte           
 // 2 - 3 Appelle la fonction qui mets à jour le total de likes sur la page
 const toggleLike = (heartBtn) => {
     const likesCount = heartBtn.parentNode
@@ -159,11 +161,18 @@ const toggleLike = (heartBtn) => {
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
     if (heart.classList.contains('fas')) {
         likesCount.setAttribute('data-like-count', currentCount -= 1)
+        
+        heartBtn.removeAttribute("aria-label", "J'aime")
+        heartBtn.setAttribute("aria-label", "Cliquer pour liker ce média")
+        
     } else {
         likesCount.setAttribute('data-like-count', currentCount += 1)
+        heartBtn.removeAttribute("aria-label", "Cliquer pour liker ce média")
+        heartBtn.setAttribute("aria-label", "J'aime")
     }
 
     heart.classList.toggle('fas')
+    
     likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
 }
