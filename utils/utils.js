@@ -222,13 +222,13 @@ export const onClickFilters = (photographerPics) => {
             select.innerHTML = filter.innerHTML
             const value = filter.getAttribute('data-filter')
             reorganizeMedias(value, photographerPics)
-            onEnterFilters()
+            onKeyboardFilters()
         })
     });
 }
 
 // Gestion du dropdown au clavier
-export const onEnterFilters = (photographerPics) => {
+export const onKeyboardFilters = (photographerPics) => {
     const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
     filters.forEach(filter => {

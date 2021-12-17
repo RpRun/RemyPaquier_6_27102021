@@ -10,7 +10,9 @@ body {
 a {
     text-decoration: none;
 }
-
+ .home-page-link {
+    display: contents;
+ }
 
 /*a checker*/
 .page-wrapper {

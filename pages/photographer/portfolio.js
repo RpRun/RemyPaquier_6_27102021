@@ -6,7 +6,7 @@ import {
     updateTotalLikeCount,
     onClickSelect,
     onClickFilters,
-    onEnterFilters
+    onKeyboardFilters
 } from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -47,7 +47,7 @@ if (localstorage) {
     addListenerOnHearts();
     onClickSelect();
     onClickFilters(photographerPics);
-    onEnterFilters(photographerPics);
+    onKeyboardFilters(photographerPics);
 
 }
 
