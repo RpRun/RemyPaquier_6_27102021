@@ -10,9 +10,10 @@ body {
 a {
     text-decoration: none;
 }
- .home-page-link {
+
+.home-page-link {
     display: contents;
- }
+}
 
 /*a checker*/
 .page-wrapper {
@@ -130,18 +131,17 @@ h1 {
 .photographers__portrait {
     background: #C4C4C4;
     box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-    margin: 1rem;
     object-fit: cover;
     border-radius: 50%;
     height: 200px;
     width: 200px;
 }
 
-.photographers__portrait--container {
+/* .photographers__portrait--container {
     display: flex;
     flex-grow: 2;
     justify-content: flex-end;
-}
+} */
 
 .photographers__name {
     color: #D3573C;
@@ -225,6 +225,7 @@ h2.photographers__name {
 
 .header__portfolio--wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-content: flex-start;
     align-items: flex-start;
@@ -250,12 +251,18 @@ h1.photographers__name {
     line-height: 83px;
 }
 
+.photographers-infos__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .photographers__infos--portfolio {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    padding: 1rem;
 }
 
 .photographers__infos--portfolio .localisation {
@@ -267,27 +274,26 @@ h1.photographers__name {
 .photographer__tags {
     display: flex;
     justify-content: flex-start;
-}
-
-.thumbnails__heading {
-    font-size: 24px;
-    line-height: 31px;
-    color: #911C1C;
+    margin-top: -40px;
 }
 
 .likes-count {
     font-weight: 500;
-    font-size: 24px;
-    color: #911C1C;
+    align-items: flex-end;
 }
 
+/* .btn__ctc--header {
+    position: absolute;
+    left: 36%;
+    top: 230px;
+} */
+
 .btn__ctc {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    white-space: nowrap;
+    white-space: nowrap; */
+
     height: 69px;
     width: 170px;
     color: #FFFFFF;
@@ -324,7 +330,7 @@ h1.photographers__name {
 }
 
 .sortBy,
-.select, 
+.select,
 .select button {
     text-align: left;
     background: #911C1C;
@@ -338,11 +344,11 @@ h1.photographers__name {
     cursor: pointer;
 }
 
-.select button {  
-    border:none;
+.select button {
+    border: none;
     display: flex;
     justify-content: space-between;
-}   
+}
 
 .sortBy {
     display: none;
@@ -374,7 +380,7 @@ h1.photographers__name {
 
 .select__icon {
     padding-left: 0.5rem;
-    
+
 }
 
 .select .select__icon {
@@ -417,6 +423,9 @@ h1.photographers__name {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    font-size: 24px;
+    line-height: 31px;
+    color: #901C1C;
 }
 
 .heart {
@@ -491,7 +500,7 @@ h1.photographers__name {
     font-weight: bold;
     font-size: 18px;
     line-height: 28px;
-    border: none;   
+    border: none;
     border-radius: 5px;
 }
 
@@ -538,18 +547,25 @@ h1.photographers__name {
     h1.photographers__name {
         font-size: 36px;
         line-height: 47px;
+        white-space: pre-wrap;
     }
 
     .photographers__portrait--portfolio {
-        height: 150px;
-        width: 150px;
+        height: 96px;
+        width: 96px;
     }
 
-    .btn__ctc {
-        margin-left: 2rem;
-    }
 
+    .photographer__tags {
+        margin-top: 0px;
+    }
 }
+
+.btn__ctc {
+    margin-left: 2rem;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .header__portfolio--wrapper {
@@ -557,20 +573,11 @@ h1.photographers__name {
         padding: 0px;
     }
 
-    .photographers__infos--portfolio {
-        padding: 0;
-    }
-
     .photographers__infos--portfolio .mojo,
     .photographers__infos--portfolio .localisation {
         margin-bottom: 0.5rem;
         font-size: 13px;
         line-height: 17px;
-    }
-
-    .photographers__portrait--portfolio {
-        height: 120px;
-        width: 120px;
     }
 
     .index-main-title {
@@ -633,21 +640,24 @@ h1.photographers__name {
         width: 150px;
     }
 
-    /*******PORTFOLIO******************/
-    .header__portfolio--wrapper {
-        flex-wrap: wrap-reverse;
-    }
-
-    .photographers__portrait {
+    /* .photographers__portrait {
         margin-left: auto;
         margin-right: auto;
+    } */
+
+    /*******PORTFOLIO******************/
+
+    .photographers__portrait--portfolio {
+        height: 100px;
+        width: 100px;
     }
 
     .photographers__infos--portfolio .mojo {
         text-align: left;
     }
 
-    .thumbnails__heading {
+    .thumbnails__infos,
+    .heartBtn {
         font-size: 1.1rem;
     }
 

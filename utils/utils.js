@@ -31,19 +31,24 @@ export const createHeader = photographe => {
 
     });
 
-    const header = `<div class="photographers__infos--portfolio">
-                    <h1 class="photographers__name">${photographe.name}</h1>
-                    <p class="localisation">${photographe.city}, ${photographe.country}</p>
-                    <p class="mojo">${photographe.tagline}</p> 
-                        <ul role=navigation class="tags photographer__tags aria-label="tags filters"">
-                        ${tagList}
-                        </ul>                   
-                    </div>  
-                    <button class="js-modalOpen btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
-                    <div class="photographers__portrait--container">
-                    <img class="photographers__portrait photographers__portrait--portfolio" src="../../assets/Photos/PhotographersIdPhotos/${photographe.portrait}"
-                     alt="portrait du photographe ${photographe.name}">
-                     </div>`
+    const header = `<div class="photographers-infos__wrapper">
+                        <div class="photographers__infos--portfolio">
+                        <h1 class="photographers__name">${photographe.name}</h1>
+                        <p class="localisation">${photographe.city}, ${photographe.country}</p>
+                        <p class="mojo">${photographe.tagline}</p>                  
+                        </div>                     
+                        <button class="js-modalOpen btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
+                        <div class="photographers__portrait--container">
+                        <img class="photographers__portrait photographers__portrait--portfolio"
+                        src="../../assets/Photos/PhotographersIdPhotos/${photographe.portrait}"
+                        alt="portrait du photographe ${photographe.name}">
+                        </div>
+                    </div> 
+                    <ul role=navigation class="tags photographer__tags aria-label="tags filters"">
+                    ${tagList}
+                    </ul>   
+                    `
+                    
     return header
 
 }
