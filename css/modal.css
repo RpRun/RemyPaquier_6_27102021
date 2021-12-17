@@ -69,8 +69,8 @@
 .modal-wrapper {
     overflow: auto;
     width: 600px;
-    max-width: calc(100vw -20px);
-    max-height: calc(100vh -20px);
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
     padding: 20px 35px;
     background: #DB8876;
     border-radius: 5px;
@@ -80,8 +80,6 @@
 .modal header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
 }
 
 .modal__heading {
@@ -148,8 +146,28 @@ form input {
 @media screen and (max-width: 768px) {
 
     .modal__heading {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .form label {
+        font-size: 1.5rem;
+    }
+
+    .crossBtn {
+        margin-top: 13px;
+        height: 22px;
+        width: 22px;
+        background-size: 23px 21px;
+    }
+
+    .modal-wrapper {
+        overflow: auto;
+        width: 600px;
+        max-width: calc(90vw - 10px);
+        max-height: calc(90vh - 10px);
+        padding: 20px 35px;
+        
     }
 
 }

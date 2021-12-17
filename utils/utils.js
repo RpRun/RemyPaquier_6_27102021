@@ -11,7 +11,7 @@ export const createCard = photographe => {
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
-        <p class="localisation">${photographe.city}</p>
+        <p class="localisation">${photographe.city}, ${photographe.country}</p>
         <p class="mojo">${photographe.tagline}</p>
         <p class="cost">${photographe.price}€/jour</p>
     </div>

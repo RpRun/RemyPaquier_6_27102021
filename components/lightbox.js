@@ -40,11 +40,9 @@
      */
     loadMedia (url) { 
         this.url = null
-        const image = new Image();
-        
+        const image = new Image();      
         const container = this.element.querySelector('.lightbox__container')
-        const loader = document.createElement('div')
-        
+        const loader = document.createElement('div')      
         loader.classList.add('lightbox__loader')
         container.innerHTML = ''
         container.appendChild(loader)
@@ -52,8 +50,6 @@
         // si c'est une image
         if(url.includes('.jpg')) {
             image.onload = () => {
-                console.log(image.title);
-
                 image.setAttribute('alt', '')
                 container.removeChild(loader)
                 container.appendChild(image)
