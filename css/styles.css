@@ -551,8 +551,8 @@ h1.photographers__name {
     }
 
     .photographers__portrait--portfolio {
-        height: 96px;
-        width: 96px;
+        height: 120px;
+        width: 120px;
     }
 
 
@@ -572,6 +572,12 @@ h1.photographers__name {
         background: #FFFFFF;
         padding: 0px;
     }
+
+    .photographers__portrait--portfolio {
+        height: 100px;
+        width: 100px;
+    }
+
 
     .photographers__infos--portfolio .mojo,
     .photographers__infos--portfolio .localisation {
@@ -648,8 +654,8 @@ h1.photographers__name {
     /*******PORTFOLIO******************/
 
     .photographers__portrait--portfolio {
-        height: 100px;
-        width: 100px;
+        height: 7rem;
+        width: 7rem;
     }
 
     .photographers__infos--portfolio .mojo {
