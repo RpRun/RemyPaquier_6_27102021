@@ -177,7 +177,8 @@ h2.photographers__name {
 }
 
 .photographers__infos--portfolio p {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    margin-top: 0.5rem;
 }
 
 .mojo {
@@ -557,7 +558,7 @@ h1.photographers__name {
 
 
     .photographer__tags {
-        margin-top: 0px;
+        margin-top: -10px;
     }
 }
 
@@ -581,9 +582,12 @@ h1.photographers__name {
 
     .photographers__infos--portfolio .mojo,
     .photographers__infos--portfolio .localisation {
-        margin-bottom: 0.5rem;
         font-size: 13px;
         line-height: 17px;
+    }
+
+    .photographers__tags {
+        font-size: 0.8rem;
     }
 
     .index-main-title {
