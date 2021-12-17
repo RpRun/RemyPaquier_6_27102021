@@ -151,6 +151,7 @@ export const addListenerOnHearts = () => {
     });
 }
 
+
 // 2 - 1 Recupere le nombre de like grace a l'attribut data-like, mets à jour le total du compteur media quand le
 //  bouton est liké
 // 2 - 2 Rajoute et enleve la classe 'fas' pour styliser l'action de liker (coeur plein)
@@ -207,6 +208,8 @@ export const onClickSelect = () => {
         toggleFilters()
     })
 }
+
+
 // gestion du dropdown, au click sur le filtre (date, popularité...):
 // le filtre remplace le select (choisir) en haut du dropdown
 // on recupere l attribut data filter (date, popularité) du filtre selectionné
@@ -219,9 +222,30 @@ export const onClickFilters = (photographerPics) => {
             select.innerHTML = filter.innerHTML
             const value = filter.getAttribute('data-filter')
             reorganizeMedias(value, photographerPics)
+            onEnterFilters()
         })
     });
 }
+
+// Gestion du dropdown au clavier
+export const onEnterFilters = (photographerPics) => {
+    const select = document.querySelector('.select__text')
+    const filters = document.querySelectorAll('.sortBy li')
+    filters.forEach(filter => {
+        filter.addEventListener('keydown', (e) => {     
+            if (e.key === 'Enter') {
+                select.innerHTML = filter.innerHTML
+                const value = filter.getAttribute('data-filter')
+                reorganizeMedias(value, photographerPics)
+                toggleFilters()
+            }
+            if (e.key === 'Escape')   {
+                toggleFilters()
+            }               
+        })
+    });
+}
+
 
 // 
 const reorganizeMedias = (value, photographerPics) => {
@@ -257,6 +281,7 @@ const reorganizeMedias = (value, photographerPics) => {
 
     updateTotalLikeCount();
     addListenerOnHearts();
+
 
 }
 
