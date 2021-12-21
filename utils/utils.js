@@ -7,7 +7,7 @@ export const createCard = photographe => {
     const card = `<li class="photographers__cards">
     <a href="./pages/photographer/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
-            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="portrait du photographe ${photographe.name}">
+            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="">
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
@@ -21,7 +21,7 @@ export const createCard = photographe => {
     </li>`
 
     return card
-
+ 
 }
 
 export const createHeader = photographe => {
@@ -61,7 +61,7 @@ export const createPreview = media => {
         <img class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
-             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour liker ce média"><i class="far fa-heart heart"></i></button>              
+             <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>              
         </div>
         </li>`
 
@@ -73,7 +73,7 @@ export const createPreview = media => {
         <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
-                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour liker ce média"><i class="far fa-heart heart"></i></button>                
+                 <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>                
         </div>
         </li>`
 
