@@ -21,12 +21,14 @@
 <body>
     <div class="photographer-page-wrapper">
         <header class="header__portfolio">
+            <a href="#main" class="access-btn" aria-controls="main">Passez au
+                contenu</a>
             <a class="home-page-link" href="../../index.html">
                 <img class="logo" src="../../assets/icones/logo.png" alt="Fisheye Home page"></a>
             <div class="header__portfolio--wrapper"></div>
             <div class="dropdown-wrapper">
                 <span>Trier par </span>
-                <div class="selectContainer">
+                <div class="selectContainer">       
                     <div class="select">
                         <button class="select__text">Choisir<span class="sr-only">Choisir</span></button>
                                     <span class="select__icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>                                
@@ -39,7 +41,7 @@
                 </div>
             </div>
         </header>
-        <main>
+        <main id="main">
             <section class="photographers__main-page">
                 <h2 class="sr-only">Portfolio du photographe</h2>
                 <ul class="preview__list"></ul>
@@ -91,10 +93,9 @@
                         <div class="modal__form--fields">
                             <label for="message">Votre message</label>
                             <br>
-                            <input type="text" required aria-required="true" class="text-control" id="message"
-                                name="message" aria-placeholder="Ecrivez votre message ici" minlength="20"
-                                size="100,20">
-                            </input>
+                            <textarea required aria-required="true" class="text-control" id="message"
+                                name="message" aria-placeholder="Ecrivez votre message ici" minlength="20">
+                            </textarea>
                             <!--check message-->
                             <br>
                         </div>

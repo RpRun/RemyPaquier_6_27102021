@@ -485,9 +485,21 @@ h1.photographers__name {
     font-size: 24px;
     line-height: 31px;
 }
+.access-btn {
+    position: absolute;
+    top: -10em;
+    width: 100%;
+}
 
-.scroll-btn {
-    z-index: 99;
+a.access-btn:hover,
+a.access-btn:focus {
+    position: absolute;
+    top: 0em;
+    border:solid 2px#000000;
+    
+}
+.scroll-btn, .access-btn {
+    z-index: 99; 
     left: -50%;
     right: -50%;
     transition: ease-in-out 300ms;
@@ -496,8 +508,9 @@ h1.photographers__name {
     margin-right: auto;
     width: 182px;
     height: 30px;
-    background: #DB8876;
+    background: #DB8876;        
     color: #000000;
+    text-align: center;
     font-weight: bold;
     font-size: 18px;
     line-height: 28px;

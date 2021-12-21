@@ -7,7 +7,7 @@ export const createCard = photographe => {
     const card = `<li class="photographers__cards">
     <a href="./pages/photographer/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
-            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="portrait du photographe">
+            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="portrait du photographe ${photographe.name}">
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
