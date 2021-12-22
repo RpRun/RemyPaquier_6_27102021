@@ -15,7 +15,6 @@ a {
     display: contents;
 }
 
-/*a checker*/
 .page-wrapper {
     max-width: 1280px;
     width: 100%;
@@ -108,7 +107,6 @@ h1 {
     color: #fff;
 }
 
-/* section photographers */
 .photographers__list {
     display: flex;
     flex-direction: row;
@@ -127,7 +125,6 @@ h1 {
     padding: 2rem 0.5rem;
 }
 
-/* img portrait */
 .photographers__portrait {
     background: #C4C4C4;
     box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
@@ -136,12 +133,6 @@ h1 {
     height: 200px;
     width: 200px;
 }
-
-/* .photographers__portrait--container {
-    display: flex;
-    flex-grow: 2;
-    justify-content: flex-end;
-} */
 
 .photographers__name {
     color: #D3573C;
@@ -177,7 +168,6 @@ h2.photographers__name {
 }
 
 .photographers__infos--portfolio p {
-    /* margin-bottom: 1rem; */
     margin-top: 0.5rem;
 }
 
@@ -186,13 +176,6 @@ h2.photographers__name {
     line-height: 13px;
     text-align: center;
     color: #000000;
-}
-
-.photographers__infos--portfolio .mojo {
-    font-size: 18px;
-    line-height: 23px;
-    text-align: center;
-    color: #525252;
 }
 
 .cost {
@@ -235,6 +218,13 @@ h2.photographers__name {
     padding: 2rem 1rem;
     background: #fafafa;
     border-radius: 5px;
+}
+
+.photographers__infos--portfolio .mojo {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #525252;
 }
 
 /* Main section portfolio*/
@@ -283,18 +273,7 @@ h1.photographers__name {
     align-items: flex-end;
 }
 
-/* .btn__ctc--header {
-    position: absolute;
-    left: 36%;
-    top: 230px;
-} */
-
 .btn__ctc {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; */
-
     height: 69px;
     width: 170px;
     color: #FFFFFF;
@@ -446,7 +425,6 @@ h1.photographers__name {
     color: #000000;
     margin-right: auto;
     margin-left: 0.4rem;
-
 }
 
 /*
@@ -455,13 +433,6 @@ h1.photographers__name {
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
 */
 .sr-only {
-    /* position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0; */
     position: absolute;
     left: -10000px;
     top: auto;
@@ -496,8 +467,8 @@ a.access-btn:focus {
     position: absolute;
     top: 0em;
     border:solid 2px#000000;
-    
 }
+
 .scroll-btn, .access-btn {
     z-index: 99; 
     left: -50%;
@@ -580,7 +551,6 @@ a.access-btn:focus {
 }
 
 
-
 @media screen and (max-width: 768px) {
     .header__portfolio--wrapper {
         background: #FFFFFF;
@@ -591,7 +561,6 @@ a.access-btn:focus {
         height: 100px;
         width: 100px;
     }
-
 
     .photographers__infos--portfolio .mojo,
     .photographers__infos--portfolio .localisation {
@@ -612,7 +581,7 @@ a.access-btn:focus {
         justify-content: center;
     }
 
-    /*
+/*
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
@@ -663,13 +632,7 @@ a.access-btn:focus {
         width: 150px;
     }
 
-    /* .photographers__portrait {
-        margin-left: auto;
-        margin-right: auto;
-    } */
-
     /*******PORTFOLIO******************/
-
     .photographers__portrait--portfolio {
         height: 7rem;
         width: 7rem;

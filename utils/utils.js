@@ -21,7 +21,7 @@ export const createCard = photographe => {
     </li>`
 
     return card
- 
+
 }
 
 export const createHeader = photographe => {
@@ -48,7 +48,7 @@ export const createHeader = photographe => {
                     ${tagList}
                     </ul>   
                     `
-                    
+
     return header
 
 }
@@ -150,7 +150,7 @@ export const addListenerOnHearts = () => {
     heartsBtn.forEach(heartBtn => {
         heartBtn.addEventListener('click', () => {
             toggleLike(heartBtn)
-            
+
         })
 
     });
@@ -168,10 +168,10 @@ const toggleLike = (heartBtn) => {
     let currentCount = parseInt(likesCount.getAttribute('data-like-count') || 0)
     if (heart.classList.contains('fas')) {
         likesCount.setAttribute('data-like-count', currentCount -= 1)
-        
+
         heartBtn.removeAttribute("aria-label", "J'aime")
         heartBtn.setAttribute("aria-label", "Cliquer pour liker ce média")
-        
+
     } else {
         likesCount.setAttribute('data-like-count', currentCount += 1)
         heartBtn.removeAttribute("aria-label", "Cliquer pour liker ce média")
@@ -179,7 +179,7 @@ const toggleLike = (heartBtn) => {
     }
 
     heart.classList.toggle('fas')
-    
+
     likesCount.querySelector('.total').innerHTML = parseInt(likesCount.getAttribute('data-like-count', currentCount))
     updateTotalLikeCount()
 }
@@ -237,16 +237,16 @@ export const onKeyboardFilters = (photographerPics) => {
     const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
     filters.forEach(filter => {
-        filter.addEventListener('keydown', (e) => {     
+        filter.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 select.innerHTML = filter.innerHTML
                 const value = filter.getAttribute('data-filter')
                 reorganizeMedias(value, photographerPics)
                 toggleFilters()
             }
-            if (e.key === 'Escape')   {
+            if (e.key === 'Escape') {
                 toggleFilters()
-            }               
+            }
         })
     });
 }
@@ -286,7 +286,6 @@ const reorganizeMedias = (value, photographerPics) => {
 
     updateTotalLikeCount();
     addListenerOnHearts();
-
 
 }
 

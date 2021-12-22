@@ -42,7 +42,7 @@ if (localstorage) {
             photographerPics.push(media)
         }
     })
-    
+
     updateTotalLikeCount();
     addListenerOnHearts();
     onClickSelect();

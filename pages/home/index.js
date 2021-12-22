@@ -35,45 +35,10 @@ if (localstorage) {
 }
 
 
-// //Scroll button handler
-// // 1- Get the button:
-// const scrollBtn = document.querySelector('.scroll-btn');
-
-// // 2 - When the user scrolls down 20px from the top of the document, show the button
-// function toggleScrollBtn() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         scrollBtn.style.transform = "translateY(60px)";
-//     } else {
-//         scrollBtn.style.transform = "translateY(-40px)";        
-//     }
-// }
-
-// window.onscroll = function () {
-//     toggleScrollBtn()
-    
-//     console.log('toggleScrollBtn');
-
-// };
-
-
-// // Reset display of the button if clicked, isnt working now, stuck in toggleScrollBtn if "document.body.scrollTop > 20"
-// function resetScrollBtn() {
-//     scrollBtn.style.transform = "translateY(-40px)";
-    
-// }
-
-// scrollBtn.addEventListener('click', (event) => {
-//     resetScrollBtn(event.target)
-//     console.log('resetScrollBtn');
-// })
-
-
-
-
- //Scroll button handler
- // 1- Get the button:
+//Scroll button handler
+// 1- Get the button:
 const scrollBtn = document.querySelector('.scroll-btn');
- // 2- If user scroll down, give focus on the button    
+// 2- If user scroll down, give focus on the button    
 function toggleScrollBtn() {
     if (window.scrollY) {
         scrollBtn.classList.replace('scroll-hidden', 'scroll-visible')
@@ -81,20 +46,10 @@ function toggleScrollBtn() {
     } else {
         scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
     }
-      
+
 }
 
 document.addEventListener('scroll', (event) => {
     toggleScrollBtn(event.target)
     console.log('toggleScrollBtn');
 })
-
-// function hideScrollBtn () {
-//     scrollBtn.classList.replace('scroll-visible', 'scroll-hidden')
-//     // scrollBtn.toggleAttribute
-// }
-
-// scrollBtn.addEventListener('click', (event) => {
-//     hideScrollBtn(event.target)
-//     console.log('hideScrollBtn');
-// })
