@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 50 version
+*/
+
 body {
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
@@ -18,10 +25,22 @@ a {
 .page-wrapper {
     max-width: 1280px;
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -33,21 +52,49 @@ a {
 }
 
 .header__index {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
     width: 100%;
     margin: 1rem;
 }
 
 .banner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 6rem;
 }
@@ -59,11 +106,19 @@ a {
 }
 
 .main-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 h1 {
@@ -72,12 +127,20 @@ h1 {
 }
 
 .tags {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .main-nav .tags {
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 .photographers__tags,
@@ -85,11 +148,15 @@ h1 {
 
     text-align: center;
     border: 0.5px solid #C4C4C4;
-    box-sizing: border-box;
-    border-radius: 11px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-border-radius: 11px;
+            border-radius: 11px;
     color: #911C1C;
     padding: 3px 5px;
     margin: 2px;
+    -webkit-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
     transition: 0.1s ease-in-out;
     display: block;
     font-weight: 500;
@@ -98,7 +165,9 @@ h1 {
 }
 
 .tags a:hover {
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
 }
 
 .tags .selectedTag {
@@ -108,11 +177,26 @@ h1 {
 }
 
 .photographers__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
@@ -127,9 +211,12 @@ h1 {
 
 .photographers__portrait {
     background: #C4C4C4;
-    box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-    object-fit: cover;
-    border-radius: 50%;
+    -webkit-box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+            box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
     height: 200px;
     width: 200px;
 }
@@ -148,11 +235,15 @@ h2.photographers__name {
 /* paragraphs photographers__cards */
 .links__portfolio {
     display: block;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
 .links__portfolio:hover {
-    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+            transform: scale(1.06);
 }
 
 .photographers__infos p {
@@ -191,8 +282,15 @@ h2.photographers__name {
 /*  +-+-+-+-+-+-+-+-+-+
 /* */
 .photographer-page-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     width: 98vw;
@@ -201,23 +299,46 @@ h2.photographers__name {
 }
 
 .header__portfolio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: left;
     margin: 3rem 1rem;
 }
 
 .header__portfolio--wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 97%;
     margin: 1rem auto;
     padding: 2rem 1rem;
     background: #fafafa;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
 }
 
 .photographers__infos--portfolio .mojo {
@@ -230,6 +351,9 @@ h2.photographers__name {
 /* Main section portfolio*/
 .photographers__main-page {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -243,17 +367,39 @@ h1.photographers__name {
 }
 
 .photographers-infos__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
 }
 
 .photographers__infos--portfolio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .photographers__infos--portfolio .localisation {
@@ -263,14 +409,23 @@ h1.photographers__name {
 }
 
 .photographer__tags {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-top: -40px;
 }
 
 .likes-count {
     font-weight: 500;
-    align-items: flex-end;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .btn__ctc {
@@ -279,7 +434,8 @@ h1.photographers__name {
     color: #FFFFFF;
     background: #911C1C;
     border: none;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
@@ -296,9 +452,19 @@ h1.photographers__name {
  +-+-+-+-+-+-+-+-+
 */
 .dropdown-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 }
 
 .dropdown-wrapper span {
@@ -318,7 +484,8 @@ h1.photographers__name {
     padding: 0.5rem;
     font-size: 18px;
     line-height: 23px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
     width: 170px;
     height: auto;
     cursor: pointer;
@@ -326,8 +493,14 @@ h1.photographers__name {
 
 .select button {
     border: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .sortBy {
@@ -352,10 +525,19 @@ h1.photographers__name {
 }
 
 .select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .select__icon {
@@ -365,7 +547,9 @@ h1.photographers__name {
 
 .select .select__icon {
     color: #ffffff;
-    transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+            transform: scale(1, -1);
 }
 
 .display {
@@ -378,11 +562,26 @@ h1.photographers__name {
  +-+-+-+-+-+-+-+-+-+-+
 */
 .preview__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -395,14 +594,25 @@ h1.photographers__name {
 .thumbnails__medias {
     width: 390px;
     height: 317px;
-    border-radius: 5px;
-    object-fit: cover;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .thumbnails__infos {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     font-size: 24px;
     line-height: 31px;
     color: #901C1C;
@@ -442,11 +652,21 @@ h1.photographers__name {
 }
 
 .likes-price {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     background: #DB8876;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
     width: 19rem;
     padding: 1rem;
     position: fixed;
@@ -473,6 +693,8 @@ a.access-btn:focus {
     z-index: 99; 
     left: -50%;
     right: -50%;
+    -webkit-transition: ease-in-out 300ms;
+    -o-transition: ease-in-out 300ms;
     transition: ease-in-out 300ms;
     margin-top: 8px;
     margin-left: auto;
@@ -486,7 +708,8 @@ a.access-btn:focus {
     font-size: 18px;
     line-height: 28px;
     border: none;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
 }
 
 .scroll-btn.scroll-hidden {
@@ -504,18 +727,27 @@ a.access-btn:focus {
     .main-nav {
         position: absolute;
         top: 9rem;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         left: -50%;
         right: -50%;
         max-width: 70%;
     }
 
     .photographers__list {
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+        -webkit-justify-content: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
 
     .preview__list {
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+        -webkit-justify-content: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
 
 }
@@ -578,7 +810,10 @@ a.access-btn:focus {
     }
 
     .photographers__list {
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
 /*

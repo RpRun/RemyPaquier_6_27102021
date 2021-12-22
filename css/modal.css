@@ -1,3 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 50 version
+*/
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -5,6 +22,16 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
@@ -18,24 +45,53 @@
     }
 }
 
-@keyframes slideFromRight {
+@-webkit-keyframes slideFromRight {
     from {
-        transform: translateX(+50px);
+        -webkit-transform: translateX(+50px);
+                transform: translateX(+50px);
     }
 
     to {
-        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
 
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        -webkit-transform: translateX(+50px);
+                transform: translateX(+50px);
+    }
+
+    to {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+
+    }
+}
+
+@-webkit-keyframes slideFromCenter {
+    from {
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+
+    to {
+        -webkit-transform: translateX(+100px);
+                transform: translateX(+100px);
     }
 }
 
 @keyframes slideFromCenter {
     from {
-        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
     }
 
     to {
-        transform: translateX(+100px);
+        -webkit-transform: translateX(+100px);
+                transform: translateX(+100px);
     }
 }
 
@@ -45,9 +101,18 @@
 }
 
 .modal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -55,31 +120,44 @@
     width: 100%;
     height: 100%;
     background-color: rgba(26, 39, 156, 0.4);
-    animation: fadeIn 0.3s both;
+    -webkit-animation: fadeIn 0.3s both;
+            animation: fadeIn 0.3s both;
 }
 
 .modal[aria-hidden="true"] {
-    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
 }
 
 .modal[aria-hidden="true"] .modal-wrapper {
-    animation-name: slideFromCenter;
+    -webkit-animation-name: slideFromCenter;
+            animation-name: slideFromCenter;
 }
 
 .modal-wrapper {
     overflow: auto;
     width: 600px;
+    max-width: -webkit-calc(100vw - 20px);
     max-width: calc(100vw - 20px);
+    max-height: -webkit-calc(100vh - 20px);
     max-height: calc(100vh - 20px);
     padding: 20px 35px;
     background: #DB8876;
-    border-radius: 5px;
-    animation: slideFromRight 0.3s both;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-animation: slideFromRight 0.3s both;
+            animation: slideFromRight 0.3s both;
 }
 
 .modal header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .modal__heading {
@@ -113,12 +191,21 @@
     margin-bottom: 20px;
 }
 
-/* ******************************************* */
 .form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 form label {
@@ -127,17 +214,28 @@ form label {
 }
 
 form div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    align-items: self-start;
+    -webkit-box-align: self-start;
+    -webkit-align-items: self-start;
+        -ms-flex-align: self-start;
+            align-items: self-start;
 }
 
 form input, textarea {
     width: 100%;
     height: 48px;
     border: none;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
     font-size: 1.5rem;
     padding: 0.3rem;
 }
@@ -168,7 +266,9 @@ textarea {
     .modal-wrapper {
         overflow: auto;
         width: 600px;
+        max-width: -webkit-calc(90vw - 10px);
         max-width: calc(90vw - 10px);
+        max-height: -webkit-calc(90vh - 10px);
         max-height: calc(90vh - 10px);
         padding: 20px 35px;
         
