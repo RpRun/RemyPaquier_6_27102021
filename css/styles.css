@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.3.6,
 * Autoprefixer: v10.3.1
-* Browsers: last 50 version
+* Browsers: last 20 version
 */
 
 body {
@@ -142,33 +142,29 @@ h1 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-
-.photographers__tags,
 .tags a {
+    text-decoration: none;
+    
+    
+    color: #911C1C;
+}
+.tags li {
 
     text-align: center;
     border: 0.5px solid #C4C4C4;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-border-radius: 11px;
     border-radius: 11px;
     color: #911C1C;
     padding: 3px 5px;
     margin: 2px;
-    -webkit-transition: 0.1s ease-in-out;
-    -o-transition: 0.1s ease-in-out;
     transition: 0.1s ease-in-out;
     display: block;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1rem;
+    cursor: pointer;
 }
 
-.tags a:hover {
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
-}
 
 .tags .selectedTag {
     border: 0.5px solid #C4C4C4;
