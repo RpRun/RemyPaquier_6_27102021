@@ -119,7 +119,7 @@ export const tagsHandler = () => {
             for (let j = 0; j < cardTags.length; j++) {
                 const tags = cardTags[j].outerText;
                 // Si oui, on affiche les cards
-                if (clickedTag.outerText.toLowerCase() == tags.toLowerCase()) {
+                if (clickedTag.innerText.toLowerCase() == tags.toLowerCase()) {
                     cards[i].style.display = "block";
                 }
             }
