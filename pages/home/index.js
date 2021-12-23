@@ -16,7 +16,7 @@ if (localstorage) {
     }
 
     tagsHandler();
-
+   
 } else {
     fetch('./data/data.json')
         .then(data => data.json())
@@ -24,7 +24,6 @@ if (localstorage) {
 
             localStorage.setItem('data', JSON.stringify(reponse))
             
-
             const sectionDom = document.querySelector('.photographers__list')
             const photographers = reponse.photographers
             for (let i = 0; i < photographers.length; i++) {
