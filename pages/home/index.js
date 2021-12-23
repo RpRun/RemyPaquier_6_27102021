@@ -18,7 +18,7 @@ if (localstorage) {
     tagsHandler();
 
 } else {
-    fetch('../../data/data.json')
+    fetch('./data/data.json')
         .then(data => data.json())
         .then(reponse => {
 
@@ -53,7 +53,6 @@ function toggleScrollBtn() {
 
 document.addEventListener('scroll', (event) => {
     toggleScrollBtn(event.target)
-    console.log('toggleScrollBtn');
 })
 
 urlTagsHandleur();

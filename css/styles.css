@@ -32,15 +32,15 @@ a {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -59,22 +59,22 @@ a {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
     width: 100%;
     margin: 1rem;
 }
@@ -85,16 +85,16 @@ a {
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
     height: 6rem;
 }
@@ -112,13 +112,13 @@ a {
     display: flex;
     -webkit-box-align: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -133,14 +133,14 @@ h1 {
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .main-nav .tags {
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .photographers__tags,
@@ -149,9 +149,9 @@ h1 {
     text-align: center;
     border: 0.5px solid #C4C4C4;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-border-radius: 11px;
-            border-radius: 11px;
+    border-radius: 11px;
     color: #911C1C;
     padding: 3px 5px;
     margin: 2px;
@@ -166,8 +166,8 @@ h1 {
 
 .tags a:hover {
     -webkit-transform: scale(1.03);
-        -ms-transform: scale(1.03);
-            transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .tags .selectedTag {
@@ -177,26 +177,30 @@ h1 {
 }
 
 .photographers__list {
+
     display: -webkit-box;
+
     display: -webkit-flex;
+
     display: -ms-flexbox;
+
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     margin-left: auto;
     margin-right: auto;
     max-width: 1080px;
@@ -205,7 +209,7 @@ h1 {
 
 .photographers__cards {
     list-style: none;
-    margin-top: 1rem;
+    margin: 1rem;
     width: 300px;
     padding: 2rem 0.5rem;
 }
@@ -213,11 +217,11 @@ h1 {
 .photographers__portrait {
     background: #C4C4C4;
     -webkit-box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
-            box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -webkit-border-radius: 50%;
-            border-radius: 50%;
+    border-radius: 50%;
     height: 200px;
     width: 200px;
 }
@@ -243,8 +247,8 @@ h2.photographers__name {
 
 .links__portfolio:hover {
     -webkit-transform: scale(1.06);
-        -ms-transform: scale(1.06);
-            transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    transform: scale(1.06);
 }
 
 .photographers__infos p {
@@ -290,8 +294,8 @@ h2.photographers__name {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     width: 98vw;
@@ -307,8 +311,8 @@ h2.photographers__name {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: left;
     margin: 3rem 1rem;
 }
@@ -321,25 +325,25 @@ h2.photographers__name {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     width: 97%;
     margin: 1rem auto;
     padding: 2rem 1rem;
     background: #fafafa;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
 }
 
 .photographers__infos--portfolio .mojo {
@@ -374,12 +378,12 @@ h1.photographers__name {
     display: flex;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -390,17 +394,17 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .photographers__infos--portfolio .localisation {
@@ -416,8 +420,8 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     margin-top: -40px;
 }
 
@@ -425,8 +429,8 @@ h1.photographers__name {
     font-weight: 500;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 .btn__ctc {
@@ -436,7 +440,7 @@ h1.photographers__name {
     background: #911C1C;
     border: none;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 20px;
     line-height: 26px;
@@ -460,12 +464,12 @@ h1.photographers__name {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
 }
 
 .dropdown-wrapper span {
@@ -486,7 +490,7 @@ h1.photographers__name {
     font-size: 18px;
     line-height: 23px;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
     width: 170px;
     height: auto;
     cursor: pointer;
@@ -500,8 +504,8 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .sortBy {
@@ -532,13 +536,13 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     position: relative;
     -webkit-box-align: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .select__icon {
@@ -549,8 +553,8 @@ h1.photographers__name {
 .select .select__icon {
     color: #ffffff;
     -webkit-transform: scale(1, -1);
-        -ms-transform: scale(1, -1);
-            transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
 }
 
 .display {
@@ -568,21 +572,21 @@ h1.photographers__name {
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -596,9 +600,9 @@ h1.photographers__name {
     width: 390px;
     height: 317px;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 .thumbnails__infos {
@@ -608,12 +612,12 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
     font-size: 24px;
     line-height: 31px;
     color: #901C1C;
@@ -659,15 +663,15 @@ h1.photographers__name {
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
     background: #DB8876;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
     width: 19rem;
     padding: 1rem;
     position: fixed;
@@ -677,6 +681,7 @@ h1.photographers__name {
     font-size: 24px;
     line-height: 31px;
 }
+
 .access-btn {
     position: absolute;
     top: -10em;
@@ -687,11 +692,12 @@ a.access-btn:hover,
 a.access-btn:focus {
     position: absolute;
     top: 0em;
-    border:solid 2px#000000;
+    border: solid 2px#000000;
 }
 
-.scroll-btn, .access-btn {
-    z-index: 99; 
+.scroll-btn,
+.access-btn {
+    z-index: 99;
     left: -50%;
     right: -50%;
     -webkit-transition: ease-in-out 300ms;
@@ -702,7 +708,7 @@ a.access-btn:focus {
     margin-right: auto;
     width: 182px;
     height: 30px;
-    background: #DB8876;        
+    background: #DB8876;
     color: #000000;
     text-align: center;
     font-weight: bold;
@@ -710,7 +716,7 @@ a.access-btn:focus {
     line-height: 28px;
     border: none;
     -webkit-border-radius: 5px;
-            border-radius: 5px;
+    border-radius: 5px;
 }
 
 .scroll-btn.scroll-hidden {
@@ -730,8 +736,8 @@ a.access-btn:focus {
         top: 9rem;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         left: -50%;
         right: -50%;
         max-width: 70%;
@@ -740,15 +746,15 @@ a.access-btn:focus {
     .photographers__list {
         -webkit-box-pack: space-evenly;
         -webkit-justify-content: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
     }
 
     .preview__list {
         -webkit-box-pack: space-evenly;
         -webkit-justify-content: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
     }
 
 }
@@ -813,11 +819,11 @@ a.access-btn:focus {
     .photographers__list {
         -webkit-box-pack: center;
         -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 
-/*
+    /*
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
  |/|*| |h|i|d|d|e|n| |i|t|e|m|s| |*|/|
  +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+
