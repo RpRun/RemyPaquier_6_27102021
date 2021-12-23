@@ -18,11 +18,12 @@ if (localstorage) {
     tagsHandler();
 
 } else {
-    fetch('../data/data.json')
+    fetch('../../data/data.json')
         .then(data => data.json())
         .then(reponse => {
 
             localStorage.setItem('data', JSON.stringify(reponse))
+            
 
             const sectionDom = document.querySelector('.photographers__list')
             const photographers = reponse.photographers
@@ -30,7 +31,7 @@ if (localstorage) {
                 const card = createCard(photographers[i])
                 sectionDom.innerHTML += card
             }
-
+            console.log(reponse)
             tagsHandler();
         })
 }
