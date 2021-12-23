@@ -27,7 +27,7 @@ export const createCard = photographe => {
 export const createHeader = photographe => {
     let tagList = ''
     photographe.tags.forEach(tag => {
-        tagList += `<li class= "photographers__tags">#${tag}</li>`
+        tagList += `<li class= "photographers__tags"><a href="../../index.html?tags=${tag}">#${tag}</a></li>`
 
     });
 
@@ -87,10 +87,11 @@ export const createPreview = media => {
 export const tagsHandler = () => {
     const cards = document.querySelectorAll('.photographers__cards')
     const headerTags = document.querySelectorAll('.main-nav .tags li a')
+    const cardsTags = document.querySelectorAll('.filters .tags')
 
     const handleFilters = (event) => {
         event.preventDefault();
-
+        
         const selectedTag = document.querySelector('.selectedTag')
         const clickedTag = event.target
 
@@ -141,8 +142,47 @@ export const tagsHandler = () => {
     headerTags.forEach((link) => link.addEventListener('click', (event) => {
         handleFilters(event)
     }));
+    cardsTags.forEach((link) => link.addEventListener('click', (event) => {
+        handleFilters(event)
+    }));
 
 }
+
+
+export const urlTagsHandleur = () => {
+    const cards = document.querySelectorAll('.photographers__cards')
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const urlTags = urlParams.get('tags')
+    
+    if (urlTags) {
+        const newUrlTags = '#'+urlTags
+        
+
+        // 1 - On enleve toutes les cards du dom
+        for (let i = 0; i < cards.length; i += 1) {
+            cards[i].style.display = "none";
+        }
+        //  - On affiche que les cards avec le meme tag que le tag recupéré
+
+        // Pour chaque cards
+        for (let i = 0; i < cards.length; i += 1) {
+            const cardTags = cards[i].querySelectorAll('.tags li')
+
+            // On recherche dans ses tags si clickedTag est présent
+            for (let j = 0; j < cardTags.length; j++) {
+                const tags = cardTags[j].outerText;
+                // Si oui, on affiche les cards
+                
+                if (newUrlTags.toLowerCase() == tags.toLowerCase()) {
+                    cards[i].style.display = "block";
+                }
+            }
+        }
+
+    }
+}
+
 
 // 1 -1 Ecoute le click sur les boutons contenant les coeurs, declenche togglelike
 export const addListenerOnHearts = () => {
