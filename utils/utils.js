@@ -117,7 +117,7 @@ export const tagsHandler = () => {
 
             // On recherche dans ses tags si clickedTag est présent
             for (let j = 0; j < cardTags.length; j++) {
-                const tags = cardTags[j].outerText;
+                const tags = cardTags[j].innerText;
                 // Si oui, on affiche les cards
                 if (clickedTag.innerText.toLowerCase() == tags.toLowerCase()) {
                     cards[i].style.display = "block";
