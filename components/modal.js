@@ -7,7 +7,6 @@ const pageWrapper = document.querySelector('.photographer-page-wrapper')
 const modalDialog = document.querySelector('.modal-wrapper')
 const modalOpenBtn = document.querySelectorAll('.js-modalOpen')
 const modalCloseBtn = document.querySelector('.js-modalClose')
-// const CloseModal = document.querySelector(".close-modal")
 
 let previouslyFocusElement = null
 let modal = null
@@ -20,23 +19,12 @@ const inputFirstName = document.querySelector('#first')
 const inputLastName = document.querySelector('#last')
 const inputEmail = document.querySelector('#email')
 const inputMessage = document.querySelector('#message')
-// const thankClosing = document.querySelector(".contact__body--submitted")
-
-
-
-//  DOM Modal Elements Errors
-const errorFirst = document.querySelector('.error-first')
-const errorLast = document.querySelector('.error-last')
-const errorEmail = document.querySelector('.error-eMail')
-const errorMsg = document.querySelector('.error-msg')
-
-// questions about best pratices https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 
 
 // Tools
 const openModal = (e) => {
   e.preventDefault()
-  // pageWrapper.setAttribute('aria-hidden', 'true')
+  pageWrapper.setAttribute('aria-hidden', 'true')
   modal = document.querySelector('.modal')
   focusables = Array.from(modal.querySelectorAll(focusableSelector))
   previouslyFocusElement = document.querySelector(':focus')
@@ -46,13 +34,13 @@ const openModal = (e) => {
   modal.setAttribute('aria-modal', 'true')
 
   modalCloseBtn.addEventListener('click', closeModal);
-  // CloseModal.addEventListener('click', closeModal);
+  
   body.classList.add('no-scroll')
 }
 
 const closeModal = (e) => {
   if (modal === null) return
-  // pageWrapper.removeAttribute('aria-hidden')
+  pageWrapper.removeAttribute('aria-hidden')
   if (previouslyFocusElement !== null) previouslyFocusElement.focus()
   e.preventDefault()
   const hideModal = function () {
@@ -66,7 +54,6 @@ const closeModal = (e) => {
   modal.removeAttribute('aria-modal')
 
   modalCloseBtn.removeEventListener('click', closeModal);
-  // CloseModal.removeEventListener('click', closeModal);
   body.classList.remove('no-scroll')
 
 }
@@ -103,19 +90,13 @@ window.addEventListener('keydown', function (e) {
   }
 });
 
-
-
-/* **************************************************************************************** */
+/* *********************************************** */
 
 
 // Form
-
-
 // AU Moment du submit
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  // debugger
-  // closeModal();
   console.log('Prénom:', inputFirstName.value);
   console.log('Nom:', inputLastName.value);
   console.log('Email:', inputEmail.value);
