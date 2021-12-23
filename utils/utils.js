@@ -128,7 +128,7 @@ export const tagsHandler = () => {
         // Si un tag est déjà sélectionné
         if (selectedTag !== null) {
             // et si on re-click sur le même tag:
-            if (selectedTag.outerText.toLowerCase() == clickedTag.outerText.toLowerCase()) {
+            if (selectedTag.innerText.toLowerCase() == clickedTag.innerText.toLowerCase()) {
                 // la class 'selectedTag' est retirée
                 clickedTag.classList.remove('selectedTag');
                 // et on affiche toutes les cards
