@@ -53,12 +53,15 @@ export const createHeader = photographe => {
 
 }
 
-export const createPreview = media => {
+export const createPreview = (media, photographers) => {
     const mediapreview = (media.image || media.video)
+    const currentPhotographer = photographers.filter((photographer) => photographer.id == media.photographerId)[0]
+    console.log('currentPhotographer: ', currentPhotographer)
+    const folderName = getFolderNameFor(currentPhotographer.name)
+    console.log('folderName', folderName)
     if (mediapreview == media.image) {
         const preview__list = `<li class="thumbnails">
-        <a href="../../assets/Photos/medias/${mediapreview}">
-        <img class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
+        <a href="../../assets/Photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/Photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
              <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>              
@@ -69,8 +72,8 @@ export const createPreview = media => {
     }
 
     if (mediapreview == media.video) {
-        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${mediapreview}" aria-label="ouvrir cette vidéo dans le caroussel">
-        <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${mediapreview}"></video></a>
+        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${folderName}/${mediapreview}" aria-label="ouvrir cette vidéo dans le caroussel">
+        <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${folderName}/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
                  <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>                
@@ -81,6 +84,12 @@ export const createPreview = media => {
 
     }
 
+}
+
+const getFolderNameFor = (name) => {
+    const nameArray = name.split(' ')
+    const firstName = nameArray[0].replace('-', ' ')
+    return firstName
 }
 
 

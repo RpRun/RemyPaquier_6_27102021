@@ -37,7 +37,7 @@ if (localstorage) {
 
     medias.forEach(media => {
         if (media.photographerId == urlId) {
-            const preview = createPreview(media)
+            const preview = createPreview(media, photographers)
             sectionPreview.innerHTML += preview
             photographerPics.push(media)
         }
