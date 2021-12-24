@@ -53,6 +53,13 @@ export const createHeader = photographe => {
 
 }
 
+const getFolderNameFor = (name) => {
+    const nameArray = name.split(' ')
+    const firstName = nameArray[0].replace('-', ' ')
+    return firstName
+}
+
+
 export const createPreview = (media, photographers) => {
     const mediapreview = (media.image || media.video)
     const currentPhotographer = photographers.filter((photographer) => photographer.id == media.photographerId)[0]
@@ -84,12 +91,6 @@ export const createPreview = (media, photographers) => {
 
     }
 
-}
-
-const getFolderNameFor = (name) => {
-    const nameArray = name.split(' ')
-    const firstName = nameArray[0].replace('-', ' ')
-    return firstName
 }
 
 
@@ -304,6 +305,7 @@ export const onKeyboardFilters = (photographerPics) => {
 // 
 const reorganizeMedias = (value, photographerPics) => {
     console.log(value);
+    console.log(photographerPics);
     const sectionPreview = document.querySelector('.preview__list')
     sectionPreview.innerHTML = '';
 
