@@ -96,7 +96,7 @@ export const createPreview = (media, photographers) => {
 
 export const tagsHandler = () => {
     const cards = document.querySelectorAll('.photographers__cards')
-    const headerTags = document.querySelectorAll('.main-nav .tags li a')
+    const headerTags = document.querySelectorAll('.main-nav .tags li')
     const cardsTags = document.querySelectorAll('.filters .tags')
 
     const handleFilters = (event) => {
