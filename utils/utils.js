@@ -269,14 +269,14 @@ export const onClickSelect = () => {
 // le filtre remplace le select (choisir) en haut du dropdown
 // on recupere l attribut data filter (date, popularité) du filtre selectionné
 // on appelle la fonction qui reorganise les medias avec comme parametre l'attribut correspondant au filtre selectionné
-export const onClickFilters = (photographerPics) => {
+export const onClickFilters = (photographerPics, photographers) => {
     const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
             select.innerHTML = filter.innerHTML
             const value = filter.getAttribute('data-filter')
-            reorganizeMedias(value, photographerPics)
+            reorganizeMedias(value, photographerPics, photographers)
             onKeyboardFilters()
         })
     });
@@ -303,7 +303,7 @@ export const onKeyboardFilters = (photographerPics) => {
 
 
 // 
-const reorganizeMedias = (value, photographerPics) => {
+const reorganizeMedias = (value, photographerPics, photographers) => {
     console.log(value);
     console.log(photographerPics);
     const sectionPreview = document.querySelector('.preview__list')
@@ -331,13 +331,12 @@ const reorganizeMedias = (value, photographerPics) => {
     }
 
     photographerPics.forEach(media => {
-        const preview = createPreview(media)
+        const preview = createPreview(media, photographers)
         sectionPreview.innerHTML += preview
     });
 
     updateTotalLikeCount();
     addListenerOnHearts();
-
 }
 
 

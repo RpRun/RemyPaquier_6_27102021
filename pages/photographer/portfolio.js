@@ -42,14 +42,14 @@ if (localstorage) {
             photographerPics.push(media)
         }
     })
-
+    
     updateTotalLikeCount();
     addListenerOnHearts();
     onClickSelect();
-    onClickFilters(photographerPics);
+    onClickFilters(photographerPics, photographers);
     onKeyboardFilters(photographerPics);
-
-}
+    
+    }
 
 // redirige vers index
 else {
