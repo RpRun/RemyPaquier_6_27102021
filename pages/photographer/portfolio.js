@@ -47,7 +47,7 @@ if (localstorage) {
     addListenerOnHearts();
     onClickSelect();
     onClickFilters(photographerPics, photographers);
-    onKeyboardFilters(photographerPics);
+    onKeyboardFilters(photographerPics,photographers);
     
     }
 

@@ -283,7 +283,7 @@ export const onClickFilters = (photographerPics, photographers) => {
 }
 
 // Gestion du dropdown au clavier
-export const onKeyboardFilters = (photographerPics) => {
+export const onKeyboardFilters = (photographerPics, photographers) => {
     const select = document.querySelector('.select__text')
     const filters = document.querySelectorAll('.sortBy li')
     filters.forEach(filter => {
@@ -291,7 +291,7 @@ export const onKeyboardFilters = (photographerPics) => {
             if (e.key === 'Enter') {
                 select.innerHTML = filter.innerHTML
                 const value = filter.getAttribute('data-filter')
-                reorganizeMedias(value, photographerPics)
+                reorganizeMedias(value, photographerPics, photographers)
                 toggleFilters()
             }
             if (e.key === 'Escape') {
