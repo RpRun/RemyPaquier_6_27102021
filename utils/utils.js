@@ -7,7 +7,7 @@ export const createCard = photographe => {
     const card = `<li class="photographers__cards">
     <a href="./pages/photographer/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
-            src="./assets/photos/PhotographersIdphotos/${photographe.portrait}" alt="">
+            src="./assets/Photos/PhotographersIdphotos/${photographe.portrait}" alt="">
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
@@ -40,7 +40,7 @@ export const createHeader = photographe => {
                         <button class="js-modalOpen btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
                         <div class="photographers__portrait--container">
                         <img class="photographers__portrait photographers__portrait--portfolio"
-                        src="../../assets/photos/PhotographersIdphotos/${photographe.portrait}"
+                        src="../../assets/Photos/PhotographersIdphotos/${photographe.portrait}"
                         alt="portrait du photographe ${photographe.name}">
                         </div>
                     </div> 
@@ -66,7 +66,7 @@ export const createPreview = (media, photographers) => {
     const folderName = getFolderNameFor(currentPhotographer.name)
     if (mediapreview == media.image) {
         const preview__list = `<li class="thumbnails">
-        <a href="../../assets/photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
+        <a href="../../assets/Photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
              <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>              
@@ -77,8 +77,8 @@ export const createPreview = (media, photographers) => {
     }
 
     if (mediapreview == media.video) {
-        const preview__list = `<li class="thumbnails"><a href="../../assets/photos/medias/${folderName}/${mediapreview}" aria-label="ouvrir cette vidéo dans le caroussel">
-        <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/photos/medias/${folderName}/${mediapreview}"></video></a>
+        const preview__list = `<li class="thumbnails"><a href="../../assets/Photos/medias/${folderName}/${mediapreview}" aria-label="ouvrir cette vidéo dans le caroussel">
+        <video title="${media.title}" controls="" class="thumbnails__medias" src="../../assets/Photos/medias/${folderName}/${mediapreview}"></video></a>
         <div class="thumbnails__infos">
               <h2 class="thumbnails__heading">${media.title}</h2>
                  <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>                
