@@ -157,7 +157,7 @@ export const tagsHandler = () => {
 }
 
 
-export const urlTagsHandleur = () => {
+export const urlTagsHandler = () => {
     const cards = document.querySelectorAll('.photographers__cards')
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)

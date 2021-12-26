@@ -1,7 +1,7 @@
 import {
     createCard,
     tagsHandler,
-    urlTagsHandleur
+    urlTagsHandler
 } from '../../utils/utils.js'
 
 const localstorage = localStorage.getItem('data')
@@ -30,7 +30,6 @@ if (localstorage) {
                 const card = createCard(photographers[i])
                 sectionDom.innerHTML += card
             }
-            console.log(reponse)
             tagsHandler();
         })
 }
@@ -54,4 +53,4 @@ document.addEventListener('scroll', (event) => {
     toggleScrollBtn(event.target)
 })
 
-urlTagsHandleur();
+urlTagsHandler();
