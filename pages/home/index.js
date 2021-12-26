@@ -16,6 +16,7 @@ if (localstorage) {
     }
 
     tagsHandler();
+    
    
 } else {
     fetch('./data/data.json')
@@ -32,6 +33,7 @@ if (localstorage) {
             }
             tagsHandler();
         })
+        
 }
 
 
