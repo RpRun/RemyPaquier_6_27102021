@@ -7,7 +7,7 @@ export const createCard = photographe => {
     const card = `<li class="photographers__cards">
     <a href="./pages/photographer/portfolio.html?photographerId=${photographe.id}" class="links__portfolio">
         <img class="photographers__portrait"
-            src="./assets/Photos/PhotographersIdphotos/${photographe.portrait}" alt="">
+            src="./assets/Photos/PhotographersIdPhotos/${photographe.portrait}" alt="">
         <h2 class="photographers__name">${photographe.name}</h2>
     </a>
     <div class="photographers__infos">
@@ -40,7 +40,7 @@ export const createHeader = photographe => {
                         <button class="js-modalOpen btn__ctc--header btn__ctc"  aria-label="Contacter le photographe ${photographe.name}">Contactez-moi</button>
                         <div class="photographers__portrait--container">
                         <img class="photographers__portrait photographers__portrait--portfolio"
-                        src="../../assets/Photos/PhotographersIdphotos/${photographe.portrait}"
+                        src="../../assets/Photos/PhotographersIdPhotos/${photographe.portrait}"
                         alt="portrait du photographe ${photographe.name}">
                         </div>
                     </div> 
@@ -302,8 +302,6 @@ export const onKeyboardFilters = (photographerPics, photographers) => {
 
 // 
 const reorganizeMedias = (value, photographerPics, photographers) => {
-    console.log(value);
-    console.log(photographerPics);
     const sectionPreview = document.querySelector('.preview__list')
     sectionPreview.innerHTML = '';
 
