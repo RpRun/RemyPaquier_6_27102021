@@ -66,7 +66,7 @@ export const createPreview = (media, photographers) => {
     const folderName = getFolderNameFor(currentPhotographer.name)
     if (mediapreview == media.image) {
         const preview__list = `<li class="thumbnails">
-        <a href="../../assets/Photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
+        <a href="../../assets/Photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/Photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
         <div class="thumbnails__infos">
             <h2 class="thumbnails__heading">${media.title}</h2>
              <div class="likes-count" data-filter="" data-like-count="${media.likes}"><span class="total">${media.likes}</span><button class="heartBtn" aria-label="Cliquer pour aimer ce média"><i class="far fa-heart heart"></i></button>              
