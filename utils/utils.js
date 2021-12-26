@@ -63,9 +63,7 @@ const getFolderNameFor = (name) => {
 export const createPreview = (media, photographers) => {
     const mediapreview = (media.image || media.video)
     const currentPhotographer = photographers.filter((photographer) => photographer.id == media.photographerId)[0]
-    console.log('currentPhotographer: ', currentPhotographer)
     const folderName = getFolderNameFor(currentPhotographer.name)
-    console.log('folderName', folderName)
     if (mediapreview == media.image) {
         const preview__list = `<li class="thumbnails">
         <a href="../../assets/photos/medias/${folderName}/${mediapreview}"><img class="thumbnails__medias" src="../../assets/photos/medias/${folderName}/${mediapreview}" alt="Photo prise le ${media.date} ayant pour titre '${media.title}' et comme thème '${media.tags}'"></a>
